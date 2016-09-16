@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beumidi
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="file:beumidi.xsd">
+
+	<definition>
+
+		<macro-def name="morse:Dot" parameter="%1 %2 %3">
+			<note note="%1" velocity="%2" step="%mul(%3,2)" gate="%3"/>
+		</macro-def>
+
+		<macro-def name="morse:Dash" parameter="%1 %2 %3">
+			<note note="%1" velocity="%2" step="%mul(%3,4)" gate="%mul(%3,3)"/>
+		</macro-def>
+
+		<macro-def name="morse:Rest" parameter="%1 %2 %3">
+			<rest step="%3"/>
+		</macro-def>
+
+		<macro-def name="morse:Rest Letter" parameter="%1 %2 %3">
+			<rest step="%mul(%3,3)"/>
+		</macro-def>
+
+		<macro-def name="morse:Rest Word" parameter="%1 %2 %3">
+			<rest step="%mul(%3,7)"/>
+		</macro-def>
+
+		<!-- ################################################## -->
+		<!--
+			parameters:
+				%1: note number
+				%2: velocity
+				%3: step of dot
+		-->
+		<!-- ################################################## -->
+
+		<macro-def name="morse:A" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:B" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:C" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:D" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:E" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:F" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:G" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:H" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:I" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:J" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:K" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:L" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:M" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:N" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:O" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:P" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:Q" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:R" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:S" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:T" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:U" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:V" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:W" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:X" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:Y" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:Z" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:1" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:2" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:3" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:4" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:5" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:6" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:7" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:8" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:9" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:0" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+		</macro-def>
+
+		<!-- ################################################## -->
+
+		<macro-def name="morse:Plus" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:Minus" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:Asterisk" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:Slash" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:Equal" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:Left Parenthesis" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:Right Parenthesis" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:Right Double Quote" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:Comma" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:Period" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:Semicolon" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:Colon" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="morse:Question" parameter="%1 %2 %3">
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dash" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+			<macro-ref ref="morse:Dot" value="%1 %2 %3"/>
+		</macro-def>
+
+	</definition>
+</beumidi>

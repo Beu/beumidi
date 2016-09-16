@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beumidi
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="file:beumidi.xsd">
+
+	<import file="beumidi-control-changes.xml"/>
+	<import file="beumidi-meta-messages.xml"/>
+	<import file="beumidi-system-exclusive-messages.xml"/>
+	<import file="beumidi-voices.xml"/>
+	<import file="beumidi-morse.xml"/>
+	<import file="beumidi-sc8850-voices.xml"/>
+	<import file="beumidi-sc8850-drumsets.xml"/>
+	<import file="beumidi-sc8850-drumset-JUNGLE.xml"/>
+
+	<definition>
+		<!--
+			cent = 1200 * log10(f1/f0) / log10(2)
+
+			 0  1  2  3  4  5  6  7  8  9 10 11
+			 A A+  B  C C+  D D+  E  F F+  G G+
+
+			1200 * log( 400/220) / log2 = 1034.995772 = 1000(G) + 34.995772
+
+			1200 * log( 697/440) / log2 =  798.386159 =  700(E) + 98.386159
+			1200 * log( 770/440) / log2 =  968.825906 =  900(F+) + 68.825906
+			1200 * log( 852/440) / log2 = 1144.019888 = 1100(G+) + 44.019888
+			1200 * log( 941/440) / log2 = 1316.029439 = 1300(A+) + 16.029439
+
+			1200 * log(1209/880) / log2 =  549.886579 =  500(D) + 49.886579
+			1200 * log(1336/880) / log2 =  722.813495 =  700(E) + 22.813495
+			1200 * log(1477/880) / log2 =  896.513277 =  800(F) + 96.513277
+			1200 * log(1633/880) / log2 = 1070.339234 = 1000(G) + 70.339234
+		-->
+		<macro-def name="DTMF:400" parameter="%1 %2 %3">
+			<macro-ref ref="Master Fine Tuning" value="%add(8192,2867)"/>
+			<note note="%n(G4)" step="%1" gate="%2" velocity="%3"/>
+		</macro-def>
+		<macro-def name="DTMF:697" parameter="%1 %2 %3">
+			<macro-ref ref="Master Fine Tuning" value="%add(8192,8060)"/>
+			<note note="%n(E5)" step="%1" gate="%2" velocity="%3"/>
+		</macro-def>
+		<macro-def name="DTMF:770" parameter="%1 %2 %3">
+			<macro-ref ref="Master Fine Tuning" value="%add(8192,5638)"/>
+			<note note="%n(F+5)" step="%1" gate="%2" velocity="%3"/>
+		</macro-def>
+		<macro-def name="DTMF:852" parameter="%1 %2 %3">
+			<macro-ref ref="Master Fine Tuning" value="%add(8192,3606)"/>
+			<note note="%n(G+5)" step="%1" gate="%2" velocity="%3"/>
+		</macro-def>
+		<macro-def name="DTMF:941" parameter="%1 %2 %3">
+			<macro-ref ref="Master Fine Tuning" value="%add(8192,1313)"/>
+			<note note="%n(A+5)" step="%1" gate="%2" velocity="%3"/>
+		</macro-def>
+		<macro-def name="DTMF:1209" parameter="%1 %2 %3">
+			<macro-ref ref="Master Fine Tuning" value="%add(8192,4087)"/>
+			<note note="%n(D6)" step="%1" gate="%2" velocity="%3"/>
+		</macro-def>
+		<macro-def name="DTMF:1336" parameter="%1 %2 %3">
+			<macro-ref ref="Master Fine Tuning" value="%add(8192,1869)"/>
+			<note note="%n(E6)" step="%1" gate="%2" velocity="%3"/>
+		</macro-def>
+		<macro-def name="DTMF:1477" parameter="%1 %2 %3">
+			<macro-ref ref="Master Fine Tuning" value="%add(8192,7906)"/>
+			<note note="%n(F6)" step="%1" gate="%2" velocity="%3"/>
+		</macro-def>
+		<macro-def name="DTMF:1633" parameter="%1 %2 %3">
+			<macro-ref ref="Master Fine Tuning" value="%add(8192,5762)"/>
+			<note note="%n(G6)" step="%1" gate="%2" velocity="%3"/>
+		</macro-def>
+
+		<macro-def name="DTMF:1-1" parameter="%1 %2 %3">
+			<macro-ref ref="DTMF:697" value="%1 %2 %3"/>
+		</macro-def>
+		<macro-def name="DTMF:2-1" parameter="%1 %2 %3">
+			<macro-ref ref="DTMF:697" value="%1 %2 %3"/>
+		</macro-def>
+		<macro-def name="DTMF:3-1" parameter="%1 %2 %3">
+			<macro-ref ref="DTMF:697" value="%1 %2 %3"/>
+		</macro-def>
+		<macro-def name="DTMF:4-1" parameter="%1 %2 %3">
+			<macro-ref ref="DTMF:770" value="%1 %2 %3"/>
+		</macro-def>
+		<macro-def name="DTMF:5-1" parameter="%1 %2 %3">
+			<macro-ref ref="DTMF:770" value="%1 %2 %3"/>
+		</macro-def>
+		<macro-def name="DTMF:6-1" parameter="%1 %2 %3">
+			<macro-ref ref="DTMF:770" value="%1 %2 %3"/>
+		</macro-def>
+		<macro-def name="DTMF:7-1" parameter="%1 %2 %3">
+			<macro-ref ref="DTMF:852" value="%1 %2 %3"/>
+		</macro-def>
+		<macro-def name="DTMF:8-1" parameter="%1 %2 %3">
+			<macro-ref ref="DTMF:852" value="%1 %2 %3"/>
+		</macro-def>
+		<macro-def name="DTMF:9-1" parameter="%1 %2 %3">
+			<macro-ref ref="DTMF:852" value="%1 %2 %3"/>
+		</macro-def>
+		<macro-def name="DTMF:*-1" parameter="%1 %2 %3">
+			<macro-ref ref="DTMF:941" value="%1 %2 %3"/>
+		</macro-def>
+		<macro-def name="DTMF:0-1" parameter="%1 %2 %3">
+			<macro-ref ref="DTMF:941" value="%1 %2 %3"/>
+		</macro-def>
+		<macro-def name="DTMF:#-1" parameter="%1 %2 %3">
+			<macro-ref ref="DTMF:941" value="%1 %2 %3"/>
+		</macro-def>
+
+		<macro-def name="DTMF:1-2" parameter="%1 %2 %3">
+			<macro-ref ref="DTMF:1209" value="%1 %2 %3"/>
+		</macro-def>
+		<macro-def name="DTMF:2-2" parameter="%1 %2 %3">
+			<macro-ref ref="DTMF:1336" value="%1 %2 %3"/>
+		</macro-def>
+		<macro-def name="DTMF:3-2" parameter="%1 %2 %3">
+			<macro-ref ref="DTMF:1477" value="%1 %2 %3"/>
+		</macro-def>
+		<macro-def name="DTMF:4-2" parameter="%1 %2 %3">
+			<macro-ref ref="DTMF:1209" value="%1 %2 %3"/>
+		</macro-def>
+		<macro-def name="DTMF:5-2" parameter="%1 %2 %3">
+			<macro-ref ref="DTMF:1336" value="%1 %2 %3"/>
+		</macro-def>
+		<macro-def name="DTMF:6-2" parameter="%1 %2 %3">
+			<macro-ref ref="DTMF:1477" value="%1 %2 %3"/>
+		</macro-def>
+		<macro-def name="DTMF:7-2" parameter="%1 %2 %3">
+			<macro-ref ref="DTMF:1209" value="%1 %2 %3"/>
+		</macro-def>
+		<macro-def name="DTMF:8-2" parameter="%1 %2 %3">
+			<macro-ref ref="DTMF:1336" value="%1 %2 %3"/>
+		</macro-def>
+		<macro-def name="DTMF:9-2" parameter="%1 %2 %3">
+			<macro-ref ref="DTMF:1477" value="%1 %2 %3"/>
+		</macro-def>
+		<macro-def name="DTMF:*-2" parameter="%1 %2 %3">
+			<macro-ref ref="DTMF:1209" value="%1 %2 %3"/>
+		</macro-def>
+		<macro-def name="DTMF:0-2" parameter="%1 %2 %3">
+			<macro-ref ref="DTMF:1336" value="%1 %2 %3"/>
+		</macro-def>
+		<macro-def name="DTMF:#-2" parameter="%1 %2 %3">
+			<macro-ref ref="DTMF:1477" value="%1 %2 %3"/>
+		</macro-def>
+	</definition>
+
+	<midi tpqn="480">
+
+		<track name="Controls">
+
+			<text type="Sequence Name" text="DTMF"/>
+			<text type="Copyright Notice" text="Copyleft by Beu."/>
+
+			<phrase step="1920">
+				<macro-ref ref="GS Reset"/>
+				<rest step="10"/>
+				<macro-ref ref="Set BPM" value="140"/>
+				<rest step="10"/>
+				<macro-ref ref="Use For Rhythm Part" value="10 2"/>
+			</phrase>
+
+			<phrase step="3840">
+				<rest step="3840"/>
+			</phrase>
+
+			<repeat times="4">
+				<phrase step="1920">
+					<rest step="1920"/>
+				</phrase>
+			</repeat>
+
+			<phrase step="1920">
+				<macro-ref ref="Set BPM" value="120"/>
+			</phrase>
+
+		</track>
+
+		<track name="Main 1">
+
+			<phrase step="1920">
+				<rest step="%add(480,%mul(120,1))"/>
+
+				<macro-ref ref="voice:2600 Sine"/>
+				<rest step="5"/>
+				<macro-ref ref="Channel Volume" value="127"/>
+				<rest step="5"/>
+				<macro-ref ref="Panpot" value="0"/>
+				<rest step="5"/>
+				<macro-ref ref="Expression" value="80"/>
+				<rest step="5"/>
+				<control-change controller="Reverb Send Level" value="40"/>
+				<rest step="5"/>
+				<control-change controller="Chorus Send Level" value="0"/>
+			</phrase>
+
+			<phrase step="3840">
+				<macro-ref ref="DTMF:400" value="3840 3840 100"/>
+			</phrase>
+
+			<repeat times="2">
+				<phrase step="1920">
+					<rest step="480"/>
+
+					<macro-ref ref="DTMF:1-1" value="240 80 100"/>
+					<rest step="240"/>
+
+					<macro-ref ref="DTMF:1-1" value="240 80 100"/>
+					<macro-ref ref="DTMF:1-1" value="240 80 100"/>
+
+					<macro-ref ref="DTMF:3-1" value="240 80 100"/>
+					<macro-ref ref="DTMF:3-1" value="240 80 100"/>
+				</phrase>
+				<phrase step="1920">
+					<macro-ref ref="DTMF:4-1" value="240 80 100"/>
+					<macro-ref ref="DTMF:4-1" value="240 80 100"/>
+
+					<macro-ref ref="DTMF:4-1" value="240 80 100"/>
+					<macro-ref ref="DTMF:4-1" value="240 80 100"/>
+
+					<macro-ref ref="DTMF:9-1" value="240 80 100"/>
+					<macro-ref ref="DTMF:9-1" value="240 80 100"/>
+					<macro-ref ref="DTMF:9-1" value="240 80 100"/>
+				</phrase>
+			</repeat>
+
+			<repeat times="2">
+				<phrase step="1920">
+					<macro-ref ref="DTMF:400" value="480 480 100"/>
+					<rest step="480"/>
+					<macro-ref ref="DTMF:400" value="480 480 100"/>
+					<rest step="480"/>
+				</phrase>
+			</repeat>
+
+		</track>
+
+		<track name="Main 2">
+
+			<phrase step="1920">
+				<rest step="%add(480,%mul(120,2))"/>
+
+				<macro-ref ref="voice:2600 Sine"/>
+				<rest step="5"/>
+				<macro-ref ref="Channel Volume" value="127"/>
+				<rest step="5"/>
+				<macro-ref ref="Panpot" value="0"/>
+				<rest step="5"/>
+				<macro-ref ref="Expression" value="80"/>
+				<rest step="5"/>
+				<control-change controller="Reverb Send Level" value="40"/>
+				<rest step="5"/>
+				<control-change controller="Chorus Send Level" value="0"/>
+			</phrase>
+
+			<phrase step="3840">
+				<rest step="3840"/>
+			</phrase>
+
+			<repeat times="2">
+				<phrase step="1920">
+					<rest step="480"/>
+
+					<macro-ref ref="DTMF:1-2" value="240 80 100"/>
+					<rest step="240"/>
+
+					<macro-ref ref="DTMF:1-2" value="240 80 100"/>
+					<macro-ref ref="DTMF:1-2" value="240 80 100"/>
+
+					<macro-ref ref="DTMF:3-2" value="240 80 100"/>
+					<macro-ref ref="DTMF:3-2" value="240 80 100"/>
+				</phrase>
+				<phrase step="1920">
+					<macro-ref ref="DTMF:4-2" value="240 80 100"/>
+					<macro-ref ref="DTMF:4-2" value="240 80 100"/>
+
+					<macro-ref ref="DTMF:4-2" value="240 80 100"/>
+					<macro-ref ref="DTMF:4-2" value="240 80 100"/>
+
+					<macro-ref ref="DTMF:9-2" value="240 80 100"/>
+					<macro-ref ref="DTMF:9-2" value="240 80 100"/>
+					<macro-ref ref="DTMF:9-2" value="240 80 100"/>
+				</phrase>
+			</repeat>
+
+		</track>
+
+		<track name="Main 3">
+
+			<phrase step="1920">
+				<rest step="%add(480,%mul(120,3))"/>
+
+				<macro-ref ref="voice:Random Sine"/>
+				<rest step="5"/>
+				<macro-ref ref="Channel Volume" value="127"/>
+				<rest step="5"/>
+				<macro-ref ref="Panpot" value="0"/>
+				<rest step="5"/>
+				<macro-ref ref="Expression" value="127"/>
+				<rest step="5"/>
+				<control-change controller="Reverb Send Level" value="40"/>
+				<rest step="5"/>
+				<control-change controller="Chorus Send Level" value="0"/>
+			</phrase>
+
+			<phrase step="3840">
+				<rest step="3840"/>
+			</phrase>
+
+			<phrase>
+				<note note="%n(C4)" step="7680" gate="7680" velocity="64"/>
+			</phrase>
+
+		</track>
+
+		<track name="Drumset 1">
+
+			<phrase step="1920">
+				<rest step="%add(480,%mul(120,9))"/>
+
+				<program-change value="JUNGLE"/>
+			</phrase>
+
+			<phrase step="3840">
+				<rest step="3840"/>
+			</phrase>
+
+			<repeat times="2">
+				<phrase step="1920">
+					<parallel>
+						<phrase step="1920">
+							<note note="Jungle Kick 1" step="240" gate="120"
+									velocity="100"/>
+							<note note="Jungle Kick 2" step="240" gate="120"
+									velocity="80"/>
+
+							<note note="Jungle Snare" step="240" gate="120"
+									velocity="100"/>
+							<rest step="120"/>
+							<note note="Jungle Snare" step="120" gate="60"
+									velocity="64"/>
+
+							<rest step="120"/>
+							<note note="Jungle Snare" step="120" gate="60"
+									velocity="64"/>
+							<note note="Jungle Kick 2" step="240" gate="120"
+									velocity="100"/>
+
+							<note note="Jungle Snare" step="240" gate="120"
+									velocity="100"/>
+							<rest step="120"/>
+							<note note="Jungle Snare" step="120" gate="60"
+									velocity="64"/>
+						</phrase>
+						<phrase step="1920">
+							<repeat times="2">
+								<note note="Ride Cymbal 2" step="240"
+										gate="120" velocity="100"/>
+								<note note="Ride Cymbal 1" step="120" gate="60"
+										velocity="80"/>
+								<note/>
+								<note/>
+								<note/>
+								<note note="Ride Cymbal 2" step="240" gate="60"
+										velocity="100"/>
+							</repeat>
+						</phrase>
+						<phrase step="1920">
+							<repeat times="2">
+								<note note="Jungle Shaker" step="120" gate="60"
+										velocity="64"/>
+								<note velocity="50"/>
+								<note/>
+								<note/>
+								<note/>
+								<note/>
+								<note/>
+								<note/>
+							</repeat>
+						</phrase>
+					</parallel>
+				</phrase>
+				<phrase step="1920">
+					<parallel>
+						<phrase step="1920">
+							<note note="Jungle Kick 1" step="240" gate="120"
+									velocity="100"/>
+							<note note="Jungle Kick 2" step="240" gate="120"
+									velocity="80"/>
+
+							<note note="Jungle Snare" step="240" gate="120"
+									velocity="100"/>
+							<rest step="120"/>
+							<note note="Jungle Snare" step="120" gate="60"
+									velocity="64"/>
+
+							<rest step="120"/>
+							<note note="Jungle Snare" step="120" gate="60"
+									velocity="64"/>
+							<note note="Jungle Kick 2" step="240" gate="120"
+									velocity="100"/>
+
+							<note note="Jungle Snare" step="240" gate="120"
+									velocity="100"/>
+							<note note="Jungle Snare" step="240" gate="120"
+									velocity="100"/>
+						</phrase>
+						<phrase step="1920">
+							<repeat times="2">
+								<note note="Ride Cymbal 2" step="240"
+										gate="120" velocity="100"/>
+								<note note="Ride Cymbal 1" step="120" gate="60"
+										velocity="80"/>
+								<note/>
+								<note/>
+								<note/>
+								<note note="Ride Cymbal 2" step="240" gate="60"
+										velocity="100"/>
+							</repeat>
+						</phrase>
+						<phrase step="1920">
+							<repeat times="2">
+								<note note="Jungle Shaker" step="120" gate="60"
+										velocity="64"/>
+								<note velocity="50"/>
+								<note/>
+								<note/>
+								<note/>
+								<note/>
+								<note/>
+								<note/>
+							</repeat>
+						</phrase>
+					</parallel>
+				</phrase>
+			</repeat>
+		</track>
+
+		<track name="Drumset 2">
+			<phrase step="1920">
+				<rest step="%add(480,%mul(120,10))"/>
+			</phrase>
+		</track>
+
+	</midi>
+
+	<output>
+		<device name="Microsoft MIDI Mapper">
+			<channel number="0" track="Controls"/>
+			<channel number="1" track="Main 1"/>
+			<channel number="2" track="Main 2"/>
+			<channel number="3" track="Main 3"/>
+			<channel number="9" track="Drumset 1"/>
+			<channel number="10" track="Drumset 2"/>
+		</device>
+		<device name="smf1:DTMF.mid">
+			<channel number="0" track="Controls"/>
+			<channel number="1" track="Main 1"/>
+			<channel number="2" track="Main 2"/>
+			<channel number="3" track="Main 3"/>
+			<channel number="9" track="Drumset 1"/>
+			<channel number="10" track="Drumset 2"/>
+		</device>
+	</output>
+</beumidi>

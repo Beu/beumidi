@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beumidi
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="file:beumidi.xsd">
+
+	<definition>
+
+		<value-def name="[88] Standard 1 Kick 1"
+				element="note" attribute="note" value="0"/>
+		<value-def name="[88] Standard 1 Kick 2"
+				element="note" attribute="note" value="1"/>
+		<value-def name="[88] Standard 2 Kick 1"
+				element="note" attribute="note" value="2"/>
+		<value-def name="[88] Standard 2 Kick 2"
+				element="note" attribute="note" value="3"/>
+		<value-def name="[55] Kick Drum 1"
+				element="note" attribute="note" value="4"/>
+		<value-def name="[55] Kick Drum 2"
+				element="note" attribute="note" value="5"/>
+		<value-def name="[88] Jazz Kick 1"
+				element="note" attribute="note" value="6"/>
+		<value-def name="[88] Jazz Kick 2"
+				element="note" attribute="note" value="7"/>
+		<value-def name="[88] Room Kick 1"
+				element="note" attribute="note" value="8"/>
+		<value-def name="[88] Room Kick 2"
+				element="note" attribute="note" value="9"/>
+		<value-def name="[88] Power Kick 1"
+				element="note" attribute="note" value="10"/>
+		<value-def name="[88] Power Kick 2"
+				element="note" attribute="note" value="11"/>
+		<value-def name="[88] Electric Kick 2"
+				element="note" attribute="note" value="12"/>
+		<value-def name="[88] Electric Kick 1"
+				element="note" attribute="note" value="13"/>
+		<value-def name="[88] TR-808 Kick"
+				element="note" attribute="note" value="14"/>
+		<value-def name="[88] TR-909 Kick"
+				element="note" attribute="note" value="15"/>
+		<value-def name="[88] Dance Kick"
+				element="note" attribute="note" value="16"/>
+		<value-def name="[Pro] Voice One"
+				element="note" attribute="note" value="17"/>
+		<value-def name="[Pro] Voice Two"
+				element="note" attribute="note" value="18"/>
+		<value-def name="[Pro] Voice Three"
+				element="note" attribute="note" value="19"/>
+		<value-def name="Room Kick 2"
+				element="note" attribute="note" value="20"/>
+		<value-def name="Room Kick 1"
+				element="note" attribute="note" value="21"/>
+
+		<value-def name="MC-500 Beep 1"
+				element="note" attribute="note" value="22"/>
+		<value-def name="MC-500 Beep 2"
+				element="note" attribute="note" value="23"/>
+		<value-def name="Concert SD"
+				element="note" attribute="note" value="24"/>
+		<value-def name="Snare Roll"
+				element="note" attribute="note" value="25"/>
+		<value-def name="Finger Snap"
+				element="note" attribute="note" value="26"/>
+		<value-def name="High Q"
+				element="note" attribute="note" value="27"/>
+		<value-def name="Slap"
+				element="note" attribute="note" value="28"/>
+		<value-def name="Scratch Push"
+				element="note" attribute="note" value="29"/>
+		<value-def name="Scratch Pull"
+				element="note" attribute="note" value="30"/>
+		<value-def name="Sticks"
+				element="note" attribute="note" value="31"/>
+		<value-def name="Square Click"
+				element="note" attribute="note" value="32"/>
+		<value-def name="Metronome Click"
+				element="note" attribute="note" value="33"/>
+		<value-def name="Metronome Bell"
+				element="note" attribute="note" value="34"/>
+		<value-def name="[RND] Standard Kick 2"
+				element="note" attribute="note" value="35"/>
+		<value-def name="[RND] Standard Kick 1"
+				element="note" attribute="note" value="36"/>
+		<value-def name="Side Stick"
+				element="note" attribute="note" value="37"/>
+		<value-def name="[RND] Standard Snare 1"
+				element="note" attribute="note" value="38"/>
+		<value-def name="Hand Clap"
+				element="note" attribute="note" value="39"/>
+		<value-def name="[RND] Standard Snare 2"
+				element="note" attribute="note" value="40"/>
+		<value-def name="[RND] Low Tom 2"
+				element="note" attribute="note" value="41"/>
+		<value-def name="[RND] Closed Hi-Hat"
+				element="note" attribute="note" value="42"/>
+		<value-def name="Low Tom 1"
+				element="note" attribute="note" value="43"/>
+		<value-def name="Pedal Hi-Hat"
+				element="note" attribute="note" value="44"/>
+		<value-def name="Mid Tom 2"
+				element="note" attribute="note" value="45"/>
+		<value-def name="Open Hi-Hat"
+				element="note" attribute="note" value="46"/>
+		<value-def name="Mid Tom 1"
+				element="note" attribute="note" value="47"/>
+		<value-def name="High Tom 2"
+				element="note" attribute="note" value="48"/>
+		<value-def name="[RND] Crash Symbal"
+				element="note" attribute="note" value="49"/>
+		<value-def name="High Tom 1"
+				element="note" attribute="note" value="50"/>
+		<value-def name="[RND] Ride Cymbal 1"
+				element="note" attribute="note" value="51"/>
+		<value-def name="Chinese Cymbal"
+				element="note" attribute="note" value="52"/>
+		<value-def name="[RND] Ride Bell 1"
+				element="note" attribute="note" value="53"/>
+		<value-def name="Tambourine"
+				element="note" attribute="note" value="54"/>
+		<value-def name="Splash Cymbal"
+				element="note" attribute="note" value="55"/>
+		<value-def name="Cowbell"
+				element="note" attribute="note" value="56"/>
+		<value-def name="Crash Cymbal 2"
+				element="note" attribute="note" value="57"/>
+		<value-def name="Vibra-slap"
+				element="note" attribute="note" value="58"/>
+		<value-def name="Ride Cymbal 2"
+				element="note" attribute="note" value="59"/>
+		<value-def name="High Bongo"
+				element="note" attribute="note" value="60"/>
+		<value-def name="Low Bongo"
+				element="note" attribute="note" value="61"/>
+		<value-def name="Mute High Conga"
+				element="note" attribute="note" value="62"/>
+		<value-def name="Open High Conga"
+				element="note" attribute="note" value="63"/>
+		<value-def name="Low Conga"
+				element="note" attribute="note" value="64"/>
+		<value-def name="High Timbale"
+				element="note" attribute="note" value="65"/>
+		<value-def name="Low Timbale"
+				element="note" attribute="note" value="66"/>
+		<value-def name="High Agogo"
+				element="note" attribute="note" value="67"/>
+		<value-def name="Low Agogo"
+				element="note" attribute="note" value="68"/>
+		<value-def name="Cabasa"
+				element="note" attribute="note" value="69"/>
+		<value-def name="Maracas"
+				element="note" attribute="note" value="70"/>
+		<value-def name="Short High Whistle"
+				element="note" attribute="note" value="71"/>
+		<value-def name="Long Low Whistle"
+				element="note" attribute="note" value="72"/>
+		<value-def name="Short Guiro"
+				element="note" attribute="note" value="73"/>
+		<value-def name="Long Guiro"
+				element="note" attribute="note" value="74"/>
+		<value-def name="Claves"
+				element="note" attribute="note" value="75"/>
+		<value-def name="High Wood Block"
+				element="note" attribute="note" value="76"/>
+		<value-def name="Low Wood Block"
+				element="note" attribute="note" value="77"/>
+		<value-def name="Mute Cuica"
+				element="note" attribute="note" value="78"/>
+		<value-def name="Open Cuica"
+				element="note" attribute="note" value="79"/>
+		<value-def name="Mute Triangle"
+				element="note" attribute="note" value="80"/>
+		<value-def name="Open Triangle"
+				element="note" attribute="note" value="81"/>
+		<value-def name="Shaker"
+				element="note" attribute="note" value="82"/>
+		<value-def name="Jingle Bell"
+				element="note" attribute="note" value="83"/>
+		<value-def name="Bar Chimes"
+				element="note" attribute="note" value="84"/>
+		<value-def name="Castanets"
+				element="note" attribute="note" value="85"/>
+		<value-def name="Mute Surdo"
+				element="note" attribute="note" value="86"/>
+		<value-def name="Open Surdo"
+				element="note" attribute="note" value="87"/>
+		<value-def name="Applause 2"
+				element="note" attribute="note" value="88"/>
+
+		<value-def name="[L] Standard Kick 2"
+				element="note" attribute="note" value="95"/>
+		<value-def name="[L] Standard Kick 1"
+				element="note" attribute="note" value="96"/>
+		<value-def name="[L] Standard Crash Cymbal"
+				element="note" attribute="note" value="97"/>
+		<value-def name="[L] Standard Snare 1"
+				element="note" attribute="note" value="98"/>
+		<value-def name="[L] Standard Ride Cymbal"
+				element="note" attribute="note" value="99"/>
+		<value-def name="[L] Standard Snare 2"
+				element="note" attribute="note" value="100"/>
+		<value-def name="[L] Standard Low Tom"
+				element="note" attribute="note" value="101"/>
+		<value-def name="[L] Standard Closed Hi-Hat"
+				element="note" attribute="note" value="102"/>
+		<value-def name="[L] Standard Mid Tom"
+				element="note" attribute="note" value="103"/>
+		<value-def name="[L] Standard Ride Bell"
+				element="note" attribute="note" value="104"/>
+		<value-def name="[L] Standard High Tom"
+				element="note" attribute="note" value="105"/>
+		<value-def name="[L] Standard Open Hi-Hat"
+				element="note" attribute="note" value="106"/>
+
+		<value-def name="[R] Standard Kick 2"
+				element="note" attribute="note" value="107"/>
+		<value-def name="[R] Standard Kick 1"
+				element="note" attribute="note" value="108"/>
+		<value-def name="[R] Standard Crash Cymbal"
+				element="note" attribute="note" value="109"/>
+		<value-def name="[R] Standard Snare 1"
+				element="note" attribute="note" value="110"/>
+		<value-def name="[R] Standard Ride Cymbal"
+				element="note" attribute="note" value="111"/>
+		<value-def name="[R] Standard Snare 2"
+				element="note" attribute="note" value="112"/>
+		<value-def name="[R] Standard Low Tom"
+				element="note" attribute="note" value="113"/>
+		<value-def name="[R] Standard Closed Hi-Hat"
+				element="note" attribute="note" value="114"/>
+		<value-def name="[R] Standard Mid Tom"
+				element="note" attribute="note" value="115"/>
+		<value-def name="[R] Standard Ride Bell"
+				element="note" attribute="note" value="116"/>
+		<value-def name="[R] Standard High Tom"
+				element="note" attribute="note" value="117"/>
+		<value-def name="[R] Standard Open Hi-Hat"
+				element="note" attribute="note" value="118"/>
+
+	</definition>
+
+</beumidi>

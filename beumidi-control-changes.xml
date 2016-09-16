@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beumidi
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="file:beumidi.xsd">
+
+	<definition>
+
+		<!-- ############################## -->
+		<!--   Control Change Controllers   -->
+		<!-- ############################## -->
+
+		<value-def element="control-change" attribute="controller"
+				value="0x00" name="Bank Select (MSB)"/>
+		<value-def element="control-change" attribute="controller"
+				value="0x20" name="Bank Select (LSB)"/>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x01" name="Modulation Wheel (MSB)"/>
+		<value-def element="control-change" attribute="controller"
+				value="0x21" name="Modulation Wheel (LSB)"/>
+		<macro-def name="Modulation Wheel" parameter="%1">
+			<control-change controller="Modulation Wheel (MSB)" value="%1"/>
+		</macro-def>
+				<!-- %1: modulation depth (0-127) -->
+
+		<value-def element="control-change" attribute="controller"
+				value="0x02" name="Breath Controller (MSB)"/>
+		<value-def element="control-change" attribute="controller"
+				value="0x22" name="Breath Controller (LSB)"/>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x04" name="Foot Controller (MSB)"/>
+		<value-def element="control-change" attribute="controller"
+				value="0x24" name="Foot Controller (LSB)"/>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x05" name="Portamento Time (MSB)"/>
+		<value-def element="control-change" attribute="controller"
+				value="0x25" name="Portamento Time (LSB)"/>
+		<macro-def name="Portamento Time" parameter="%1">
+			<control-change controller="Portamento Time (MSB)" value="%1"/>
+		</macro-def>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x06" name="Data Entry (MSB)"/>
+		<value-def element="control-change" attribute="controller"
+				value="0x26" name="Data Entry (LSB)"/>
+		<macro-def name="Data Entry" parameter="%1">
+			<control-change controller="Data Entry (MSB)"
+					value="%bits(%1,15,8)"/>
+			<control-change controller="Data Entry (LSB)"
+					value="%bits(%1,7,0)"/>
+		</macro-def>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x07" name="Channel Volume (MSB)"/>
+		<value-def element="control-change" attribute="controller"
+				value="0x27" name="Channel Volume (LSB)"/>
+		<macro-def name="Channel Volume" parameter="%1">
+			<control-change controller="Channel Volume (MSB)" value="%1"/>
+		</macro-def>
+				<!-- %1: volume (0-127) -->
+
+		<value-def element="control-change" attribute="controller"
+				value="0x08" name="Balance (MSB)"/>
+		<value-def element="control-change" attribute="controller"
+				value="0x28" name="Balance (LSB)"/>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x0a" name="Panpot (MSB)"/>
+		<value-def element="control-change" attribute="controller"
+				value="0x2a" name="Panpot (LSB)"/>
+		<macro-def name="Panpot" parameter="%1">
+			<control-change controller="Panpot (MSB)" value="%add(%1,64)"/>
+		</macro-def>
+				<!-- %1: panpot (-64:left, 0:center, 63:right) -->
+
+		<value-def element="control-change" attribute="controller"
+				value="0x0b" name="Expression (MSB)"/>
+		<value-def element="control-change" attribute="controller"
+				value="0x2b" name="Expression (LSB)"/>
+		<macro-def name="Expression" parameter="%1">
+			<control-change controller="Expression (MSB)" value="%1"/>
+		</macro-def>
+				<!-- %1: expression (0-127) -->
+
+		<value-def element="control-change" attribute="controller"
+				value="0x0c" name="Effect Control 1 (MSB)"/>
+		<value-def element="control-change" attribute="controller"
+				value="0x2c" name="Effect Control 1 (LSB)"/>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x0d" name="Effect Control 2 (MSB)"/>
+		<value-def element="control-change" attribute="controller"
+				value="0x2d" name="Effect Control 2 (LSB)"/>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x40" name="Hold 1"/>
+		<value-def element="control-change" attribute="controller"
+				value="0x40" name="Damper Pedal"/>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x41" name="Portamento Switch"/>
+		<macro-def name="Portamento On">
+			<control-change controller="Portamento Switch" value="127"/>
+		</macro-def>
+		<macro-def name="Portamento Off">
+			<control-change controller="Portamento Switch" value="0"/>
+		</macro-def>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x42" name="Sostenuto"/>
+		<macro-def name="Sostenuto On">
+			<control-change controller="Sostenuto" value="127"/>
+		</macro-def>
+		<macro-def name="Sostenuto Off">
+			<control-change controller="Sostenuto" value="0"/>
+		</macro-def>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x43" name="Soft Pedal"/>
+		<macro-def name="Soft On">
+			<control-change controller="Soft Pedal" value="127"/>
+		</macro-def>
+		<macro-def name="Soft Off">
+			<control-change controller="Soft Pedal" value="0"/>
+		</macro-def>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x44" name="Legato Foot Switch"/>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x45" name="Hold 2"/>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x46" name="Sound Variation"/>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x47" name="Timbre"/>
+		<value-def element="control-change" attribute="controller"
+				value="0x47" name="Harmonic Intensity"/>
+		<macro-def name="Resonance" parameter="%1">
+			<control-change controller="Timbre" value="%add(%1,64)"/>
+		</macro-def>
+				<!-- %1: absolute value (-64, 0, 63) -->
+
+		<value-def element="control-change" attribute="controller"
+				value="0x48" name="Release Time"/>
+		<macro-def name="Release Time" parameter="%1">
+			<control-change controller="Release Time" value="%add(%1,64)"/>
+		</macro-def>
+				<!-- %1: -64, 0, 63 -->
+
+		<value-def element="control-change" attribute="controller"
+				value="0x49" name="Attack Time"/>
+		<macro-def name="Attack Time" parameter="%1">
+			<control-change controller="Attack Time" value="%add(%1,64)"/>
+		</macro-def>
+				<!-- %1: -64, 0, 63 -->
+
+		<value-def element="control-change" attribute="controller"
+				value="0x4a" name="Brightness"/>
+		<macro-def name="Cut-Off" parameter="%1">
+			<control-change controller="Brightness" value="%add(%1,64)"/>
+		</macro-def>
+				<!-- %1: -64, 0, 63 -->
+
+		<value-def element="control-change" attribute="controller"
+				value="0x4b" name="Decay Time"/>
+		<macro-def name="Decay Time" parameter="%1">
+			<control-change controller="Decay Time" value="%add(%1,64)"/>
+		</macro-def>
+				<!-- %1: -64, 0, 63 -->
+
+		<value-def element="control-change" attribute="controller"
+				value="0x4c" name="Vibrato Rate"/>
+		<macro-def name="Vibrato Rate" parameter="%1">
+			<control-change controller="Vibrato Rate" value="%add(%1,64)"/>
+		</macro-def>
+				<!-- %1: -64, 0, 63 -->
+
+		<value-def element="control-change" attribute="controller"
+				value="0x4d" name="Vibrato Depth"/>
+		<macro-def name="Vibrato Depth" parameter="%1">
+			<control-change controller="Vibrato Depth" value="%add(%1,64)"/>
+		</macro-def>
+				<!-- %1: -64, 0, 63 -->
+
+		<value-def element="control-change" attribute="controller"
+				value="0x4e" name="Vibrato Delay"/>
+		<macro-def name="Vibrato Delay" parameter="%1">
+			<control-change controller="Vibrato Delay" value="%add(%1,64)"/>
+		</macro-def>
+				<!-- %1: -64, 0, 63 -->
+
+		<value-def element="control-change" attribute="controller"
+				value="0x54" name="Portamento Control"/>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x5b" name="Effect 1 Depth"/>
+		<value-def element="control-change" attribute="controller"
+				value="0x5b" name="Reverb Send Level"/>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x5c" name="Effect 2 Depth"/>
+		<value-def element="control-change" attribute="controller"
+				value="0x5c" name="Tremolo Depth"/>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x5d" name="Effect 3 Depth"/>
+		<value-def element="control-change" attribute="controller"
+				value="0x5d" name="Chorus Send Level"/>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x5e" name="Effect 4 Depth"/>
+		<value-def element="control-change" attribute="controller"
+				value="0x5e" name="Celeste Depth"/>
+		<value-def element="control-change" attribute="controller"
+				value="0x5e" name="Detune Depth"/>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x5f" name="Effect 5 Depth"/>
+		<value-def element="control-change" attribute="controller"
+				value="0x5f" name="Phaser Depth"/>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x60" name="Data Increment"/>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x61" name="Data Decrement"/>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x62" name="NRPN (LSB)"/>
+		<value-def element="control-change" attribute="controller"
+				value="0x63" name="NRPN (MSB)"/>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x64" name="RPN (LSB)"/>
+		<value-def element="control-change" attribute="controller"
+				value="0x65" name="RPN (MSB)"/>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x78" name="All Sound Off" scope="local"/>
+		<macro-def name="All Sound Off">
+			<control-change controller="All Sound Off" value="0x00"/>
+		</macro-def>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x79" name="Reset All Controllers" scope="local"/>
+		<macro-def name="Reset All Controllers">
+			<control-change controller="Reset All Controllers" value="0x00"/>
+		</macro-def>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x7a" name="Local Control"/>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x7b" name="All Notes Off" scope="local"/>
+		<macro-def name="All Notes Off">
+			<control-change controller="All Notes Off" value="0x00"/>
+		</macro-def>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x7c" name="Omni Off" scope="local"/>
+		<macro-def name="Omni Off">
+			<control-change controller="Omni Off" value="0x00"/>
+		</macro-def>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x7d" name="Omni On" scope="local"/>
+		<macro-def name="Omni On">
+			<control-change controller="Omni On" value="0x00"/>
+		</macro-def>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x7e" name="Mono Mode On" scope="local"/>
+		<macro-def name="Mono Mode On" parameter="%1">
+			<control-change controller="Poly Mode On" value="%1"/>
+		</macro-def>
+		<value-def element="control-change" attribute="controller"
+				value="0x7e" name="Poly Mode Off" scope="local"/>
+		<macro-def name="Poly Mode Off">
+			<control-change controller="Poly Mode Off" value="0x01"/>
+		</macro-def>
+
+		<value-def element="control-change" attribute="controller"
+				value="0x7f" name="Mono Mode Off"/>
+		<macro-def name="Mono Mode Off">
+			<control-change controller="Mono Mode Off" value="0x00"/>
+		</macro-def>
+		<value-def element="control-change" attribute="controller"
+				value="0x7f" name="Poly Mode On" scope="local"/>
+		<macro-def name="Poly Mode On">
+			<control-change controller="Poly Mode On" value="0x00"/>
+		</macro-def>
+
+		<!-- ########## -->
+		<!-- ## NRPN ## -->
+		<!-- ########## -->
+
+		<macro-def name="Drum Instrument Pitch Coarse" parameter="%1 %2">
+			<control-change controller="NRPN (MSB)" value="0x18"/>
+			<control-change controller="NRPN (LSB)" value="%1"/>
+			<control-change controller="Data Entry (MSB)" value="%add(%2,64)"/>
+		</macro-def>
+				<!-- %1: note number -->
+				<!-- %2: -64, 0, 63 -->
+
+		<macro-def name="Drum Instrument TVA Level" parameter="%1 %2">
+			<control-change controller="NRPN (MSB)" value="0x1a"/>
+			<control-change controller="NRPN (LSB)" value="%1"/>
+			<control-change controller="Data Entry (MSB)" value="%2"/>
+		</macro-def>
+
+		<macro-def name="Drum Instrument Panpot" parameter="%1 %2">
+			<control-change controller="NRPN (MSB)" value="0x1c"/>
+			<control-change controller="NRPN (LSB)" value="%1"/>
+			<control-change controller="Data Entry (MSB)" value="%add(%2,64)"/>
+		</macro-def>
+				<!-- %1: note number -->
+				<!-- %2: -64:random, -63:left, 0:center, 63:right -->
+
+		<macro-def name="Drum Instrument Reverb Send Level" parameter="%1 %2">
+			<control-change controller="NRPN (MSB)" value="0x1d"/>
+			<control-change controller="NRPN (LSB)" value="%1"/>
+			<control-change controller="Data Entry (MSB)" value="%2"/>
+		</macro-def>
+
+		<macro-def name="Drum Instrument Chorus Send Level" parameter="%1 %2">
+			<control-change controller="NRPN (MSB)" value="0x1e"/>
+			<control-change controller="NRPN (LSB)" value="%1"/>
+			<control-change controller="Data Entry (MSB)" value="%2"/>
+		</macro-def>
+
+		<macro-def name="Drum Instrument Delay Send Level" parameter="%1 %2">
+			<control-change controller="NRPN (MSB)" value="0x1f"/>
+			<control-change controller="NRPN (LSB)" value="%1"/>
+			<control-change controller="Data Entry (MSB)" value="%2"/>
+		</macro-def>
+
+		<!-- ######### -->
+		<!-- ## RPN ## -->
+		<!-- ######### -->
+
+		<macro-def name="Pitch Bend Sensitivity" parameter="%1">
+			<control-change controller="RPN (MSB)" value="0x00"/>
+			<control-change controller="RPN (LSB)" value="0x00"/>
+			<control-change controller="Data Entry (MSB)" value="%1"/>
+			<control-change controller="Data Entry (LSB)" value="0x00"/>
+		</macro-def>
+				<!-- %1: 0-24 (half keys) -->
+
+		<macro-def name="Master Fine Tuning" parameter="%1">
+			<control-change controller="RPN (MSB)" value="0x00"/>
+			<control-change controller="RPN (LSB)" value="0x01"/>
+			<control-change controller="Data Entry (MSB)"
+					value="%bits(%1,13,7)"/>
+			<control-change controller="Data Entry (LSB)"
+					value="%bits(%1,6,0)"/>
+		</macro-def>
+				<!-- %1: -100-0-99.99 cents -->
+
+		<macro-def name="Master Coarse Tuning" parameter="%1">
+			<control-change controller="RPN (MSB)" value="0x00"/>
+			<control-change controller="RPN (LSB)" value="0x02"/>
+			<control-change controller="Data Entry (MSB)" value="%add(%1,64)"/>
+			<control-change controller="Data Entry (LSB)" value="0x00"/>
+		</macro-def>
+				<!-- %1: -24, 0, 24 half key -->
+
+		<macro-def name="Modulation Depth Range" parameter="%1 %2">
+			<control-change controller="RPN (MSB)" value="0x00"/>
+			<control-change controller="RPN (LSB)" value="0x05"/>
+			<control-change controller="Data Entry (MSB)" value="%1"/>
+			<control-change controller="Data Entry (LSB)"
+					value="%div(%mul(%2,128),100)"/>
+		</macro-def>
+				<!-- %1: 0-4 half key -->
+				<!-- %2: 0-100 cent n/100*128 -->
+
+		<macro-def name="RPN Null">
+			<control-change controller="RPN (MSB)" value="0x7f"/>
+			<control-change controller="RPN (LSB)" value="0x7f"/>
+		</macro-def>
+
+	</definition>
+
+</beumidi>

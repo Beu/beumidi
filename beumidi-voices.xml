@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beumidi
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="file:beumidi.xsd">
+
+	<definition>
+
+		<value-def name="Piano 1"
+				element="program-change" attribute="value" value="0"/>
+		<value-def name="Piano 2"
+				element="program-change" attribute="value" value="1"/>
+		<value-def name="Piano 3"
+				element="program-change" attribute="value" value="2"/>
+		<value-def name="Honky-tonk"
+				element="program-change" attribute="value" value="3"/>
+		<value-def name="E.Piano 1"
+				element="program-change" attribute="value" value="4"/>
+		<value-def name="E.Piano 2"
+				element="program-change" attribute="value" value="5"/>
+		<value-def name="Harpsichord"
+				element="program-change" attribute="value" value="6"/>
+		<value-def name="Clavichord"
+				element="program-change" attribute="value" value="7"/>
+
+		<value-def name="Celesta"
+				element="program-change" attribute="value" value="8"/>
+		<value-def name="Glockenspiel"
+				element="program-change" attribute="value" value="9"/>
+		<value-def name="Music Box"
+				element="program-change" attribute="value" value="10"/>
+		<value-def name="Vibraphone"
+				element="program-change" attribute="value" value="11"/>
+		<value-def name="Marimba"
+				element="program-change" attribute="value" value="12"/>
+		<value-def name="Xylophone"
+				element="program-change" attribute="value" value="13"/>
+		<value-def name="Tubular-bell"
+				element="program-change" attribute="value" value="14"/>
+		<value-def name="Santur"
+				element="program-change" attribute="value" value="15"/>
+
+		<value-def name="Organ 1"
+				element="program-change" attribute="value" value="16"/>
+		<value-def name="Organ 2"
+				element="program-change" attribute="value" value="17"/>
+		<value-def name="Organ 3"
+				element="program-change" attribute="value" value="18"/>
+		<value-def name="Church Organ 1"
+				element="program-change" attribute="value" value="19"/>
+		<value-def name="Reed Organ"
+				element="program-change" attribute="value" value="20"/>
+		<value-def name="Accordion French"
+				element="program-change" attribute="value" value="21"/>
+		<value-def name="Harmonica"
+				element="program-change" attribute="value" value="22"/>
+		<value-def name="Bandoneon"
+				element="program-change" attribute="value" value="23"/>
+
+		<value-def name="Nylon-string Guitar"
+				element="program-change" attribute="value" value="24"/>
+		<value-def name="Steel-string Guitar"
+				element="program-change" attribute="value" value="25"/>
+		<value-def name="Jazz Guitar"
+				element="program-change" attribute="value" value="26"/>
+		<value-def name="Clean Guitar"
+				element="program-change" attribute="value" value="27"/>
+		<value-def name="Muted Guitar"
+				element="program-change" attribute="value" value="28"/>
+		<value-def name="Overdrive Guitar"
+				element="program-change" attribute="value" value="29"/>
+		<value-def name="Distortion Guitar"
+				element="program-change" attribute="value" value="30"/>
+		<value-def name="Guitar Harmonics"
+				element="program-change" attribute="value" value="31"/>
+
+		<value-def name="Acoustic Bass"
+				element="program-change" attribute="value" value="32"/>
+		<value-def name="Fingered Bass"
+				element="program-change" attribute="value" value="33"/>
+		<value-def name="Picked Bass"
+				element="program-change" attribute="value" value="34"/>
+		<value-def name="Fretless Bass"
+				element="program-change" attribute="value" value="35"/>
+		<value-def name="Slap Bass 1"
+				element="program-change" attribute="value" value="36"/>
+		<value-def name="Slap Bass 2"
+				element="program-change" attribute="value" value="37"/>
+		<value-def name="Synth Bass 1"
+				element="program-change" attribute="value" value="38"/>
+		<value-def name="Synth Bass 2"
+				element="program-change" attribute="value" value="39"/>
+
+		<value-def name="Violin"
+				element="program-change" attribute="value" value="40"/>
+		<value-def name="Viola"
+				element="program-change" attribute="value" value="41"/>
+		<value-def name="Cello"
+				element="program-change" attribute="value" value="42"/>
+		<value-def name="Contrabass"
+				element="program-change" attribute="value" value="43"/>
+		<value-def name="Tremolo String"
+				element="program-change" attribute="value" value="44"/>
+		<value-def name="Pizzicato String"
+				element="program-change" attribute="value" value="45"/>
+		<value-def name="Harp"
+				element="program-change" attribute="value" value="46"/>
+		<value-def name="Timpani"
+				element="program-change" attribute="value" value="47"/>
+
+		<value-def name="Strings"
+				element="program-change" attribute="value" value="48"/>
+		<value-def name="Slow Strings"
+				element="program-change" attribute="value" value="49"/>
+		<value-def name="Synth Strings 1"
+				element="program-change" attribute="value" value="50"/>
+		<value-def name="Synth Strings 2"
+				element="program-change" attribute="value" value="51"/>
+		<value-def name="Choir Aahs"
+				element="program-change" attribute="value" value="52"/>
+		<value-def name="Voice Ohhs"
+				element="program-change" attribute="value" value="53"/>
+		<value-def name="Synth Vox"
+				element="program-change" attribute="value" value="54"/>
+		<value-def name="Orchestra Hit"
+				element="program-change" attribute="value" value="55"/>
+
+		<value-def name="Trumpet"
+				element="program-change" attribute="value" value="56"/>
+		<value-def name="Trombone"
+				element="program-change" attribute="value" value="57"/>
+		<value-def name="Tuba"
+				element="program-change" attribute="value" value="58"/>
+		<value-def name="Muted Trumpet"
+				element="program-change" attribute="value" value="59"/>
+		<value-def name="French Horns"
+				element="program-change" attribute="value" value="60"/>
+		<value-def name="Brass 1"
+				element="program-change" attribute="value" value="61"/>
+		<value-def name="Synth Brass 1"
+				element="program-change" attribute="value" value="62"/>
+		<value-def name="Synth Brass 2"
+				element="program-change" attribute="value" value="63"/>
+
+		<value-def name="Soprano Sax"
+				element="program-change" attribute="value" value="64"/>
+		<value-def name="Alto Sax"
+				element="program-change" attribute="value" value="65"/>
+		<value-def name="Tenor Sax"
+				element="program-change" attribute="value" value="66"/>
+		<value-def name="Baritone Sax"
+				element="program-change" attribute="value" value="67"/>
+		<value-def name="Oboe"
+				element="program-change" attribute="value" value="68"/>
+		<value-def name="English Horn"
+				element="program-change" attribute="value" value="69"/>
+		<value-def name="Bassoon"
+				element="program-change" attribute="value" value="70"/>
+		<value-def name="Clarinet"
+				element="program-change" attribute="value" value="71"/>
+
+		<value-def name="Piccolo"
+				element="program-change" attribute="value" value="72"/>
+		<value-def name="Flute"
+				element="program-change" attribute="value" value="73"/>
+		<value-def name="Recorder"
+				element="program-change" attribute="value" value="74"/>
+		<value-def name="Pan Flute"
+				element="program-change" attribute="value" value="75"/>
+		<value-def name="Bottle Blow"
+				element="program-change" attribute="value" value="76"/>
+		<value-def name="尺八"
+				element="program-change" attribute="value" value="77"/>
+		<value-def name="Whistle"
+				element="program-change" attribute="value" value="78"/>
+		<value-def name="Ocarina"
+				element="program-change" attribute="value" value="79"/>
+
+		<value-def name="Square Wave"
+				element="program-change" attribute="value" value="80"/>
+		<value-def name="Saw Wave"
+				element="program-change" attribute="value" value="81"/>
+		<value-def name="Synth Calliope"
+				element="program-change" attribute="value" value="82"/>
+		<value-def name="Chiffer Lead"
+				element="program-change" attribute="value" value="83"/>
+		<value-def name="Charang"
+				element="program-change" attribute="value" value="84"/>
+		<value-def name="Solo Vox"
+				element="program-change" attribute="value" value="85"/>
+		<value-def name="5th Saw Wave"
+				element="program-change" attribute="value" value="86"/>
+		<value-def name="Bass &amp; Lead"
+				element="program-change" attribute="value" value="87"/>
+
+		<value-def name="Fantasia"
+				element="program-change" attribute="value" value="88"/>
+		<value-def name="Warm Pad"
+				element="program-change" attribute="value" value="89"/>
+		<value-def name="Polysynth"
+				element="program-change" attribute="value" value="90"/>
+		<value-def name="Space Voice"
+				element="program-change" attribute="value" value="91"/>
+		<value-def name="Bowed Glass"
+				element="program-change" attribute="value" value="92"/>
+		<value-def name="Metal Pad"
+				element="program-change" attribute="value" value="93"/>
+		<value-def name="Halo Pad"
+				element="program-change" attribute="value" value="94"/>
+		<value-def name="Sweep Pad"
+				element="program-change" attribute="value" value="95"/>
+
+		<value-def name="Ice Rain"
+				element="program-change" attribute="value" value="96"/>
+		<value-def name="Soundtrack"
+				element="program-change" attribute="value" value="97"/>
+		<value-def name="Crystal"
+				element="program-change" attribute="value" value="98"/>
+		<value-def name="Atmosphere"
+				element="program-change" attribute="value" value="99"/>
+		<value-def name="Brightness"
+				element="program-change" attribute="value" value="100"/>
+		<value-def name="Goblin"
+				element="program-change" attribute="value" value="101"/>
+		<value-def name="Echo Drops"
+				element="program-change" attribute="value" value="102"/>
+		<value-def name="Star Theme"
+				element="program-change" attribute="value" value="103"/>
+
+		<value-def name="Sitar"
+				element="program-change" attribute="value" value="104"/>
+		<value-def name="Banjo"
+				element="program-change" attribute="value" value="105"/>
+		<value-def name="三味線"
+				element="program-change" attribute="value" value="106"/>
+		<value-def name="琴"
+				element="program-change" attribute="value" value="107"/>
+		<value-def name="Kalimba"
+				element="program-change" attribute="value" value="108"/>
+		<value-def name="Bagpipe"
+				element="program-change" attribute="value" value="109"/>
+		<value-def name="Fiddle"
+				element="program-change" attribute="value" value="110"/>
+		<value-def name="Shanai"
+				element="program-change" attribute="value" value="111"/>
+
+		<value-def name="Tinkle Bell"
+				element="program-change" attribute="value" value="112"/>
+		<value-def name="Agogo"
+				element="program-change" attribute="value" value="113"/>
+		<value-def name="Steel Drums"
+				element="program-change" attribute="value" value="114"/>
+		<value-def name="Woodblock"
+				element="program-change" attribute="value" value="115"/>
+		<value-def name="太鼓"
+				element="program-change" attribute="value" value="116"/>
+		<value-def name="Melo.Tom 1"
+				element="program-change" attribute="value" value="117"/>
+		<value-def name="Synth Drum"
+				element="program-change" attribute="value" value="118"/>
+		<value-def name="Reverse Cymbal"
+				element="program-change" attribute="value" value="119"/>
+
+		<value-def name="Guitar Fret Noise"
+				element="program-change" attribute="value" value="120"/>
+		<value-def name="Breath Noise"
+				element="program-change" attribute="value" value="121"/>
+		<value-def name="Seashore"
+				element="program-change" attribute="value" value="122"/>
+		<value-def name="Bird"
+				element="program-change" attribute="value" value="123"/>
+		<value-def name="Telephone 1"
+				element="program-change" attribute="value" value="124"/>
+		<value-def name="Helicopter"
+				element="program-change" attribute="value" value="125"/>
+		<value-def name="Applause"
+				element="program-change" attribute="value" value="126"/>
+		<value-def name="Gun Shot"
+				element="program-change" attribute="value" value="127"/>
+
+	</definition>
+</beumidi>

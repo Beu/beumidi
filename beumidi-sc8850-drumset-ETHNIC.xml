@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beumidi
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="file:beumidi.xsd">
+
+	<definition>
+
+		<value-def name="Finger Snap"
+				element="note" attribute="note" value="25"/>
+		<value-def name="Tambourine"
+				element="note" attribute="note" value="26"/>
+		<value-def name="Castanets"
+				element="note" attribute="note" value="27"/>
+		<value-def name="Crash Symbal 1"
+				element="note" attribute="note" value="28"/>
+		<value-def name="Snare Roll"
+				element="note" attribute="note" value="29"/>
+		<value-def name="Concert SD"
+				element="note" attribute="note" value="30"/>
+		<value-def name="Concert Cymbal"
+				element="note" attribute="note" value="31"/>
+		<value-def name="Concert BD 1"
+				element="note" attribute="note" value="32"/>
+		<value-def name="Jungle Bell"
+				element="note" attribute="note" value="33"/>
+		<value-def name="Bell Tree"
+				element="note" attribute="note" value="34"/>
+		<value-def name="Bar Chimes"
+				element="note" attribute="note" value="35"/>
+		<value-def name="和太鼓"
+				element="note" attribute="note" value="36"/>
+		<value-def name="和太鼓 Rim"
+				element="note" attribute="note" value="37"/>
+		<value-def name="締太鼓"
+				element="note" attribute="note" value="38"/>
+		<value-def name="当り鉦"
+				element="note" attribute="note" value="39"/>
+		<value-def name="拍子木"
+				element="note" attribute="note" value="40"/>
+		<value-def name="大革"
+				element="note" attribute="note" value="41"/>
+		<value-def name="High 小鼓"
+				element="note" attribute="note" value="42"/>
+		<value-def name="Low 小鼓"
+				element="note" attribute="note" value="43"/>
+		<value-def name="Ban Gu"
+				element="note" attribute="note" value="44"/>
+		<value-def name="Big Gong"
+				element="note" attribute="note" value="45"/>
+		<value-def name="Small Gong"
+				element="note" attribute="note" value="46"/>
+		<value-def name="Bend Gong"
+				element="note" attribute="note" value="47"/>
+		<value-def name="Thai Gong"
+				element="note" attribute="note" value="48"/>
+		<value-def name="Rama Cymbal"
+				element="note" attribute="note" value="49"/>
+		<value-def name="Gamelan Gong"
+				element="note" attribute="note" value="50"/>
+		<value-def name="Udo Short"
+				element="note" attribute="note" value="51"/>
+		<value-def name="Udo Long"
+				element="note" attribute="note" value="52"/>
+		<value-def name="Udo Slap"
+				element="note" attribute="note" value="53"/>
+		<value-def name="Bendir"
+				element="note" attribute="note" value="54"/>
+		<value-def name="Req Dum"
+				element="note" attribute="note" value="55"/>
+		<value-def name="Req Tik"
+				element="note" attribute="note" value="56"/>
+		<value-def name="Tabla Te"
+				element="note" attribute="note" value="57"/>
+		<value-def name="Tabla Na"
+				element="note" attribute="note" value="58"/>
+		<value-def name="Tabla Tun"
+				element="note" attribute="note" value="59"/>
+		<value-def name="Tabla Ge"
+				element="note" attribute="note" value="60"/>
+		<value-def name="Tabla Ge Hi"
+				element="note" attribute="note" value="61"/>
+		<value-def name="Talking Drum"
+				element="note" attribute="note" value="62"/>
+		<value-def name="Bend Talking Drum"
+				element="note" attribute="note" value="63"/>
+		<value-def name="Caxixi"
+				element="note" attribute="note" value="64"/>
+		<value-def name="Djembe"
+				element="note" attribute="note" value="65"/>
+		<value-def name="Djembe Rim"
+				element="note" attribute="note" value="66"/>
+		<value-def name="Timbales Low"
+				element="note" attribute="note" value="67"/>
+		<value-def name="Timbales Paila"
+				element="note" attribute="note" value="68"/>
+		<value-def name="Timables High"
+				element="note" attribute="note" value="69"/>
+		<value-def name="Cowbell"
+				element="note" attribute="note" value="70"/>
+		<value-def name="High Bongo"
+				element="note" attribute="note" value="71"/>
+		<value-def name="Low Bongo"
+				element="note" attribute="note" value="72"/>
+		<value-def name="Mute High Conga"
+				element="note" attribute="note" value="73"/>
+		<value-def name="Open High Conga"
+				element="note" attribute="note" value="74"/>
+		<value-def name="Mute Low Conga"
+				element="note" attribute="note" value="75"/>
+		<value-def name="Conga Slap"
+				element="note" attribute="note" value="76"/>
+		<value-def name="Open Low Conga"
+				element="note" attribute="note" value="77"/>
+		<value-def name="Conga Slide"
+				element="note" attribute="note" value="78"/>
+		<value-def name="Mute Pandiero"
+				element="note" attribute="note" value="79"/>
+		<value-def name="Open Pandiero"
+				element="note" attribute="note" value="80"/>
+		<value-def name="Open Surdo"
+				element="note" attribute="note" value="81"/>
+		<value-def name="Mute Surdo"
+				element="note" attribute="note" value="82"/>
+		<value-def name="Tamborim"
+				element="note" attribute="note" value="83"/>
+		<value-def name="High Agogo"
+				element="note" attribute="note" value="84"/>
+		<value-def name="Low Agogo"
+				element="note" attribute="note" value="85"/>
+		<value-def name="Shaker"
+				element="note" attribute="note" value="86"/>
+		<value-def name="High Whistle"
+				element="note" attribute="note" value="87"/>
+		<value-def name="Low Whistle"
+				element="note" attribute="note" value="88"/>
+		<value-def name="Mute Cuica"
+				element="note" attribute="note" value="89"/>
+		<value-def name="Open Cuica"
+				element="note" attribute="note" value="90"/>
+		<value-def name="Mute Triangle"
+				element="note" attribute="note" value="91"/>
+		<value-def name="Open Triangle"
+				element="note" attribute="note" value="92"/>
+		<value-def name="Short Guiro"
+				element="note" attribute="note" value="93"/>
+		<value-def name="Long Guiro"
+				element="note" attribute="note" value="94"/>
+		<value-def name="Cabasa Up"
+				element="note" attribute="note" value="95"/>
+		<value-def name="Cabasa Down"
+				element="note" attribute="note" value="96"/>
+		<value-def name="Claves"
+				element="note" attribute="note" value="97"/>
+		<value-def name="High Wood Block"
+				element="note" attribute="note" value="98"/>
+		<value-def name="Low Wood Block"
+				element="note" attribute="note" value="99"/>
+
+	</definition>
+
+</beumidi>

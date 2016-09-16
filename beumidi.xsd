@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<!-- ###################################################### -->
+	<!-- ## /beumidi                                         ## -->
+	<!-- ###################################################### -->
+
+	<xsd:element name="beumidi">
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element ref="import"/>
+				<xsd:element ref="ignore"/>
+				<xsd:element ref="definition"/>
+				<xsd:element ref="dls"/>
+				<xsd:element ref="midi"/>
+				<xsd:element ref="output"/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!-- ###################################################### -->
+	<!-- ## /beumidi/import                                  ## -->
+	<!-- ###################################################### -->
+
+	<xsd:element name="import">
+		<xsd:complexType>
+			<xsd:attribute name="file" type="xsd:anyURI" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!-- ###################################################### -->
+	<!-- ## /beumidi//ignore                                 ## -->
+	<!-- ###################################################### -->
+
+	<xsd:element name="ignore">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:any minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!-- ###################################################### -->
+	<!-- ## /beumidi/definition                              ## -->
+	<!-- ## /beumidi/definition/value-def                    ## -->
+	<!-- ## /beumidi/definition/macro-def                    ## -->
+	<!-- ###################################################### -->
+
+	<xsd:element name="definition">
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element ref="ignore"/>
+				<xsd:element ref="value-def"/>
+				<xsd:element ref="macro-def"/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="value-def">
+		<xsd:complexType>
+			<xsd:attribute name="element" type="xsd:string" use="required"/>
+			<xsd:attribute name="attribute" type="xsd:string" use="required"/>
+			<xsd:attribute name="name" type="xsd:string" use="required"/>
+			<xsd:attribute name="value" type="xsd:string" use="required"/>
+			<xsd:attribute ref="scope" use="optional" default="global"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="macro-def">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:any minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute name="name" type="xsd:string" use="required"/>
+			<xsd:attribute name="parameter" type="xsd:string" use="optional"/>
+			<xsd:attribute ref="scope" use="optional" default="global"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:attribute name="scope">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="global"/>
+				<xsd:enumeration value="local"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+
+	<!-- ###################################################### -->
+	<!-- ## /beumidi/dls                                     ## -->
+	<!-- ###################################################### -->
+
+	<xsd:element name="dls"/>
+
+	<!-- ###################################################### -->
+	<!-- ## /beumidi/midi                                    ## -->
+	<!-- ## /beumidi/midi/track                              ## -->
+	<!-- ###################################################### -->
+
+	<xsd:element name="midi">
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element ref="ignore"/>
+				<xsd:element ref="track"/>
+			</xsd:choice>
+			<xsd:attribute name="tpqn" type="xsd:int" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="track">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:any minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute name="name" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!-- ###################################################### -->
+	<!-- ## /beumidi/output                                  ## -->
+	<!-- ## /beumidi/output/device                           ## -->
+	<!-- ## /beumidi/output/device/channel                   ## -->
+	<!-- ###################################################### -->
+
+	<xsd:element name="output">
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element ref="ignore"/>
+				<xsd:element ref="device"/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="device">
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element ref="ignore"/>
+				<xsd:element ref="channel"/>
+			</xsd:choice>
+			<xsd:attribute name="name" type="xsd:string" use="required"/>
+			<xsd:attribute name="option" type="xsd:string" use="optional"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="channel">
+		<xsd:complexType>
+			<xsd:attribute name="number" type="xsd:int" use="required"/>
+			<xsd:attribute name="track" type="xsd:string" use="optional"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!-- ###################################################### -->
+
+	<xsd:element name="phrase">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:any minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute name="step" type="xsd:string" use="optional"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="phrase-def">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:any minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute name="step" type="xsd:string" use="required"/>
+			<xsd:attribute name="name" type="xsd:string" use="required"/>
+			<xsd:attribute ref="scope" use="optional" default="global"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="phrase-ref">
+		<xsd:complexType>
+			<xsd:attribute name="ref" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="macro-ref">
+		<xsd:complexType>
+			<xsd:attribute name="ref" type="xsd:string" use="required"/>
+			<xsd:attribute name="value" type="xsd:string" use="optional"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="repeat">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:any minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute name="times" type="xsd:int" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="transpose">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:any minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute name="value" type="xsd:int" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="parallel">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:any minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="milestone">
+		<xsd:complexType>
+			<xsd:attribute name="name" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="values">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:any minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute name="parameter" type="xsd:string" use="required"/>
+			<xsd:attribute name="start" type="xsd:string" use="required"/>
+			<xsd:attribute name="end" type="xsd:string" use="required"/>
+			<xsd:attribute name="times" type="xsd:string" use="required"/>
+			<xsd:attribute name="step" type="xsd:string" use="required"/>
+			<xsd:attribute name="type" use="optional" default="straight">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="straight"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="note">
+		<xsd:complexType>
+			<xsd:attribute name="note" type="xsd:string" use="optional"/>
+			<xsd:attribute name="step" type="xsd:string" use="optional"/>
+			<xsd:attribute name="gate" type="xsd:string" use="optional"/>
+			<xsd:attribute name="velocity" type="xsd:string" use="optional"/>
+			<xsd:attribute name="off-velocity" type="xsd:string"
+					use="optional"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="rest">
+		<xsd:complexType>
+			<xsd:attribute name="step" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!-- ###################################################### -->
+	<!-- ## MIDI messages                                    ## -->
+	<!-- ###################################################### -->
+
+	<xsd:element name="note-off">
+		<xsd:complexType>
+			<xsd:attribute name="note" type="xsd:string" use="required"/>
+			<xsd:attribute name="velocity" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="note-on">
+		<xsd:complexType>
+			<xsd:attribute name="note" type="xsd:string" use="required"/>
+			<xsd:attribute name="velocity" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="poly-pressure">
+		<xsd:complexType>
+			<xsd:attribute name="note" type="xsd:string" use="required"/>
+			<xsd:attribute name="value" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="control-change">
+		<xsd:complexType>
+			<xsd:attribute name="controller" type="xsd:string" use="required"/>
+			<xsd:attribute name="value" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="program-change">
+		<xsd:complexType>
+			<xsd:attribute name="value" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="channel-pressure">
+		<xsd:complexType>
+			<xsd:attribute name="value" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="pitch-bend">
+		<xsd:complexType>
+			<xsd:attribute name="value" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="system-exclusive">
+		<xsd:complexType>
+			<xsd:attribute name="data" type="xsd:string" use="required"/>
+			<xsd:attribute name="cs-index" type="xsd:string" default="0"
+					use="optional"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="meta">
+		<xsd:complexType>
+			<xsd:attribute name="type" type="xsd:string" use="required"/>
+			<xsd:attribute name="data" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="text">
+		<xsd:complexType>
+			<xsd:attribute name="type" type="xsd:string" use="required"/>
+			<xsd:attribute name="text" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!-- ###################################################### -->
+
+</xsd:schema>

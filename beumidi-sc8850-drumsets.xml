@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beumidi
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="file:beumidi.xsd">
+
+	<definition>
+
+		<value-def name="STANDARD 1"
+				element="program-change" attribute="value" value="0"/>
+		<value-def name="STANDARD 2"
+				element="program-change" attribute="value" value="1"/>
+		<value-def name="STANDARD L/R"
+				element="program-change" attribute="value" value="2"/>
+		<value-def name="ROOM"
+				element="program-change" attribute="value" value="8"/>
+		<value-def name="HIP HOP"
+				element="program-change" attribute="value" value="9"/>
+		<value-def name="JUNGLE"
+				element="program-change" attribute="value" value="10"/>
+		<value-def name="TECHNO"
+				element="program-change" attribute="value" value="11"/>
+		<value-def name="ROOM L/R"
+				element="program-change" attribute="value" value="12"/>
+		<value-def name="HOUSE"
+				element="program-change" attribute="value" value="13"/>
+		<value-def name="POWER"
+				element="program-change" attribute="value" value="16"/>
+		<value-def name="ELECTRONIC"
+				element="program-change" attribute="value" value="24"/>
+		<value-def name="TR-808"
+				element="program-change" attribute="value" value="25"/>
+		<value-def name="DANCE"
+				element="program-change" attribute="value" value="26"/>
+		<value-def name="CR-78"
+				element="program-change" attribute="value" value="27"/>
+		<value-def name="TR-606"
+				element="program-change" attribute="value" value="28"/>
+		<value-def name="TR-707"
+				element="program-change" attribute="value" value="29"/>
+		<value-def name="TR-909"
+				element="program-change" attribute="value" value="30"/>
+		<value-def name="JAZZ"
+				element="program-change" attribute="value" value="32"/>
+		<value-def name="JAZZ L/R"
+				element="program-change" attribute="value" value="33"/>
+		<value-def name="BRUSH"
+				element="program-change" attribute="value" value="40"/>
+		<value-def name="BRUSH 2"
+				element="program-change" attribute="value" value="41"/>
+		<value-def name="BRUSH 2 L/R"
+				element="program-change" attribute="value" value="42"/>
+		<value-def name="ORCHESTRA"
+				element="program-change" attribute="value" value="48"/>
+		<value-def name="ETHNIC"
+				element="program-change" attribute="value" value="49"/>
+		<value-def name="KICK &amp; SNARE"
+				element="program-change" attribute="value" value="50"/>
+		<value-def name="KICK &amp; SNARE 2"
+				element="program-change" attribute="value" value="51"/>
+		<value-def name="ASIA"
+				element="program-change" attribute="value" value="52"/>
+		<value-def name="CYMBAL &amp; CLAPS"
+				element="program-change" attribute="value" value="53"/>
+		<value-def name="GAMELAN 1"
+				element="program-change" attribute="value" value="54"/>
+		<value-def name="GAMELAN 2"
+				element="program-change" attribute="value" value="55"/>
+		<value-def name="SFX"
+				element="program-change" attribute="value" value="56"/>
+		<value-def name="RHYTHM FX"
+				element="program-change" attribute="value" value="57"/>
+		<value-def name="RHYTHM FX 2"
+				element="program-change" attribute="value" value="58"/>
+		<value-def name="RHYTHM FX 3"
+				element="program-change" attribute="value" value="59"/>
+		<value-def name="SFX 2"
+				element="program-change" attribute="value" value="60"/>
+		<value-def name="VOICE"
+				element="program-change" attribute="value" value="61"/>
+		<value-def name="CYMBAL &amp; CLAPS 2"
+				element="program-change" attribute="value" value="62"/>
+
+	</definition>
+</beumidi>

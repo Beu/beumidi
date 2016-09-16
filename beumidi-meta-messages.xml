@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beumidi
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="file:beumidi.xsd">
+
+	<definition>
+
+		<!-- ################################################## -->
+		<!--   Meta Message Text Types                          -->
+		<!-- ################################################## -->
+
+		<value-def element="text" attribute="type"
+				value="0x01" name="Text"/>
+		<value-def element="text" attribute="type"
+				value="0x02" name="Copyright Notice"/>
+		<value-def element="text" attribute="type"
+				value="0x03" name="Sequence Name"/>
+		<value-def element="text" attribute="type"
+				value="0x03" name="Track Name"/>
+		<value-def element="text" attribute="type"
+				value="0x04" name="Instrument Name"/>
+		<value-def element="text" attribute="type"
+				value="0x05" name="Lyric"/>
+		<value-def element="text" attribute="type"
+				value="0x06" name="Marker"/>
+		<value-def element="text" attribute="type"
+				value="0x07" name="Cue Point"/>
+
+		<!-- ################################################## -->
+		<!--   Meta Message Types                               -->
+		<!-- ################################################## -->
+
+		<value-def element="meta" attribute="type"
+				value="0x00" name="Sequence Number"/>
+		<value-def element="meta" attribute="type"
+				value="0x20" name="MIDI Channel Prefix"/>
+		<value-def element="meta" attribute="type"
+				value="0x2f" name="End Of Track"/>
+		<value-def element="meta" attribute="type"
+				value="0x51" name="Set Tempo"/>
+		<value-def element="meta" attribute="type"
+				value="0x54" name="SMPTE Offset"/>
+		<value-def element="meta" attribute="type"
+				value="0x58" name="Time Signature"/>
+		<value-def element="meta" attribute="type"
+				value="0x59" name="Key Signature"/>
+		<value-def element="meta" attribute="type"
+				value="0x7f" name="Sequencer Specific"/>
+
+		<!-- ################################################## -->
+		<!--   Meta Message Macros                              -->
+		<!-- ################################################## -->
+
+		<macro-def name="Set Tempo" parameter="%1">
+			<meta type="Set Tempo"
+					data="%bits(%1,23,16) %bits(%1,15,8) %bits(%1,7,0)"/>
+		</macro-def>
+
+		<macro-def name="Set BPM" parameter="%1">
+			<meta type="Set Tempo"
+					data="%bits(%div(60000000,%1),23,16) %bits(%div(60000000,%1),15,8) %bits(%div(60000000,%1),7,0)"/>
+		</macro-def>
+
+			<!--
+				unit: usec/QN
+				n (BPM) = n (QN/min) = n/60 (QN/sec) = n/60000000 (QN/usec)
+				60000000/n (usec/QN)
+			-->
+
+		<macro-def name="Key Signature" parameter="%1">
+			<meta type="Key Signature" data="%bits(%1,7,0) 0x00"/>
+		</macro-def>
+
+			<!--
+				positive: sharps
+				negative: flats
+			-->
+			<!--
+				note: ([CDEFGAB][n+-][0-9]+)|([0-9]+)
+			-->
+
+	</definition>
+
+</beumidi>

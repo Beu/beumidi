@@ -1,0 +1,3997 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beumidi
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="file:beumidi.xsd">
+
+	<definition>
+
+		<!-- ################################################## -->
+		<!-- ## SC-8850/8820 Instruments                     ## -->
+		<!-- ################################################## -->
+
+		<macro-def name="Voice Change" parameter="%1 %2" scope="local">
+			<control-change controller="Bank Select (MSB)" value="%1"/>
+			<control-change controller="Bank Select (LSB)" value="0"/>
+			<program-change value="%2"/>
+		</macro-def>
+
+		<!-- ########### -->
+		<!-- ## PIANO ## -->
+		<!-- ########### -->
+
+		<macro-def name="voice:Piano 1">
+			<macro-ref ref="Voice Change" value="0 0"/>
+		</macro-def>
+		<macro-def name="voice:Upright Piano">
+			<macro-ref ref="Voice Change" value="1 0"/>
+		</macro-def>
+		<macro-def name="voice:Mild Piano">
+			<macro-ref ref="Voice Change" value="2 0"/>
+		</macro-def>
+		<macro-def name="voice:Upright Piano w">
+			<macro-ref ref="Voice Change" value="8 0"/>
+		</macro-def>
+		<macro-def name="voice:Mild Piano w">
+			<macro-ref ref="Voice Change" value="9 0"/>
+		</macro-def>
+		<macro-def name="voice:European Pf">
+			<macro-ref ref="Voice Change" value="16 0"/>
+		</macro-def>
+		<macro-def name="voice:Piano + String">
+			<macro-ref ref="Voice Change" value="24 0"/>
+		</macro-def>
+		<macro-def name="voice:Piano + String 2">
+			<macro-ref ref="Voice Change" value="25 0"/>
+		</macro-def>
+		<macro-def name="voice:Piano + Choir 1">
+			<macro-ref ref="Voice Change" value="26 0"/>
+		</macro-def>
+		<macro-def name="voice:Piano + Choir 2">
+			<macro-ref ref="Voice Change" value="27 0"/>
+		</macro-def>
+
+		<macro-def name="voice:Piano 2">
+			<macro-ref ref="Voice Change" value="0 1"/>
+		</macro-def>
+		<macro-def name="voice:Pop Piano">
+			<macro-ref ref="Voice Change" value="1 1"/>
+		</macro-def>
+		<macro-def name="voice:Rock Piano">
+			<macro-ref ref="Voice Change" value="2 1"/>
+		</macro-def>
+		<macro-def name="voice:Pop Piano w">
+			<macro-ref ref="Voice Change" value="8 1"/>
+		</macro-def>
+		<macro-def name="voice:Rock Piano w">
+			<macro-ref ref="Voice Change" value="9 1"/>
+		</macro-def>
+		<macro-def name="voice:Dance Piano">
+			<macro-ref ref="Voice Change" value="16 1"/>
+		</macro-def>
+
+		<macro-def name="voice:Piano 3">
+			<macro-ref ref="Voice Change" value="0 2"/>
+		</macro-def>
+		<macro-def name="voice:EG + Rhodes 1">
+			<macro-ref ref="Voice Change" value="1 2"/>
+		</macro-def>
+		<macro-def name="voice:EG + Rhodes 2">
+			<macro-ref ref="Voice Change" value="2 2"/>
+		</macro-def>
+		<macro-def name="voice:Piano 3w">
+			<macro-ref ref="Voice Change" value="8 2"/>
+		</macro-def>
+
+		<macro-def name="voice:Honky-tonk">
+			<macro-ref ref="Voice Change" value="0 3"/>
+		</macro-def>
+		<macro-def name="voice:Honky-tonk 2">
+			<macro-ref ref="Voice Change" value="8 3"/>
+		</macro-def>
+
+		<macro-def name="voice:Electric Piano 1">
+			<macro-ref ref="Voice Change" value="0 4"/>
+		</macro-def>
+		<macro-def name="voice:Steel Soft Electric Piano">
+			<macro-ref ref="Voice Change" value="8 4"/>
+		</macro-def>
+		<macro-def name="voice:Chorus Electric Piano">
+			<macro-ref ref="Voice Change" value="9 4"/>
+		</macro-def>
+		<macro-def name="voice:Silent Rhodes">
+			<macro-ref ref="Voice Change" value="10 4"/>
+		</macro-def>
+		<macro-def name="voice:FM+SA Electric Piano">
+			<macro-ref ref="Voice Change" value="16 4"/>
+		</macro-def>
+		<macro-def name="voice:Distortion Electric Piano">
+			<macro-ref ref="Voice Change" value="17 4"/>
+		</macro-def>
+		<macro-def name="voice:Wurly">
+			<macro-ref ref="Voice Change" value="24 4"/>
+		</macro-def>
+		<macro-def name="voice:Hard Rhodes">
+			<macro-ref ref="Voice Change" value="25 4"/>
+		</macro-def>
+		<macro-def name="voice:Mellow Rhodes">
+			<macro-ref ref="Voice Change" value="26 4"/>
+		</macro-def>
+
+		<macro-def name="voice:Electric Piano 2">
+			<macro-ref ref="Voice Change" value="0 5"/>
+		</macro-def>
+		<macro-def name="voice:Electric Piano 3">
+			<macro-ref ref="Voice Change" value="1 5"/>
+		</macro-def>
+		<macro-def name="voice:Detuned Electric Piano 2">
+			<macro-ref ref="Voice Change" value="8 5"/>
+		</macro-def>
+		<macro-def name="voice:Detuned Electric Piano 3">
+			<macro-ref ref="Voice Change" value="9 5"/>
+		</macro-def>
+		<macro-def name="voice:Electric Piano Legend">
+			<macro-ref ref="Voice Change" value="10 5"/>
+		</macro-def>
+		<macro-def name="voice:Steel FM Electric Piano">
+			<macro-ref ref="Voice Change" value="16 5"/>
+		</macro-def>
+		<macro-def name="voice:Hard FM Electric Piano">
+			<macro-ref ref="Voice Change" value="24 5"/>
+		</macro-def>
+		<macro-def name="voice:Electric Piano Phase">
+			<macro-ref ref="Voice Change" value="32 5"/>
+		</macro-def>
+
+		<macro-def name="voice:Harpsichord">
+			<macro-ref ref="Voice Change" value="0 6"/>
+		</macro-def>
+		<macro-def name="voice:Harpsichord 2">
+			<macro-ref ref="Voice Change" value="1 6"/>
+		</macro-def>
+		<macro-def name="voice:Harpsichord 3">
+			<macro-ref ref="Voice Change" value="2 6"/>
+		</macro-def>
+		<macro-def name="voice:Coupled Harpsichord">
+			<macro-ref ref="Voice Change" value="8 6"/>
+		</macro-def>
+		<macro-def name="voice:Harpsichord w">
+			<macro-ref ref="Voice Change" value="16 6"/>
+		</macro-def>
+		<macro-def name="voice:Harpsichord o">
+			<macro-ref ref="Voice Change" value="24 6"/>
+		</macro-def>
+		<macro-def name="voice:Synth Harpsichord">
+			<macro-ref ref="Voice Change" value="32 6"/>
+		</macro-def>
+
+		<macro-def name="voice:Clavichord">
+			<macro-ref ref="Voice Change" value="0 7"/>
+		</macro-def>
+		<macro-def name="voice:Clavichord 2">
+			<macro-ref ref="Voice Change" value="1 7"/>
+		</macro-def>
+		<macro-def name="voice:Attack Clavichord 1">
+			<macro-ref ref="Voice Change" value="2 7"/>
+		</macro-def>
+		<macro-def name="voice:Attack Clavichord 2">
+			<macro-ref ref="Voice Change" value="3 7"/>
+		</macro-def>
+		<macro-def name="voice:Comp Clavichord">
+			<macro-ref ref="Voice Change" value="8 7"/>
+		</macro-def>
+		<macro-def name="voice:Resonance Clavichord">
+			<macro-ref ref="Voice Change" value="16 7"/>
+		</macro-def>
+		<macro-def name="voice:Phase Clavichord">
+			<macro-ref ref="Voice Change" value="17 7"/>
+		</macro-def>
+		<macro-def name="voice:Clavichord o">
+			<macro-ref ref="Voice Change" value="24 7"/>
+		</macro-def>
+		<macro-def name="voice:Analog Clavichord">
+			<macro-ref ref="Voice Change" value="32 7"/>
+		</macro-def>
+		<macro-def name="voice:JP8 Clavichord 1">
+			<macro-ref ref="Voice Change" value="33 7"/>
+		</macro-def>
+		<macro-def name="voice:JP8 Clavichord 2">
+			<macro-ref ref="Voice Change" value="35 7"/>
+		</macro-def>
+		<macro-def name="voice:Synth Ring Clavichord">
+			<macro-ref ref="Voice Change" value="36 7"/>
+		</macro-def>
+		<macro-def name="voice:Synth Distortion Clavichord">
+			<macro-ref ref="Voice Change" value="37 7"/>
+		</macro-def>
+		<macro-def name="voice:JP8000 Clavichord">
+			<macro-ref ref="Voice Change" value="38 7"/>
+		</macro-def>
+		<macro-def name="voice:Pulse Clavichord">
+			<macro-ref ref="Voice Change" value="39 7"/>
+		</macro-def>
+
+		<!-- ######################### -->
+		<!-- ## CROMATIC PERCUSSION ## -->
+		<!-- ######################### -->
+
+		<macro-def name="voice:Celesta">
+			<macro-ref ref="Voice Change" value="0 8"/>
+		</macro-def>
+		<macro-def name="voice:Pop Celesta">
+			<macro-ref ref="Voice Change" value="1 8"/>
+		</macro-def>
+
+		<macro-def name="voice:Glockenspiel">
+			<macro-ref ref="Voice Change" value="0 9"/>
+		</macro-def>
+
+		<macro-def name="voice:Music Box">
+			<macro-ref ref="Voice Change" value="0 10"/>
+		</macro-def>
+		<macro-def name="voice:Music Box 2">
+			<macro-ref ref="Voice Change" value="1 10"/>
+		</macro-def>
+		<macro-def name="voice:Steel Music Box">
+			<macro-ref ref="Voice Change" value="8 10"/>
+		</macro-def>
+
+		<macro-def name="voice:Vibraphone">
+			<macro-ref ref="Voice Change" value="0 11"/>
+		</macro-def>
+		<macro-def name="voice:Pop Vibraphone">
+			<macro-ref ref="Voice Change" value="1 11"/>
+		</macro-def>
+		<macro-def name="voice:Vibraphone w">
+			<macro-ref ref="Voice Change" value="8 11"/>
+		</macro-def>
+		<macro-def name="voice:Vibraphones">
+			<macro-ref ref="Voice Change" value="9 11"/>
+		</macro-def>
+
+		<macro-def name="voice:Marimba">
+			<macro-ref ref="Voice Change" value="0 12"/>
+		</macro-def>
+		<macro-def name="voice:Marimba w">
+			<macro-ref ref="Voice Change" value="8 12"/>
+		</macro-def>
+		<macro-def name="voice:Barafon">
+			<macro-ref ref="Voice Change" value="16 12"/>
+		</macro-def>
+		<macro-def name="voice:Barafon 2">
+			<macro-ref ref="Voice Change" value="17 12"/>
+		</macro-def>
+		<macro-def name="voice:Log drum">
+			<macro-ref ref="Voice Change" value="24 12"/>
+		</macro-def>
+
+		<macro-def name="voice:Xylophone">
+			<macro-ref ref="Voice Change" value="0 13"/>
+		</macro-def>
+		<macro-def name="voice:Xylophone w">
+			<macro-ref ref="Voice Change" value="8 13"/>
+		</macro-def>
+
+		<macro-def name="voice:Tubular-bell">
+			<macro-ref ref="Voice Change" value="0 14"/>
+		</macro-def>
+		<macro-def name="voice:Church Bell">
+			<macro-ref ref="Voice Change" value="8 14"/>
+		</macro-def>
+		<macro-def name="voice:Carillon">
+			<macro-ref ref="Voice Change" value="9 14"/>
+		</macro-def>
+		<macro-def name="voice:Church Bell 2">
+			<macro-ref ref="Voice Change" value="10 14"/>
+		</macro-def>
+		<macro-def name="voice:Tubular-bell w">
+			<macro-ref ref="Voice Change" value="16 14"/>
+		</macro-def>
+
+		<macro-def name="voice:Santur">
+			<macro-ref ref="Voice Change" value="0 15"/>
+		</macro-def>
+		<macro-def name="voice:Santur 2">
+			<macro-ref ref="Voice Change" value="1 15"/>
+		</macro-def>
+		<macro-def name="voice:Santur 3">
+			<macro-ref ref="Voice Change" value="2 15"/>
+		</macro-def>
+		<macro-def name="voice:Cimbalom">
+			<macro-ref ref="Voice Change" value="8 15"/>
+		</macro-def>
+		<macro-def name="voice:Zither 1">
+			<macro-ref ref="Voice Change" value="16 15"/>
+		</macro-def>
+		<macro-def name="voice:Zither 2">
+			<macro-ref ref="Voice Change" value="17 15"/>
+		</macro-def>
+		<macro-def name="voice:Dulcimer">
+			<macro-ref ref="Voice Change" value="24 15"/>
+		</macro-def>
+
+		<!-- ########### -->
+		<!-- ## ORGAN ## -->
+		<!-- ########### -->
+
+		<macro-def name="voice:Organ 1">
+			<macro-ref ref="Voice Change" value="0 16"/>
+		</macro-def>
+		<macro-def name="voice:Organ 101">
+			<macro-ref ref="Voice Change" value="1 16"/>
+		</macro-def>
+		<macro-def name="voice:Ful Organ 1">
+			<macro-ref ref="Voice Change" value="2 16"/>
+		</macro-def>
+		<macro-def name="voice:Ful Organ 2">
+			<macro-ref ref="Voice Change" value="3 16"/>
+		</macro-def>
+		<macro-def name="voice:Ful Organ 3">
+			<macro-ref ref="Voice Change" value="4 16"/>
+		</macro-def>
+		<macro-def name="voice:Ful Organ 4">
+			<macro-ref ref="Voice Change" value="5 16"/>
+		</macro-def>
+		<macro-def name="voice:Ful Organ 5">
+			<macro-ref ref="Voice Change" value="6 16"/>
+		</macro-def>
+		<macro-def name="voice:Ful Organ 6">
+			<macro-ref ref="Voice Change" value="7 16"/>
+		</macro-def>
+		<macro-def name="voice:Tremolo Organ">
+			<macro-ref ref="Voice Change" value="8 16"/>
+		</macro-def>
+		<macro-def name="voice:Organ o">
+			<macro-ref ref="Voice Change" value="9 16"/>
+		</macro-def>
+		<macro-def name="voice:Ful Organ 7">
+			<macro-ref ref="Voice Change" value="10 16"/>
+		</macro-def>
+		<macro-def name="voice:Ful Organ 8">
+			<macro-ref ref="Voice Change" value="11 16"/>
+		</macro-def>
+		<macro-def name="voice:Ful Organ 9">
+			<macro-ref ref="Voice Change" value="12 16"/>
+		</macro-def>
+		<macro-def name="voice:60's Organ 1">
+			<macro-ref ref="Voice Change" value="16 16"/>
+		</macro-def>
+		<macro-def name="voice:60's Organ 2">
+			<macro-ref ref="Voice Change" value="17 16"/>
+		</macro-def>
+		<macro-def name="voice:60's Organ 3">
+			<macro-ref ref="Voice Change" value="18 16"/>
+		</macro-def>
+		<macro-def name="voice:Farf Organ">
+			<macro-ref ref="Voice Change" value="19 16"/>
+		</macro-def>
+		<macro-def name="voice:Cheese Organ">
+			<macro-ref ref="Voice Change" value="24 16"/>
+		</macro-def>
+		<macro-def name="voice:D-50 Organ">
+			<macro-ref ref="Voice Change" value="25 16"/>
+		</macro-def>
+		<macro-def name="voice:JUNO Organ">
+			<macro-ref ref="Voice Change" value="26 16"/>
+		</macro-def>
+		<macro-def name="voice:Hybrid Organ">
+			<macro-ref ref="Voice Change" value="27 16"/>
+		</macro-def>
+		<macro-def name="voice:VS Organ">
+			<macro-ref ref="Voice Change" value="28 16"/>
+		</macro-def>
+		<macro-def name="voice:Digi Church">
+			<macro-ref ref="Voice Change" value="29 16"/>
+		</macro-def>
+		<macro-def name="voice:JX-8P Organ">
+			<macro-ref ref="Voice Change" value="30 16"/>
+		</macro-def>
+		<macro-def name="voice:FM Organ">
+			<macro-ref ref="Voice Change" value="31 16"/>
+		</macro-def>
+		<macro-def name="voice:70's Electric Organ">
+			<macro-ref ref="Voice Change" value="32 16"/>
+		</macro-def>
+		<macro-def name="voice:Even Bar">
+			<macro-ref ref="Voice Change" value="33 16"/>
+		</macro-def>
+		<macro-def name="voice:Organ Bass">
+			<macro-ref ref="Voice Change" value="40 16"/>
+		</macro-def>
+		<macro-def name="voice:5th Organ">
+			<macro-ref ref="Voice Change" value="48 16"/>
+		</macro-def>
+
+		<macro-def name="voice:Organ 2">
+			<macro-ref ref="Voice Change" value="0 17"/>
+		</macro-def>
+		<macro-def name="voice:Jazz Organ">
+			<macro-ref ref="Voice Change" value="1 17"/>
+		</macro-def>
+		<macro-def name="voice:Electric Organ 16+2">
+			<macro-ref ref="Voice Change" value="2 17"/>
+		</macro-def>
+		<macro-def name="voice:Jazz Organ 2">
+			<macro-ref ref="Voice Change" value="3 17"/>
+		</macro-def>
+		<macro-def name="voice:Jazz Organ 3">
+			<macro-ref ref="Voice Change" value="4 17"/>
+		</macro-def>
+		<macro-def name="voice:Jazz Organ 4">
+			<macro-ref ref="Voice Change" value="5 17"/>
+		</macro-def>
+		<macro-def name="voice:Jazz Organ 5">
+			<macro-ref ref="Voice Change" value="6 17"/>
+		</macro-def>
+		<macro-def name="voice:Jazz Organ 6">
+			<macro-ref ref="Voice Change" value="7 17"/>
+		</macro-def>
+		<macro-def name="voice:Chorus Organ 2">
+			<macro-ref ref="Voice Change" value="8 17"/>
+		</macro-def>
+		<macro-def name="voice:Octave Organ">
+			<macro-ref ref="Voice Change" value="9 17"/>
+		</macro-def>
+		<macro-def name="voice:Perc. Organ">
+			<macro-ref ref="Voice Change" value="32 17"/>
+		</macro-def>
+		<macro-def name="voice:Perc. Organ 2">
+			<macro-ref ref="Voice Change" value="33 17"/>
+		</macro-def>
+		<macro-def name="voice:Perc. Organ 3">
+			<macro-ref ref="Voice Change" value="34 17"/>
+		</macro-def>
+		<macro-def name="voice:Perc. Organ 4">
+			<macro-ref ref="Voice Change" value="35 17"/>
+		</macro-def>
+
+		<macro-def name="voice:Organ 3">
+			<macro-ref ref="Voice Change" value="0 18"/>
+		</macro-def>
+		<macro-def name="voice:Rotary Organ">
+			<macro-ref ref="Voice Change" value="8 18"/>
+		</macro-def>
+		<macro-def name="voice:Rotary Organ S">
+			<macro-ref ref="Voice Change" value="16 18"/>
+		</macro-def>
+		<macro-def name="voice:Rock Organ 1">
+			<macro-ref ref="Voice Change" value="17 18"/>
+		</macro-def>
+		<macro-def name="voice:Rock Organ 2">
+			<macro-ref ref="Voice Change" value="18 18"/>
+		</macro-def>
+		<macro-def name="voice:Rotary Organ F">
+			<macro-ref ref="Voice Change" value="24 18"/>
+		</macro-def>
+
+		<macro-def name="voice:Church Organ 1">
+			<macro-ref ref="Voice Change" value="0 19"/>
+		</macro-def>
+		<macro-def name="voice:Church Organ 2">
+			<macro-ref ref="Voice Change" value="8 19"/>
+		</macro-def>
+		<macro-def name="voice:Church Organ 3">
+			<macro-ref ref="Voice Change" value="16 19"/>
+		</macro-def>
+		<macro-def name="voice:Organ Flute">
+			<macro-ref ref="Voice Change" value="24 19"/>
+		</macro-def>
+		<macro-def name="voice:Tremolo Flute">
+			<macro-ref ref="Voice Change" value="32 19"/>
+		</macro-def>
+		<macro-def name="voice:Theater Organ">
+			<macro-ref ref="Voice Change" value="33 19"/>
+		</macro-def>
+
+		<macro-def name="voice:Reed Organ">
+			<macro-ref ref="Voice Change" value="0 20"/>
+		</macro-def>
+		<macro-def name="voice:Wind Organ">
+			<macro-ref ref="Voice Change" value="8 20"/>
+		</macro-def>
+		<macro-def name="voice:Puff Organ">
+			<macro-ref ref="Voice Change" value="16 20"/>
+		</macro-def>
+
+		<macro-def name="voice:Accordion French">
+			<macro-ref ref="Voice Change" value="0 21"/>
+		</macro-def>
+		<macro-def name="voice:Accordion Italian">
+			<macro-ref ref="Voice Change" value="8 21"/>
+		</macro-def>
+		<macro-def name="voice:Distortion Accordion">
+			<macro-ref ref="Voice Change" value="9 21"/>
+		</macro-def>
+		<macro-def name="voice:Chorus Accordion">
+			<macro-ref ref="Voice Change" value="16 21"/>
+		</macro-def>
+		<macro-def name="voice:Hard Accordion">
+			<macro-ref ref="Voice Change" value="24 21"/>
+		</macro-def>
+		<macro-def name="voice:Soft Accordion">
+			<macro-ref ref="Voice Change" value="25 21"/>
+		</macro-def>
+
+		<macro-def name="voice:Harmonica">
+			<macro-ref ref="Voice Change" value="0 22"/>
+		</macro-def>
+		<macro-def name="voice:Harmonica 2">
+			<macro-ref ref="Voice Change" value="1 22"/>
+		</macro-def>
+		<macro-def name="voice:Bass Harp Basic">
+			<macro-ref ref="Voice Change" value="8 22"/>
+		</macro-def>
+		<macro-def name="voice:Bass Harp Suppl">
+			<macro-ref ref="Voice Change" value="9 22"/>
+		</macro-def>
+
+		<macro-def name="voice:Bandoneon">
+			<macro-ref ref="Voice Change" value="0 23"/>
+		</macro-def>
+		<macro-def name="voice:Bandoneon 2">
+			<macro-ref ref="Voice Change" value="8 23"/>
+		</macro-def>
+		<macro-def name="voice:Bandoneon 3">
+			<macro-ref ref="Voice Change" value="16 23"/>
+		</macro-def>
+
+		<!-- ############ -->
+		<!-- ## GUITAR ## -->
+		<!-- ############ -->
+
+		<macro-def name="voice:Nylon-string Guitar">
+			<macro-ref ref="Voice Change" value="0 24"/>
+		</macro-def>
+		<macro-def name="voice:Ukulele">
+			<macro-ref ref="Voice Change" value="8 24"/>
+		</macro-def>
+		<macro-def name="voice:Nylon Guitar o">
+			<macro-ref ref="Voice Change" value="16 24"/>
+		</macro-def>
+		<macro-def name="voice:Velo Harmnix">
+			<macro-ref ref="Voice Change" value="24 24"/>
+		</macro-def>
+		<macro-def name="voice:Nylon Guitar 2">
+			<macro-ref ref="Voice Change" value="32 24"/>
+		</macro-def>
+		<macro-def name="voice:Lequint Guitar">
+			<macro-ref ref="Voice Change" value="40 24"/>
+		</macro-def>
+
+		<macro-def name="voice:Steel-string Guitar">
+			<macro-ref ref="Voice Change" value="0 25"/>
+		</macro-def>
+		<macro-def name="voice:12-string Guitar">
+			<macro-ref ref="Voice Change" value="8 25"/>
+		</macro-def>
+		<macro-def name="voice:Nylon + Steel Guitar">
+			<macro-ref ref="Voice Change" value="9 25"/>
+		</macro-def>
+		<macro-def name="voice:Attack Steel Guitar">
+			<macro-ref ref="Voice Change" value="10 25"/>
+		</macro-def>
+		<macro-def name="voice:Mandolin">
+			<macro-ref ref="Voice Change" value="16 25"/>
+		</macro-def>
+		<macro-def name="voice:Mandolin 2">
+			<macro-ref ref="Voice Change" value="17 25"/>
+		</macro-def>
+		<macro-def name="voice:Mandolin Tremolo">
+			<macro-ref ref="Voice Change" value="18 25"/>
+		</macro-def>
+		<macro-def name="voice:Steel Guitar 2">
+			<macro-ref ref="Voice Change" value="32 25"/>
+		</macro-def>
+		<macro-def name="voice:Steel Guitar + Body">
+			<macro-ref ref="Voice Change" value="33 25"/>
+		</macro-def>
+
+		<macro-def name="voice:Jazz Guitar">
+			<macro-ref ref="Voice Change" value="0 26"/>
+		</macro-def>
+		<macro-def name="voice:Mellow Guitar">
+			<macro-ref ref="Voice Change" value="1 26"/>
+		</macro-def>
+		<macro-def name="voice:Pedal Steel Guitar">
+			<macro-ref ref="Voice Change" value="8 26"/>
+		</macro-def>
+
+		<macro-def name="voice:Clean Guitar">
+			<macro-ref ref="Voice Change" value="0 27"/>
+		</macro-def>
+		<macro-def name="voice:Clean Half Guitar">
+			<macro-ref ref="Voice Change" value="1 27"/>
+		</macro-def>
+		<macro-def name="voice:Open Hard Guitar 1">
+			<macro-ref ref="Voice Change" value="2 27"/>
+		</macro-def>
+		<macro-def name="voice:Open Hard Guitar 2">
+			<macro-ref ref="Voice Change" value="3 27"/>
+		</macro-def>
+		<macro-def name="voice:JC Clean Guitar">
+			<macro-ref ref="Voice Change" value="4 27"/>
+		</macro-def>
+		<macro-def name="voice:Attack Clean Guitar">
+			<macro-ref ref="Voice Change" value="5 27"/>
+		</macro-def>
+		<macro-def name="voice:Chorus Guitar">
+			<macro-ref ref="Voice Change" value="8 27"/>
+		</macro-def>
+		<macro-def name="voice:JC Chorus Guitar">
+			<macro-ref ref="Voice Change" value="9 27"/>
+		</macro-def>
+		<macro-def name="voice:TC Front Pick">
+			<macro-ref ref="Voice Change" value="16 27"/>
+		</macro-def>
+		<macro-def name="voice:TC Rear Pick">
+			<macro-ref ref="Voice Change" value="17 27"/>
+		</macro-def>
+		<macro-def name="voice:TC Clean Guitar ff">
+			<macro-ref ref="Voice Change" value="18 27"/>
+		</macro-def>
+		<macro-def name="voice:TC Clean Guitar 2">
+			<macro-ref ref="Voice Change" value="19 27"/>
+		</macro-def>
+		<macro-def name="voice:LP Rear Pick">
+			<macro-ref ref="Voice Change" value="20 27"/>
+		</macro-def>
+		<macro-def name="voice:LP Rear Pick 2">
+			<macro-ref ref="Voice Change" value="21 27"/>
+		</macro-def>
+		<macro-def name="voice:LP Rear Attack">
+			<macro-ref ref="Voice Change" value="22 27"/>
+		</macro-def>
+		<macro-def name="voice:Mid Tone Guitar">
+			<macro-ref ref="Voice Change" value="23 27"/>
+		</macro-def>
+		<macro-def name="voice:Chung Ruan">
+			<macro-ref ref="Voice Change" value="24 27"/>
+		</macro-def>
+		<macro-def name="voice:Chung Ruan 2">
+			<macro-ref ref="Voice Change" value="25 27"/>
+		</macro-def>
+
+		<macro-def name="voice:Muted Guitar">
+			<macro-ref ref="Voice Change" value="0 28"/>
+		</macro-def>
+		<macro-def name="voice:Muted Distortion Guitar">
+			<macro-ref ref="Voice Change" value="1 28"/>
+		</macro-def>
+		<macro-def name="voice:TC Muted Guitar">
+			<macro-ref ref="Voice Change" value="2 28"/>
+		</macro-def>
+		<macro-def name="voice:Funk Pop Guitar">
+			<macro-ref ref="Voice Change" value="8 28"/>
+		</macro-def>
+		<macro-def name="voice:Funk Pop Guitar 2">
+			<macro-ref ref="Voice Change" value="16 28"/>
+		</macro-def>
+		<macro-def name="voice:Jazz Man">
+			<macro-ref ref="Voice Change" value="24 28"/>
+		</macro-def>
+
+		<macro-def name="voice:Overdrive Guitar">
+			<macro-ref ref="Voice Change" value="0 29"/>
+		</macro-def>
+		<macro-def name="voice:Overdrive Guitar 2">
+			<macro-ref ref="Voice Change" value="1 29"/>
+		</macro-def>
+		<macro-def name="voice:Overdrive Guitar 3">
+			<macro-ref ref="Voice Change" value="2 29"/>
+		</macro-def>
+		<macro-def name="voice:More Drive Guitar">
+			<macro-ref ref="Voice Change" value="3 29"/>
+		</macro-def>
+		<macro-def name="voice:Guitar Pinch">
+			<macro-ref ref="Voice Change" value="4 29"/>
+		</macro-def>
+		<macro-def name="voice:Attack Drive Guitar">
+			<macro-ref ref="Voice Change" value="5 29"/>
+		</macro-def>
+		<macro-def name="voice:LP Overdrive Guitar">
+			<macro-ref ref="Voice Change" value="8 29"/>
+		</macro-def>
+		<macro-def name="voice:LP Overdrive Guitar 2">
+			<macro-ref ref="Voice Change" value="9 29"/>
+		</macro-def>
+		<macro-def name="voice:LP Half Drive Guitar">
+			<macro-ref ref="Voice Change" value="10 29"/>
+		</macro-def>
+		<macro-def name="voice:LP Half Drive Guitar 2">
+			<macro-ref ref="Voice Change" value="11 29"/>
+		</macro-def>
+		<macro-def name="voice:LP Chorus Guitar">
+			<macro-ref ref="Voice Change" value="12 29"/>
+		</macro-def>
+
+		<macro-def name="voice:Distortion Guitar">
+			<macro-ref ref="Voice Change" value="0 30"/>
+		</macro-def>
+		<macro-def name="voice:Distortion Guitar 2">
+			<macro-ref ref="Voice Change" value="1 30"/>
+		</macro-def>
+		<macro-def name="voice:Dazed Guitar">
+			<macro-ref ref="Voice Change" value="2 30"/>
+		</macro-def>
+		<macro-def name="voice:Distortion Guitar 3">
+			<macro-ref ref="Voice Change" value="3 30"/>
+		</macro-def>
+		<macro-def name="voice:Distortion Fast Guitar">
+			<macro-ref ref="Voice Change" value="4 30"/>
+		</macro-def>
+		<macro-def name="voice:Attack Distortion Guitar">
+			<macro-ref ref="Voice Change" value="5 30"/>
+		</macro-def>
+		<macro-def name="voice:Feedback Guitar">
+			<macro-ref ref="Voice Change" value="8 30"/>
+		</macro-def>
+		<macro-def name="voice:Feedback Guitar 2">
+			<macro-ref ref="Voice Change" value="9 30"/>
+		</macro-def>
+		<macro-def name="voice:Power Guitar">
+			<macro-ref ref="Voice Change" value="16 30"/>
+		</macro-def>
+		<macro-def name="voice:Power Guitar 2">
+			<macro-ref ref="Voice Change" value="17 30"/>
+		</macro-def>
+		<macro-def name="voice:5th Distortion Guitar">
+			<macro-ref ref="Voice Change" value="18 30"/>
+		</macro-def>
+		<macro-def name="voice:Rock Rhythm Guitar">
+			<macro-ref ref="Voice Change" value="24 30"/>
+		</macro-def>
+		<macro-def name="voice:Rock Rhythm2 Guitar">
+			<macro-ref ref="Voice Change" value="25 30"/>
+		</macro-def>
+		<macro-def name="voice:Distortion Rhythm Guitar">
+			<macro-ref ref="Voice Change" value="26 30"/>
+		</macro-def>
+
+		<macro-def name="voice:Guitar Harmonics">
+			<macro-ref ref="Voice Change" value="0 31"/>
+		</macro-def>
+		<macro-def name="voice:Guitar Feedback">
+			<macro-ref ref="Voice Change" value="8 31"/>
+		</macro-def>
+		<macro-def name="voice:Guitar Feedback 2">
+			<macro-ref ref="Voice Change" value="9 31"/>
+		</macro-def>
+		<macro-def name="voice:Acoustic Guitar Harmonics">
+			<macro-ref ref="Voice Change" value="16 31"/>
+		</macro-def>
+		<macro-def name="voice:Electric Bass Harmonics">
+			<macro-ref ref="Voice Change" value="24 31"/>
+		</macro-def>
+
+		<!-- ########## -->
+		<!-- ## BASS ## -->
+		<!-- ########## -->
+
+		<macro-def name="voice:Acoustic Bass">
+			<macro-ref ref="Voice Change" value="0 32"/>
+		</macro-def>
+		<macro-def name="voice:Rockabilly">
+			<macro-ref ref="Voice Change" value="1 32"/>
+		</macro-def>
+		<macro-def name="voice:Wild Acoustic Bass">
+			<macro-ref ref="Voice Change" value="8 32"/>
+		</macro-def>
+		<macro-def name="voice:Attack Acoustic Bass">
+			<macro-ref ref="Voice Change" value="9 32"/>
+		</macro-def>
+		<macro-def name="voice:Bass + OHH">
+			<macro-ref ref="Voice Change" value="16 32"/>
+		</macro-def>
+
+		<macro-def name="voice:Fingered Bass">
+			<macro-ref ref="Voice Change" value="0 33"/>
+		</macro-def>
+		<macro-def name="voice:Fingered Bass 2">
+			<macro-ref ref="Voice Change" value="1 33"/>
+		</macro-def>
+		<macro-def name="voice:Jazz Bass">
+			<macro-ref ref="Voice Change" value="2 33"/>
+		</macro-def>
+		<macro-def name="voice:Jazz Bass 2">
+			<macro-ref ref="Voice Change" value="3 33"/>
+		</macro-def>
+		<macro-def name="voice:Rock Bass">
+			<macro-ref ref="Voice Change" value="4 33"/>
+		</macro-def>
+		<macro-def name="voice:Heart Bass">
+			<macro-ref ref="Voice Change" value="5 33"/>
+		</macro-def>
+		<macro-def name="voice:Attack Finger Bass">
+			<macro-ref ref="Voice Change" value="6 33"/>
+		</macro-def>
+		<macro-def name="voice:Finger Slap Bass">
+			<macro-ref ref="Voice Change" value="7 33"/>
+		</macro-def>
+		<macro-def name="voice:Chorus Jazz Bass">
+			<macro-ref ref="Voice Change" value="8 33"/>
+		</macro-def>
+		<macro-def name="voice:Finger Bass / Harmonics">
+			<macro-ref ref="Voice Change" value="16 33"/>
+		</macro-def>
+
+		<macro-def name="voice:Picked Bass">
+			<macro-ref ref="Voice Change" value="0 34"/>
+		</macro-def>
+		<macro-def name="voice:Picked Bass 2">
+			<macro-ref ref="Voice Change" value="1 34"/>
+		</macro-def>
+		<macro-def name="voice:Picked Bass 3">
+			<macro-ref ref="Voice Change" value="2 34"/>
+		</macro-def>
+		<macro-def name="voice:Picked Bass 4">
+			<macro-ref ref="Voice Change" value="3 34"/>
+		</macro-def>
+		<macro-def name="voice:Double Picked Bass">
+			<macro-ref ref="Voice Change" value="4 34"/>
+		</macro-def>
+		<macro-def name="voice:Muted Picked Bass">
+			<macro-ref ref="Voice Change" value="8 34"/>
+		</macro-def>
+		<macro-def name="voice:Picked Bass / Harmonics">
+			<macro-ref ref="Voice Change" value="16 34"/>
+		</macro-def>
+
+		<macro-def name="voice:Fretless Bass">
+			<macro-ref ref="Voice Change" value="0 35"/>
+		</macro-def>
+		<macro-def name="voice:Fretless Bass 2">
+			<macro-ref ref="Voice Change" value="1 35"/>
+		</macro-def>
+		<macro-def name="voice:Fretless Bass 3">
+			<macro-ref ref="Voice Change" value="2 35"/>
+		</macro-def>
+		<macro-def name="voice:Fretless Bass 4">
+			<macro-ref ref="Voice Change" value="3 35"/>
+		</macro-def>
+		<macro-def name="voice:Synth Fretless Bass">
+			<macro-ref ref="Voice Change" value="4 35"/>
+		</macro-def>
+		<macro-def name="voice:Mr. Smooth">
+			<macro-ref ref="Voice Change" value="5 35"/>
+		</macro-def>
+		<macro-def name="voice:Wood + Fretless Bass">
+			<macro-ref ref="Voice Change" value="8 35"/>
+		</macro-def>
+
+		<macro-def name="voice:Slap Bass 1">
+			<macro-ref ref="Voice Change" value="0 36"/>
+		</macro-def>
+		<macro-def name="voice:Slap Pop Bass">
+			<macro-ref ref="Voice Change" value="1 36"/>
+		</macro-def>
+		<macro-def name="voice:Resonance Slap Bass">
+			<macro-ref ref="Voice Change" value="8 36"/>
+		</macro-def>
+		<macro-def name="voice:Unison Slap Bass">
+			<macro-ref ref="Voice Change" value="9 36"/>
+		</macro-def>
+
+		<macro-def name="voice:Slap Bass 2">
+			<macro-ref ref="Voice Change" value="0 37"/>
+		</macro-def>
+		<macro-def name="voice:Slap Bass 3">
+			<macro-ref ref="Voice Change" value="1 37"/>
+		</macro-def>
+		<macro-def name="voice:FM Slap Bass">
+			<macro-ref ref="Voice Change" value="8 37"/>
+		</macro-def>
+
+		<macro-def name="voice:Synth Bass 1">
+			<macro-ref ref="Voice Change" value="0 38"/>
+		</macro-def>
+		<macro-def name="voice:Synth Bass 101">
+			<macro-ref ref="Voice Change" value="1 38"/>
+		</macro-def>
+		<macro-def name="voice:CS Bass">
+			<macro-ref ref="Voice Change" value="2 38"/>
+		</macro-def>
+		<macro-def name="voice:JP-4 Bass">
+			<macro-ref ref="Voice Change" value="3 38"/>
+		</macro-def>
+		<macro-def name="voice:JP-8 Bass">
+			<macro-ref ref="Voice Change" value="4 38"/>
+		</macro-def>
+		<macro-def name="voice:P5 Bass">
+			<macro-ref ref="Voice Change" value="5 38"/>
+		</macro-def>
+		<macro-def name="voice:JPMG Bass">
+			<macro-ref ref="Voice Change" value="6 38"/>
+		</macro-def>
+		<macro-def name="voice:Acid Bass">
+			<macro-ref ref="Voice Change" value="8 38"/>
+		</macro-def>
+		<macro-def name="voice:TB303 Bass">
+			<macro-ref ref="Voice Change" value="9 38"/>
+		</macro-def>
+		<macro-def name="voice:Tekno Bass">
+			<macro-ref ref="Voice Change" value="10 38"/>
+		</macro-def>
+		<macro-def name="voice:TB303 Bass 2">
+			<macro-ref ref="Voice Change" value="11 38"/>
+		</macro-def>
+		<macro-def name="voice:Kicked TB303">
+			<macro-ref ref="Voice Change" value="12 38"/>
+		</macro-def>
+		<macro-def name="voice:TB303 Saw Bass">
+			<macro-ref ref="Voice Change" value="13 38"/>
+		</macro-def>
+		<macro-def name="voice:Rubber303 Bass">
+			<macro-ref ref="Voice Change" value="14 38"/>
+		</macro-def>
+		<macro-def name="voice:Resonance 303 Bass">
+			<macro-ref ref="Voice Change" value="15 38"/>
+		</macro-def>
+		<macro-def name="voice:Resonance SH Bass">
+			<macro-ref ref="Voice Change" value="16 38"/>
+		</macro-def>
+		<macro-def name="voice:TB303 Square Bass">
+			<macro-ref ref="Voice Change" value="17 38"/>
+		</macro-def>
+		<macro-def name="voice:TB303 Distortion Bass">
+			<macro-ref ref="Voice Change" value="18 38"/>
+		</macro-def>
+		<macro-def name="voice:Clavi Bass">
+			<macro-ref ref="Voice Change" value="19 38"/>
+		</macro-def>
+		<macro-def name="voice:Hammer">
+			<macro-ref ref="Voice Change" value="20 38"/>
+		</macro-def>
+		<macro-def name="voice:Jungle Bass">
+			<macro-ref ref="Voice Change" value="21 38"/>
+		</macro-def>
+		<macro-def name="voice:Square Bass">
+			<macro-ref ref="Voice Change" value="22 38"/>
+		</macro-def>
+		<macro-def name="voice:Square Bass 2">
+			<macro-ref ref="Voice Change" value="23 38"/>
+		</macro-def>
+		<macro-def name="voice:Arpeggio Bass">
+			<macro-ref ref="Voice Change" value="24 38"/>
+		</macro-def>
+		<macro-def name="voice:Hit &amp; Saw Bass">
+			<macro-ref ref="Voice Change" value="32 38"/>
+		</macro-def>
+		<macro-def name="voice:Ring Bass">
+			<macro-ref ref="Voice Change" value="33 38"/>
+		</macro-def>
+		<macro-def name="voice:Attack Sine Bass">
+			<macro-ref ref="Voice Change" value="34 38"/>
+		</macro-def>
+		<macro-def name="voice:OB sine Bass">
+			<macro-ref ref="Voice Change" value="35 38"/>
+		</macro-def>
+		<macro-def name="voice:Auxiliary Bass">
+			<macro-ref ref="Voice Change" value="36 38"/>
+		</macro-def>
+		<macro-def name="voice:303 Square Distortion Bass">
+			<macro-ref ref="Voice Change" value="40 38"/>
+		</macro-def>
+		<macro-def name="voice:303 Square Distortion Bass 2">
+			<macro-ref ref="Voice Change" value="41 38"/>
+		</macro-def>
+		<macro-def name="voice:303 Square Distortion Bass 3">
+			<macro-ref ref="Voice Change" value="42 38"/>
+		</macro-def>
+		<macro-def name="voice:303 Square Rev">
+			<macro-ref ref="Voice Change" value="43 38"/>
+		</macro-def>
+		<macro-def name="voice:TeeBee">
+			<macro-ref ref="Voice Change" value="44 38"/>
+		</macro-def>
+
+		<macro-def name="voice:Synth Bass 2">
+			<macro-ref ref="Voice Change" value="0 39"/>
+		</macro-def>
+		<macro-def name="voice:Synth Bass 201">
+			<macro-ref ref="Voice Change" value="1 39"/>
+		</macro-def>
+		<macro-def name="voice:Modular Bass">
+			<macro-ref ref="Voice Change" value="2 39"/>
+		</macro-def>
+		<macro-def name="voice:Seq Bass">
+			<macro-ref ref="Voice Change" value="3 39"/>
+		</macro-def>
+		<macro-def name="voice:MG Bass">
+			<macro-ref ref="Voice Change" value="4 39"/>
+		</macro-def>
+		<macro-def name="voice:MG Octave Bass1">
+			<macro-ref ref="Voice Change" value="5 39"/>
+		</macro-def>
+		<macro-def name="voice:MG Octave Bass2">
+			<macro-ref ref="Voice Change" value="6 39"/>
+		</macro-def>
+		<macro-def name="voice:MG Blip Bass:">
+			<macro-ref ref="Voice Change" value="7 39"/>
+		</macro-def>
+		<macro-def name="voice:Beef FM Bass">
+			<macro-ref ref="Voice Change" value="8 39"/>
+		</macro-def>
+		<macro-def name="voice:Dly Bass">
+			<macro-ref ref="Voice Change" value="9 39"/>
+		</macro-def>
+		<macro-def name="voice:X Wire Bass">
+			<macro-ref ref="Voice Change" value="10 39"/>
+		</macro-def>
+		<macro-def name="voice:Wire String Bass">
+			<macro-ref ref="Voice Change" value="11 39"/>
+		</macro-def>
+		<macro-def name="voice:Blip Bass :">
+			<macro-ref ref="Voice Change" value="12 39"/>
+		</macro-def>
+		<macro-def name="voice:Rubber Bass 1">
+			<macro-ref ref="Voice Change" value="13 39"/>
+		</macro-def>
+		<macro-def name="voice:Synth Bell Bs">
+			<macro-ref ref="Voice Change" value="14 39"/>
+		</macro-def>
+		<macro-def name="voice:Odd Bass">
+			<macro-ref ref="Voice Change" value="15 39"/>
+		</macro-def>
+		<macro-def name="voice:Rubber Bass 2">
+			<macro-ref ref="Voice Change" value="16 39"/>
+		</macro-def>
+		<macro-def name="voice:SH101 Bass 1">
+			<macro-ref ref="Voice Change" value="17 39"/>
+		</macro-def>
+		<macro-def name="voice:SH101 Bass 2">
+			<macro-ref ref="Voice Change" value="18 39"/>
+		</macro-def>
+		<macro-def name="voice:Smooth Bass">
+			<macro-ref ref="Voice Change" value="19 39"/>
+		</macro-def>
+		<macro-def name="voice:SH101 Bass 3">
+			<macro-ref ref="Voice Change" value="20 39"/>
+		</macro-def>
+		<macro-def name="voice:Spike Bass">
+			<macro-ref ref="Voice Change" value="21 39"/>
+		</macro-def>
+		<macro-def name="voice:House Bass">
+			<macro-ref ref="Voice Change" value="22 39"/>
+		</macro-def>
+		<macro-def name="voice:KG Bass">
+			<macro-ref ref="Voice Change" value="23 39"/>
+		</macro-def>
+		<macro-def name="voice:Sync Bass">
+			<macro-ref ref="Voice Change" value="24 39"/>
+		</macro-def>
+		<macro-def name="voice:MG 5th Bass">
+			<macro-ref ref="Voice Change" value="25 39"/>
+		</macro-def>
+		<macro-def name="voice:RND Bass">
+			<macro-ref ref="Voice Change" value="26 39"/>
+		</macro-def>
+		<macro-def name="voice:WowMG Bass">
+			<macro-ref ref="Voice Change" value="27 39"/>
+		</macro-def>
+		<macro-def name="voice:Bubble Bass">
+			<macro-ref ref="Voice Change" value="28 39"/>
+		</macro-def>
+		<macro-def name="voice:Attack Pulse Bass">
+			<macro-ref ref="Voice Change" value="29 39"/>
+		</macro-def>
+		<macro-def name="voice:Sync Bass 2">
+			<macro-ref ref="Voice Change" value="30 39"/>
+		</macro-def>
+		<macro-def name="voice:Pulse Mix Bass">
+			<macro-ref ref="Voice Change" value="31 39"/>
+		</macro-def>
+		<macro-def name="voice:MG Distortion Bass">
+			<macro-ref ref="Voice Change" value="32 39"/>
+		</macro-def>
+		<macro-def name="voice:Sequence Bass 2">
+			<macro-ref ref="Voice Change" value="33 39"/>
+		</macro-def>
+		<macro-def name="voice:3rd Bass">
+			<macro-ref ref="Voice Change" value="34 39"/>
+		</macro-def>
+		<macro-def name="voice:MG Octave Bass">
+			<macro-ref ref="Voice Change" value="35 39"/>
+		</macro-def>
+		<macro-def name="voice:Slow Env Bass">
+			<macro-ref ref="Voice Change" value="36 39"/>
+		</macro-def>
+		<macro-def name="voice:Mild Bass">
+			<macro-ref ref="Voice Change" value="37 39"/>
+		</macro-def>
+		<macro-def name="voice:Distortion Env Bass">
+			<macro-ref ref="Voice Change" value="38 39"/>
+		</macro-def>
+		<macro-def name="voice:MG Light Bass">
+			<macro-ref ref="Voice Change" value="39 39"/>
+		</macro-def>
+		<macro-def name="voice:Distortion Synth Bass">
+			<macro-ref ref="Voice Change" value="40 39"/>
+		</macro-def>
+		<macro-def name="voice:Rise Bass">
+			<macro-ref ref="Voice Change" value="41 39"/>
+		</macro-def>
+		<macro-def name="voice:Cyber Bass">
+			<macro-ref ref="Voice Change" value="42 39"/>
+		</macro-def>
+
+		<!-- ######################### -->
+		<!-- ## STRINGS / ORCHESTRA ## -->
+		<!-- ######################### -->
+
+		<macro-def name="voice:Violin">
+			<macro-ref ref="Voice Change" value="0 40"/>
+		</macro-def>
+		<macro-def name="voice:Violin Attack">
+			<macro-ref ref="Voice Change" value="1 40"/>
+		</macro-def>
+		<macro-def name="voice:Slow Violin">
+			<macro-ref ref="Voice Change" value="8 40"/>
+		</macro-def>
+
+		<macro-def name="voice:Viola">
+			<macro-ref ref="Voice Change" value="0 41"/>
+		</macro-def>
+		<macro-def name="voice:Viola Attack">
+			<macro-ref ref="Voice Change" value="1 41"/>
+		</macro-def>
+
+		<macro-def name="voice:Cello">
+			<macro-ref ref="Voice Change" value="0 42"/>
+		</macro-def>
+		<macro-def name="voice:Cello Attack">
+			<macro-ref ref="Voice Change" value="1 42"/>
+		</macro-def>
+
+		<macro-def name="voice:Contrabass">
+			<macro-ref ref="Voice Change" value="0 43"/>
+		</macro-def>
+
+		<macro-def name="voice:Tremolo String">
+			<macro-ref ref="Voice Change" value="0 44"/>
+		</macro-def>
+		<macro-def name="voice:Tremolo String 2">
+			<macro-ref ref="Voice Change" value="2 44"/>
+		</macro-def>
+		<macro-def name="voice:Slow Tremolo String">
+			<macro-ref ref="Voice Change" value="8 44"/>
+		</macro-def>
+		<macro-def name="voice:Suspense String">
+			<macro-ref ref="Voice Change" value="9 44"/>
+		</macro-def>
+		<macro-def name="voice:Suspense String 2">
+			<macro-ref ref="Voice Change" value="10 44"/>
+		</macro-def>
+
+		<macro-def name="voice:Pizzicato String">
+			<macro-ref ref="Voice Change" value="0 45"/>
+		</macro-def>
+		<macro-def name="voice:Vcs &amp; Cbs Pizzicato String">
+			<macro-ref ref="Voice Change" value="1 45"/>
+		</macro-def>
+		<macro-def name="voice:Chamber Pizzicato">
+			<macro-ref ref="Voice Change" value="2 45"/>
+		</macro-def>
+		<macro-def name="voice:Steel Pizzicato">
+			<macro-ref ref="Voice Change" value="3 45"/>
+		</macro-def>
+		<macro-def name="voice:Solo Pizzicato">
+			<macro-ref ref="Voice Change" value="8 45"/>
+		</macro-def>
+		<macro-def name="voice:Solo Spic.">
+			<macro-ref ref="Voice Change" value="16 45"/>
+		</macro-def>
+		<macro-def name="voice:Strings Spic.">
+			<macro-ref ref="Voice Change" value="17 45"/>
+		</macro-def>
+
+		<macro-def name="voice:Harp">
+			<macro-ref ref="Voice Change" value="0 46"/>
+		</macro-def>
+		<macro-def name="voice:Harp &amp; Strings">
+			<macro-ref ref="Voice Change" value="1 46"/>
+		</macro-def>
+		<macro-def name="voice:Harp Steel">
+			<macro-ref ref="Voice Change" value="2 46"/>
+		</macro-def>
+		<macro-def name="voice:Uillean Harp">
+			<macro-ref ref="Voice Change" value="8 46"/>
+		</macro-def>
+		<macro-def name="voice:Synth Harp">
+			<macro-ref ref="Voice Change" value="16 46"/>
+		</macro-def>
+		<macro-def name="voice:Yang Qin">
+			<macro-ref ref="Voice Change" value="24 46"/>
+		</macro-def>
+		<macro-def name="voice:Yang Qin 2">
+			<macro-ref ref="Voice Change" value="25 46"/>
+		</macro-def>
+		<macro-def name="voice:Synth Yang Qin">
+			<macro-ref ref="Voice Change" value="26 46"/>
+		</macro-def>
+
+		<macro-def name="voice:Timpani">
+			<macro-ref ref="Voice Change" value="0 47"/>
+		</macro-def>
+
+		<!-- ############## -->
+		<!-- ## ENSAMBLE ## -->
+		<!-- ############## -->
+
+		<macro-def name="voice:Strings">
+			<macro-ref ref="Voice Change" value="0 48"/>
+		</macro-def>
+		<macro-def name="voice:Bright Strings">
+			<macro-ref ref="Voice Change" value="1 48"/>
+		</macro-def>
+		<macro-def name="voice:Chamber Strings">
+			<macro-ref ref="Voice Change" value="2 48"/>
+		</macro-def>
+		<macro-def name="voice:Cello Section">
+			<macro-ref ref="Voice Change" value="3 48"/>
+		</macro-def>
+		<macro-def name="voice:Bright Strings 2">
+			<macro-ref ref="Voice Change" value="4 48"/>
+		</macro-def>
+		<macro-def name="voice:Bright Strings 3">
+			<macro-ref ref="Voice Change" value="5 48"/>
+		</macro-def>
+		<macro-def name="voice:Quad Strings">
+			<macro-ref ref="Voice Change" value="6 48"/>
+		</macro-def>
+		<macro-def name="voice:Mild Strings">
+			<macro-ref ref="Voice Change" value="7 48"/>
+		</macro-def>
+		<macro-def name="voice:Orchestra">
+			<macro-ref ref="Voice Change" value="8 48"/>
+		</macro-def>
+		<macro-def name="voice:Orchestra 2">
+			<macro-ref ref="Voice Change" value="9 48"/>
+		</macro-def>
+		<macro-def name="voice:Tremolo Orchestra">
+			<macro-ref ref="Voice Change" value="10 48"/>
+		</macro-def>
+		<macro-def name="voice:Choir Strings">
+			<macro-ref ref="Voice Change" value="11 48"/>
+		</macro-def>
+		<macro-def name="voice:Strings + Horn">
+			<macro-ref ref="Voice Change" value="12 48"/>
+		</macro-def>
+		<macro-def name="voice:Strings + Flute">
+			<macro-ref ref="Voice Change" value="13 48"/>
+		</macro-def>
+		<macro-def name="voice:Choir Strings 2">
+			<macro-ref ref="Voice Change" value="14 48"/>
+		</macro-def>
+		<macro-def name="voice:Choir Strings 3">
+			<macro-ref ref="Voice Change" value="15 48"/>
+		</macro-def>
+		<macro-def name="voice:Steel Strings">
+			<macro-ref ref="Voice Change" value="16 48"/>
+		</macro-def>
+		<macro-def name="voice:Steel Strings 2">
+			<macro-ref ref="Voice Change" value="17 48"/>
+		</macro-def>
+		<macro-def name="voice:Steel Strings 3">
+			<macro-ref ref="Voice Change" value="18 48"/>
+		</macro-def>
+		<macro-def name="voice:Orchestra 3">
+			<macro-ref ref="Voice Change" value="19 48"/>
+		</macro-def>
+		<macro-def name="voice:Orchestra 4">
+			<macro-ref ref="Voice Change" value="20 48"/>
+		</macro-def>
+		<macro-def name="voice:Velo Strings">
+			<macro-ref ref="Voice Change" value="24 48"/>
+		</macro-def>
+		<macro-def name="voice:Octave Strings 1">
+			<macro-ref ref="Voice Change" value="32 48"/>
+		</macro-def>
+		<macro-def name="voice:Octave Strings 2">
+			<macro-ref ref="Voice Change" value="33 48"/>
+		</macro-def>
+		<macro-def name="voice:Contrabass Sect">
+			<macro-ref ref="Voice Change" value="34 48"/>
+		</macro-def>
+		<macro-def name="voice:60s Strings">
+			<macro-ref ref="Voice Change" value="40 48"/>
+		</macro-def>
+
+		<macro-def name="voice:Slow Strings">
+			<macro-ref ref="Voice Change" value="0 49"/>
+		</macro-def>
+		<macro-def name="voice:Slow Strings 2">
+			<macro-ref ref="Voice Change" value="1 49"/>
+		</macro-def>
+		<macro-def name="voice:Slow Strings 3">
+			<macro-ref ref="Voice Change" value="2 49"/>
+		</macro-def>
+		<macro-def name="voice:Legato Strings">
+			<macro-ref ref="Voice Change" value="8 49"/>
+		</macro-def>
+		<macro-def name="voice:Warm Strings">
+			<macro-ref ref="Voice Change" value="9 49"/>
+		</macro-def>
+		<macro-def name="voice:Steel Slow Strings">
+			<macro-ref ref="Voice Change" value="10 49"/>
+		</macro-def>
+		<macro-def name="voice:Steel Slow Strings 2">
+			<macro-ref ref="Voice Change" value="11 49"/>
+		</macro-def>
+		<macro-def name="voice:Slow Strings + Choir">
+			<macro-ref ref="Voice Change" value="12 49"/>
+		</macro-def>
+		<macro-def name="voice:Slow Strings + Choir 2">
+			<macro-ref ref="Voice Change" value="13 49"/>
+		</macro-def>
+
+		<macro-def name="voice:Synth Strings 1">
+			<macro-ref ref="Voice Change" value="0 50"/>
+		</macro-def>
+		<macro-def name="voice:OB Strings">
+			<macro-ref ref="Voice Change" value="1 50"/>
+		</macro-def>
+		<macro-def name="voice:Stack Strings">
+			<macro-ref ref="Voice Change" value="2 50"/>
+		</macro-def>
+		<macro-def name="voice:JP Strings">
+			<macro-ref ref="Voice Change" value="3 50"/>
+		</macro-def>
+		<macro-def name="voice:Chorus Strings">
+			<macro-ref ref="Voice Change" value="4 50"/>
+		</macro-def>
+		<macro-def name="voice:Synth Strings 3">
+			<macro-ref ref="Voice Change" value="8 50"/>
+		</macro-def>
+		<macro-def name="voice:Synth Strings 4">
+			<macro-ref ref="Voice Change" value="9 50"/>
+		</macro-def>
+		<macro-def name="voice:Synth Strings 6">
+			<macro-ref ref="Voice Change" value="10 50"/>
+		</macro-def>
+		<macro-def name="voice:Synth Strings 7">
+			<macro-ref ref="Voice Change" value="11 50"/>
+		</macro-def>
+		<macro-def name="voice:LoFi Strings">
+			<macro-ref ref="Voice Change" value="12 50"/>
+		</macro-def>
+		<macro-def name="voice:High Strings">
+			<macro-ref ref="Voice Change" value="16 50"/>
+		</macro-def>
+		<macro-def name="voice:Hybrid Strings">
+			<macro-ref ref="Voice Change" value="17 50"/>
+		</macro-def>
+		<macro-def name="voice:Tron Strings">
+			<macro-ref ref="Voice Change" value="24 50"/>
+		</macro-def>
+		<macro-def name="voice:Noise Strings">
+			<macro-ref ref="Voice Change" value="25 50"/>
+		</macro-def>
+
+		<macro-def name="voice:Synth Strings 2">
+			<macro-ref ref="Voice Change" value="0 51"/>
+		</macro-def>
+		<macro-def name="voice:Synth Strings 5">
+			<macro-ref ref="Voice Change" value="1 51"/>
+		</macro-def>
+		<macro-def name="voice:JUNO Strings">
+			<macro-ref ref="Voice Change" value="2 51"/>
+		</macro-def>
+		<macro-def name="voice:Filtered Orchestra">
+			<macro-ref ref="Voice Change" value="3 51"/>
+		</macro-def>
+		<macro-def name="voice:JP Saw Strings">
+			<macro-ref ref="Voice Change" value="4 51"/>
+		</macro-def>
+		<macro-def name="voice:Hybrid Strings 2">
+			<macro-ref ref="Voice Change" value="5 51"/>
+		</macro-def>
+		<macro-def name="voice:Distortion Strings">
+			<macro-ref ref="Voice Change" value="6 51"/>
+		</macro-def>
+		<macro-def name="voice:JUNO Full Strings">
+			<macro-ref ref="Voice Change" value="7 51"/>
+		</macro-def>
+		<macro-def name="voice:Air Strings">
+			<macro-ref ref="Voice Change" value="8 51"/>
+		</macro-def>
+		<macro-def name="voice:Attack Synth Strings">
+			<macro-ref ref="Voice Change" value="9 51"/>
+		</macro-def>
+		<macro-def name="voice:Straight Strings">
+			<macro-ref ref="Voice Change" value="10 51"/>
+		</macro-def>
+
+		<macro-def name="voice:Choir Aahs">
+			<macro-ref ref="Voice Change" value="0 52"/>
+		</macro-def>
+		<macro-def name="voice:Steel Choir Aahs">
+			<macro-ref ref="Voice Change" value="8 52"/>
+		</macro-def>
+		<macro-def name="voice:Melted Choir">
+			<macro-ref ref="Voice Change" value="9 52"/>
+		</macro-def>
+		<macro-def name="voice:Church Choir">
+			<macro-ref ref="Voice Change" value="10 52"/>
+		</macro-def>
+		<macro-def name="voice:Boys Choir 1">
+			<macro-ref ref="Voice Change" value="11 52"/>
+		</macro-def>
+		<macro-def name="voice:Boys Choir 2">
+			<macro-ref ref="Voice Change" value="12 52"/>
+		</macro-def>
+		<macro-def name="voice:Steel Boys Choir">
+			<macro-ref ref="Voice Change" value="13 52"/>
+		</macro-def>
+		<macro-def name="voice:Rich Choir">
+			<macro-ref ref="Voice Change" value="14 52"/>
+		</macro-def>
+		<macro-def name="voice:Choir Hahs">
+			<macro-ref ref="Voice Change" value="16 52"/>
+		</macro-def>
+		<macro-def name="voice:Chorus Lahs">
+			<macro-ref ref="Voice Change" value="24 52"/>
+		</macro-def>
+		<macro-def name="voice:Chorus Aahs">
+			<macro-ref ref="Voice Change" value="32 52"/>
+		</macro-def>
+		<macro-def name="voice:Male Aah + Strings">
+			<macro-ref ref="Voice Change" value="33 52"/>
+		</macro-def>
+
+		<macro-def name="voice:Voice Oohs">
+			<macro-ref ref="Voice Change" value="0 53"/>
+		</macro-def>
+		<macro-def name="voice:Chorus Oohs">
+			<macro-ref ref="Voice Change" value="1 53"/>
+		</macro-def>
+		<macro-def name="voice:Voice Oohs 2">
+			<macro-ref ref="Voice Change" value="2 53"/>
+		</macro-def>
+		<macro-def name="voice:Chorus Oohs 2">
+			<macro-ref ref="Voice Change" value="3 53"/>
+		</macro-def>
+		<macro-def name="voice:Oohs Code Maj7">
+			<macro-ref ref="Voice Change" value="4 53"/>
+		</macro-def>
+		<macro-def name="voice:Oohs Code Sus4">
+			<macro-ref ref="Voice Change" value="5 53"/>
+		</macro-def>
+		<macro-def name="voice:Jazz Scat">
+			<macro-ref ref="Voice Change" value="6 53"/>
+		</macro-def>
+		<macro-def name="voice:Voice Dahs">
+			<macro-ref ref="Voice Change" value="8 53"/>
+		</macro-def>
+		<macro-def name="voice:Jazz Voice Dat">
+			<macro-ref ref="Voice Change" value="9 53"/>
+		</macro-def>
+		<macro-def name="voice:Jazz Voice Bap">
+			<macro-ref ref="Voice Change" value="10 53"/>
+		</macro-def>
+		<macro-def name="voice:Jazz Voice Dow">
+			<macro-ref ref="Voice Change" value="11 53"/>
+		</macro-def>
+		<macro-def name="voice:Jazz Voice Thum">
+			<macro-ref ref="Voice Change" value="12 53"/>
+		</macro-def>
+		<macro-def name="voice:Voice Lah Female">
+			<macro-ref ref="Voice Change" value="16 53"/>
+		</macro-def>
+		<macro-def name="voice:Chorus Lah Female">
+			<macro-ref ref="Voice Change" value="17 53"/>
+		</macro-def>
+		<macro-def name="voice:Voice Luh Female">
+			<macro-ref ref="Voice Change" value="18 53"/>
+		</macro-def>
+		<macro-def name="voice:Chorus Luh Female">
+			<macro-ref ref="Voice Change" value="19 53"/>
+		</macro-def>
+		<macro-def name="voice:Voice Lan Female">
+			<macro-ref ref="Voice Change" value="20 53"/>
+		</macro-def>
+		<macro-def name="voice:Chorus Lan Female">
+			<macro-ref ref="Voice Change" value="21 53"/>
+		</macro-def>
+		<macro-def name="voice:Voice Aah Female">
+			<macro-ref ref="Voice Change" value="22 53"/>
+		</macro-def>
+		<macro-def name="voice:Voice Uuh Female">
+			<macro-ref ref="Voice Change" value="23 53"/>
+		</macro-def>
+		<macro-def name="voice:Female Lah &amp; Lan">
+			<macro-ref ref="Voice Change" value="24 53"/>
+		</macro-def>
+		<macro-def name="voice:Voice Wah Malale">
+			<macro-ref ref="Voice Change" value="32 53"/>
+		</macro-def>
+		<macro-def name="voice:Chorus Wah Male">
+			<macro-ref ref="Voice Change" value="33 53"/>
+		</macro-def>
+		<macro-def name="voice:Voice Woh Male">
+			<macro-ref ref="Voice Change" value="34 53"/>
+		</macro-def>
+		<macro-def name="voice:Chorus Woh Male">
+			<macro-ref ref="Voice Change" value="35 53"/>
+		</macro-def>
+		<macro-def name="voice:Voice Aah Male">
+			<macro-ref ref="Voice Change" value="36 53"/>
+		</macro-def>
+		<macro-def name="voice:Voice Ooh Male">
+			<macro-ref ref="Voice Change" value="37 53"/>
+		</macro-def>
+		<macro-def name="voice:Humming">
+			<macro-ref ref="Voice Change" value="40 53"/>
+		</macro-def>
+
+		<macro-def name="voice:Synth Vox">
+			<macro-ref ref="Voice Change" value="0 54"/>
+		</macro-def>
+		<macro-def name="voice:Synth Vox 2">
+			<macro-ref ref="Voice Change" value="1 54"/>
+		</macro-def>
+		<macro-def name="voice:Synth Vox 3">
+			<macro-ref ref="Voice Change" value="2 54"/>
+		</macro-def>
+		<macro-def name="voice:Synth Voice">
+			<macro-ref ref="Voice Change" value="8 54"/>
+		</macro-def>
+		<macro-def name="voice:Silent Night">
+			<macro-ref ref="Voice Change" value="9 54"/>
+		</macro-def>
+		<macro-def name="voice:Synth Voice 2">
+			<macro-ref ref="Voice Change" value="10 54"/>
+		</macro-def>
+		<macro-def name="voice:VP330 Choir">
+			<macro-ref ref="Voice Change" value="16 54"/>
+		</macro-def>
+		<macro-def name="voice:Vinyl Choir">
+			<macro-ref ref="Voice Change" value="17 54"/>
+		</macro-def>
+		<macro-def name="voice:JX8P Vox">
+			<macro-ref ref="Voice Change" value="18 54"/>
+		</macro-def>
+		<macro-def name="voice:Analog Voice">
+			<macro-ref ref="Voice Change" value="19 54"/>
+		</macro-def>
+
+		<macro-def name="voice:Orchestra Hit">
+			<macro-ref ref="Voice Change" value="0 55"/>
+		</macro-def>
+		<macro-def name="voice:Bass Hit">
+			<macro-ref ref="Voice Change" value="1 55"/>
+		</macro-def>
+		<macro-def name="voice:6th Hit">
+			<macro-ref ref="Voice Change" value="2 55"/>
+		</macro-def>
+		<macro-def name="voice:Euro Hit">
+			<macro-ref ref="Voice Change" value="3 55"/>
+		</macro-def>
+		<macro-def name="voice:Impact Hit">
+			<macro-ref ref="Voice Change" value="8 55"/>
+		</macro-def>
+		<macro-def name="voice:Philly Hit">
+			<macro-ref ref="Voice Change" value="9 55"/>
+		</macro-def>
+		<macro-def name="voice:Double Hit">
+			<macro-ref ref="Voice Change" value="10 55"/>
+		</macro-def>
+		<macro-def name="voice:Perc. Hit">
+			<macro-ref ref="Voice Change" value="11 55"/>
+		</macro-def>
+		<macro-def name="voice:Shock Wave">
+			<macro-ref ref="Voice Change" value="12 55"/>
+		</macro-def>
+		<macro-def name="voice:Bounce Hit">
+			<macro-ref ref="Voice Change" value="13 55"/>
+		</macro-def>
+		<macro-def name="voice:Drill Hit">
+			<macro-ref ref="Voice Change" value="14 55"/>
+		</macro-def>
+		<macro-def name="voice:Thrill Hit">
+			<macro-ref ref="Voice Change" value="15 55"/>
+		</macro-def>
+		<macro-def name="voice:Lo Fi Rave">
+			<macro-ref ref="Voice Change" value="16 55"/>
+		</macro-def>
+		<macro-def name="voice:Techno Hit">
+			<macro-ref ref="Voice Change" value="17 55"/>
+		</macro-def>
+		<macro-def name="voice:Distortion Hit">
+			<macro-ref ref="Voice Change" value="18 55"/>
+		</macro-def>
+		<macro-def name="voice:Bam Hit">
+			<macro-ref ref="Voice Change" value="19 55"/>
+		</macro-def>
+		<macro-def name="voice:Bit Hit">
+			<macro-ref ref="Voice Change" value="20 55"/>
+		</macro-def>
+		<macro-def name="voice:Bim Hit">
+			<macro-ref ref="Voice Change" value="21 55"/>
+		</macro-def>
+		<macro-def name="voice:Technorg Hit">
+			<macro-ref ref="Voice Change" value="22 55"/>
+		</macro-def>
+		<macro-def name="voice:Rave Hit">
+			<macro-ref ref="Voice Change" value="23 55"/>
+		</macro-def>
+		<macro-def name="voice:Strings Hit">
+			<macro-ref ref="Voice Change" value="24 55"/>
+		</macro-def>
+		<macro-def name="voice:Stack Hit">
+			<macro-ref ref="Voice Change" value="25 55"/>
+		</macro-def>
+		<macro-def name="voice:Industry Hit">
+			<macro-ref ref="Voice Change" value="26 55"/>
+		</macro-def>
+		<macro-def name="voice:Clap Hit">
+			<macro-ref ref="Voice Change" value="27 55"/>
+		</macro-def>
+
+		<macro-def name="voice:Trumpet">
+			<macro-ref ref="Voice Change" value="0 56"/>
+		</macro-def>
+		<macro-def name="voice:Trumpet 2">
+			<macro-ref ref="Voice Change" value="1 56"/>
+		</macro-def>
+		<macro-def name="voice:Trumpet 3">
+			<macro-ref ref="Voice Change" value="2 56"/>
+		</macro-def>
+		<macro-def name="voice:Dark Trumpet">
+			<macro-ref ref="Voice Change" value="3 56"/>
+		</macro-def>
+		<macro-def name="voice:Trumpet &amp; Noise">
+			<macro-ref ref="Voice Change" value="4 56"/>
+		</macro-def>
+		<macro-def name="voice:Flugel Horn">
+			<macro-ref ref="Voice Change" value="8 56"/>
+		</macro-def>
+		<macro-def name="voice:4th Trumpets">
+			<macro-ref ref="Voice Change" value="16 56"/>
+		</macro-def>
+		<macro-def name="voice:Bright Trumpet">
+			<macro-ref ref="Voice Change" value="24 56"/>
+		</macro-def>
+		<macro-def name="voice:Warm Trumpet">
+			<macro-ref ref="Voice Change" value="25 56"/>
+		</macro-def>
+		<macro-def name="voice:Warm Trumpet 2">
+			<macro-ref ref="Voice Change" value="26 56"/>
+		</macro-def>
+		<macro-def name="voice:Twin Trumpet">
+			<macro-ref ref="Voice Change" value="27 56"/>
+		</macro-def>
+		<macro-def name="voice:Synth Trumpet">
+			<macro-ref ref="Voice Change" value="32 56"/>
+		</macro-def>
+
+		<macro-def name="voice:Trombone">
+			<macro-ref ref="Voice Change" value="0 57"/>
+		</macro-def>
+		<macro-def name="voice:Trombone 2">
+			<macro-ref ref="Voice Change" value="1 57"/>
+		</macro-def>
+		<macro-def name="voice:Twin Trombones">
+			<macro-ref ref="Voice Change" value="2 57"/>
+		</macro-def>
+		<macro-def name="voice:Trombones &amp; Tuba">
+			<macro-ref ref="Voice Change" value="3 57"/>
+		</macro-def>
+		<macro-def name="voice:Bright Trombone">
+			<macro-ref ref="Voice Change" value="4 57"/>
+		</macro-def>
+		<macro-def name="voice:Bass Trombone">
+			<macro-ref ref="Voice Change" value="8 57"/>
+		</macro-def>
+		<macro-def name="voice:Euphonium">
+			<macro-ref ref="Voice Change" value="16 57"/>
+		</macro-def>
+
+		<macro-def name="voice:Tuba">
+			<macro-ref ref="Voice Change" value="0 58"/>
+		</macro-def>
+		<macro-def name="voice:Tuba 2">
+			<macro-ref ref="Voice Change" value="1 58"/>
+		</macro-def>
+		<macro-def name="voice:Tuba + Horn">
+			<macro-ref ref="Voice Change" value="8 58"/>
+		</macro-def>
+
+		<macro-def name="voice:Muted Trumpet">
+			<macro-ref ref="Voice Change" value="0 59"/>
+		</macro-def>
+		<macro-def name="voice:Cup Mute Trumpet">
+			<macro-ref ref="Voice Change" value="1 59"/>
+		</macro-def>
+		<macro-def name="voice:Muted Trumpet 2">
+			<macro-ref ref="Voice Change" value="2 59"/>
+		</macro-def>
+		<macro-def name="voice:Muted Trumpet 3">
+			<macro-ref ref="Voice Change" value="3 59"/>
+		</macro-def>
+		<macro-def name="voice:Muted Horns">
+			<macro-ref ref="Voice Change" value="8 59"/>
+		</macro-def>
+
+		<macro-def name="voice:French Horns">
+			<macro-ref ref="Voice Change" value="0 60"/>
+		</macro-def>
+		<macro-def name="voice:French Horn 2">
+			<macro-ref ref="Voice Change" value="1 60"/>
+		</macro-def>
+		<macro-def name="voice:Horn + Orche">
+			<macro-ref ref="Voice Change" value="2 60"/>
+		</macro-def>
+		<macro-def name="voice:Wide French Horns">
+			<macro-ref ref="Voice Change" value="3 60"/>
+		</macro-def>
+		<macro-def name="voice:French Horn Slow">
+			<macro-ref ref="Voice Change" value="8 60"/>
+		</macro-def>
+		<macro-def name="voice:Dual Horns">
+			<macro-ref ref="Voice Change" value="9 60"/>
+		</macro-def>
+		<macro-def name="voice:Synth Horn">
+			<macro-ref ref="Voice Change" value="16 60"/>
+		</macro-def>
+		<macro-def name="voice:French Horn Rip">
+			<macro-ref ref="Voice Change" value="24 60"/>
+		</macro-def>
+
+		<!-- ########### -->
+		<!-- ## BRASS ## -->
+		<!-- ########### -->
+
+		<macro-def name="voice:Brass 1">
+			<macro-ref ref="Voice Change" value="0 61"/>
+		</macro-def>
+		<macro-def name="voice:Brass ff">
+			<macro-ref ref="Voice Change" value="1 61"/>
+		</macro-def>
+		<macro-def name="voice:Bones Section">
+			<macro-ref ref="Voice Change" value="2 61"/>
+		</macro-def>
+		<macro-def name="voice:Steel Brass ff">
+			<macro-ref ref="Voice Change" value="3 61"/>
+		</macro-def>
+		<macro-def name="voice:Quad Brass 1">
+			<macro-ref ref="Voice Change" value="4 61"/>
+		</macro-def>
+		<macro-def name="voice:Quad Brass 2">
+			<macro-ref ref="Voice Change" value="5 61"/>
+		</macro-def>
+		<macro-def name="voice:Brass 2">
+			<macro-ref ref="Voice Change" value="8 61"/>
+		</macro-def>
+		<macro-def name="voice:Brass 3">
+			<macro-ref ref="Voice Change" value="9 61"/>
+		</macro-def>
+		<macro-def name="voice:Brass sfz">
+			<macro-ref ref="Voice Change" value="10 61"/>
+		</macro-def>
+		<macro-def name="voice:Brass sfz 2">
+			<macro-ref ref="Voice Change" value="12 61"/>
+		</macro-def>
+		<macro-def name="voice:FatPop Brass">
+			<macro-ref ref="Voice Change" value="14 61"/>
+		</macro-def>
+		<macro-def name="voice:Brass Fall">
+			<macro-ref ref="Voice Change" value="16 61"/>
+		</macro-def>
+		<macro-def name="voice:Trumpet Fall">
+			<macro-ref ref="Voice Change" value="17 61"/>
+		</macro-def>
+		<macro-def name="voice:Octave Brass">
+			<macro-ref ref="Voice Change" value="24 61"/>
+		</macro-def>
+		<macro-def name="voice:Brass + Reed">
+			<macro-ref ref="Voice Change" value="25 61"/>
+		</macro-def>
+		<macro-def name="voice:Fat + Reed">
+			<macro-ref ref="Voice Change" value="26 61"/>
+		</macro-def>
+		<macro-def name="voice:Orchestra Brass">
+			<macro-ref ref="Voice Change" value="32 61"/>
+		</macro-def>
+		<macro-def name="voice:Orchestra Brass 2">
+			<macro-ref ref="Voice Change" value="33 61"/>
+		</macro-def>
+		<macro-def name="voice:Steel Fat Pop Brass">
+			<macro-ref ref="Voice Change" value="35 61"/>
+		</macro-def>
+		<macro-def name="voice:Steel Orchestra Brass">
+			<macro-ref ref="Voice Change" value="36 61"/>
+		</macro-def>
+		<macro-def name="voice:Steel Orchestra Brass 2">
+			<macro-ref ref="Voice Change" value="37 61"/>
+		</macro-def>
+		<macro-def name="voice:Steel Orchestra Brass 3">
+			<macro-ref ref="Voice Change" value="38 61"/>
+		</macro-def>
+
+		<macro-def name="voice:Synth Brass 1">
+			<macro-ref ref="Voice Change" value="0 62"/>
+		</macro-def>
+		<macro-def name="voice:JUNO Brass">
+			<macro-ref ref="Voice Change" value="1 62"/>
+		</macro-def>
+		<macro-def name="voice:Stack Brass">
+			<macro-ref ref="Voice Change" value="2 62"/>
+		</macro-def>
+		<macro-def name="voice:SH-5 Brass">
+			<macro-ref ref="Voice Change" value="3 62"/>
+		</macro-def>
+		<macro-def name="voice:MKS Brass">
+			<macro-ref ref="Voice Change" value="4 62"/>
+		</macro-def>
+		<macro-def name="voice:Jump Brass">
+			<macro-ref ref="Voice Change" value="5 62"/>
+		</macro-def>
+		<macro-def name="voice:Pro Brass">
+			<macro-ref ref="Voice Change" value="8 62"/>
+		</macro-def>
+		<macro-def name="voice:P5 Brass">
+			<macro-ref ref="Voice Change" value="9 62"/>
+		</macro-def>
+		<macro-def name="voice:Orchestra Synth Brass">
+			<macro-ref ref="Voice Change" value="10 62"/>
+		</macro-def>
+		<macro-def name="voice:Octave Synth Brass">
+			<macro-ref ref="Voice Change" value="16 62"/>
+		</macro-def>
+		<macro-def name="voice:Hybrid Brass">
+			<macro-ref ref="Voice Change" value="17 62"/>
+		</macro-def>
+		<macro-def name="voice:Octave Synth Brass 2">
+			<macro-ref ref="Voice Change" value="18 62"/>
+		</macro-def>
+		<macro-def name="voice:BPF Brass">
+			<macro-ref ref="Voice Change" value="19 62"/>
+		</macro-def>
+
+		<macro-def name="voice:Synth Brass 2">
+			<macro-ref ref="Voice Change" value="0 63"/>
+		</macro-def>
+		<macro-def name="voice:Soft Brass">
+			<macro-ref ref="Voice Change" value="1 63"/>
+		</macro-def>
+		<macro-def name="voice:Warm Brass">
+			<macro-ref ref="Voice Change" value="2 63"/>
+		</macro-def>
+		<macro-def name="voice:Synth Brass3">
+			<macro-ref ref="Voice Change" value="3 63"/>
+		</macro-def>
+		<macro-def name="voice:Sync Brass">
+			<macro-ref ref="Voice Change" value="4 63"/>
+		</macro-def>
+		<macro-def name="voice:Fat Sync Brass">
+			<macro-ref ref="Voice Change" value="5 63"/>
+		</macro-def>
+		<macro-def name="voice:Deep Sync Brass">
+			<macro-ref ref="Voice Change" value="6 63"/>
+		</macro-def>
+		<macro-def name="voice:Sync Brass sfz">
+			<macro-ref ref="Voice Change" value="8 63"/>
+		</macro-def>
+		<macro-def name="voice:OB Brass">
+			<macro-ref ref="Voice Change" value="9 63"/>
+		</macro-def>
+		<macro-def name="voice:Resonance Brass">
+			<macro-ref ref="Voice Change" value="10 63"/>
+		</macro-def>
+		<macro-def name="voice:Distortion Square Brass">
+			<macro-ref ref="Voice Change" value="11 63"/>
+		</macro-def>
+		<macro-def name="voice:JP8000 Saw Brass">
+			<macro-ref ref="Voice Change" value="12 63"/>
+		</macro-def>
+		<macro-def name="voice:Velo Brass 1">
+			<macro-ref ref="Voice Change" value="16 63"/>
+		</macro-def>
+		<macro-def name="voice:Transbrass">
+			<macro-ref ref="Voice Change" value="17 63"/>
+		</macro-def>
+
+		<!-- ########## -->
+		<!-- ## REED ## -->
+		<!-- ########## -->
+
+		<macro-def name="voice:Soprano Sax">
+			<macro-ref ref="Voice Change" value="0 64"/>
+		</macro-def>
+		<macro-def name="voice:Soprano Exp.">
+			<macro-ref ref="Voice Change" value="8 64"/>
+		</macro-def>
+
+		<macro-def name="voice:Alto Sax">
+			<macro-ref ref="Voice Change" value="0 65"/>
+		</macro-def>
+		<macro-def name="voice:Alto Sax Exp.">
+			<macro-ref ref="Voice Change" value="8 65"/>
+		</macro-def>
+		<macro-def name="voice:Grow Sax">
+			<macro-ref ref="Voice Change" value="9 65"/>
+		</macro-def>
+		<macro-def name="voice:Alto Sax + Trumpet">
+			<macro-ref ref="Voice Change" value="16 65"/>
+		</macro-def>
+		<macro-def name="voice:Sax Section">
+			<macro-ref ref="Voice Change" value="17 65"/>
+		</macro-def>
+
+		<macro-def name="voice:Tenor Sax">
+			<macro-ref ref="Voice Change" value="0 66"/>
+		</macro-def>
+		<macro-def name="voice:Tenor Sax 2">
+			<macro-ref ref="Voice Change" value="1 66"/>
+		</macro-def>
+		<macro-def name="voice:Breathy Tenor Sax">
+			<macro-ref ref="Voice Change" value="8 66"/>
+		</macro-def>
+		<macro-def name="voice:Steel Tenor Sax">
+			<macro-ref ref="Voice Change" value="9 66"/>
+		</macro-def>
+
+		<macro-def name="voice:Baritone Sax">
+			<macro-ref ref="Voice Change" value="0 67"/>
+		</macro-def>
+		<macro-def name="voice:Baritone Sax 2">
+			<macro-ref ref="Voice Change" value="1 67"/>
+		</macro-def>
+		<macro-def name="voice:Baritone Sax &amp; Tenor Sax">
+			<macro-ref ref="Voice Change" value="8 67"/>
+		</macro-def>
+
+		<macro-def name="voice:Oboe">
+			<macro-ref ref="Voice Change" value="0 68"/>
+		</macro-def>
+		<macro-def name="voice:Oboe Exp.">
+			<macro-ref ref="Voice Change" value="8 68"/>
+		</macro-def>
+		<macro-def name="voice:Multi Reed">
+			<macro-ref ref="Voice Change" value="16 68"/>
+		</macro-def>
+
+		<macro-def name="voice:English Horn">
+			<macro-ref ref="Voice Change" value="0 69"/>
+		</macro-def>
+
+		<macro-def name="voice:Bassoon">
+			<macro-ref ref="Voice Change" value="0 70"/>
+		</macro-def>
+
+		<macro-def name="voice:Clarinet">
+			<macro-ref ref="Voice Change" value="0 71"/>
+		</macro-def>
+		<macro-def name="voice:Bass Clarinet">
+			<macro-ref ref="Voice Change" value="8 71"/>
+		</macro-def>
+		<macro-def name="voice:Multi Wind">
+			<macro-ref ref="Voice Change" value="16 71"/>
+		</macro-def>
+		<macro-def name="voice:Quad Wind">
+			<macro-ref ref="Voice Change" value="17 71"/>
+		</macro-def>
+
+		<!-- ########## -->
+		<!-- ## PIPE ## -->
+		<!-- ########## -->
+
+		<macro-def name="voice:Piccolo">
+			<macro-ref ref="Voice Change" value="0 72"/>
+		</macro-def>
+		<macro-def name="voice:Piccolo 2">
+			<macro-ref ref="Voice Change" value="1 72"/>
+		</macro-def>
+		<macro-def name="voice:Nay">
+			<macro-ref ref="Voice Change" value="8 72"/>
+		</macro-def>
+		<macro-def name="voice:Nay Tremolo">
+			<macro-ref ref="Voice Change" value="9 72"/>
+		</macro-def>
+		<macro-def name="voice:Di">
+			<macro-ref ref="Voice Change" value="16 72"/>
+		</macro-def>
+
+		<macro-def name="voice:Flute">
+			<macro-ref ref="Voice Change" value="0 73"/>
+		</macro-def>
+		<macro-def name="voice:Flute 2">
+			<macro-ref ref="Voice Change" value="1 73"/>
+		</macro-def>
+		<macro-def name="voice:Flute Exp.">
+			<macro-ref ref="Voice Change" value="2 73"/>
+		</macro-def>
+		<macro-def name="voice:Flute Travelso">
+			<macro-ref ref="Voice Change" value="3 73"/>
+		</macro-def>
+		<macro-def name="voice:Flute + Violin">
+			<macro-ref ref="Voice Change" value="8 73"/>
+		</macro-def>
+		<macro-def name="voice:Pipe &amp; Reed">
+			<macro-ref ref="Voice Change" value="9 73"/>
+		</macro-def>
+		<macro-def name="voice:Tron Flute">
+			<macro-ref ref="Voice Change" value="16 73"/>
+		</macro-def>
+		<macro-def name="voice:Indian Flute">
+			<macro-ref ref="Voice Change" value="17 73"/>
+		</macro-def>
+
+		<macro-def name="voice:Recorder">
+			<macro-ref ref="Voice Change" value="0 74"/>
+		</macro-def>
+
+		<macro-def name="voice:Pan Flute">
+			<macro-ref ref="Voice Change" value="0 75"/>
+		</macro-def>
+		<macro-def name="voice:Kawala">
+			<macro-ref ref="Voice Change" value="8 75"/>
+		</macro-def>
+		<macro-def name="voice:Zampona">
+			<macro-ref ref="Voice Change" value="16 75"/>
+		</macro-def>
+		<macro-def name="voice:Zampona Attack">
+			<macro-ref ref="Voice Change" value="17 75"/>
+		</macro-def>
+		<macro-def name="voice:Tin Whistle">
+			<macro-ref ref="Voice Change" value="24 75"/>
+		</macro-def>
+		<macro-def name="voice:Tin Whistle Nm">
+			<macro-ref ref="Voice Change" value="25 75"/>
+		</macro-def>
+		<macro-def name="voice:Tin Whistle Or">
+			<macro-ref ref="Voice Change" value="26 75"/>
+		</macro-def>
+
+		<macro-def name="voice:Bottle Blow">
+			<macro-ref ref="Voice Change" value="0 76"/>
+		</macro-def>
+
+		<macro-def name="voice:尺八">
+			<macro-ref ref="Voice Change" value="0 77"/>
+		</macro-def>
+		<macro-def name="voice:尺八 2">
+			<macro-ref ref="Voice Change" value="1 77"/>
+		</macro-def>
+
+		<macro-def name="voice:Whistle">
+			<macro-ref ref="Voice Change" value="0 78"/>
+		</macro-def>
+		<macro-def name="voice:Whistle 2">
+			<macro-ref ref="Voice Change" value="1 78"/>
+		</macro-def>
+
+		<macro-def name="voice:Ocarina">
+			<macro-ref ref="Voice Change" value="0 79"/>
+		</macro-def>
+
+		<!-- ################ -->
+		<!-- ## SYNTH LEAD ## -->
+		<!-- ################ -->
+
+		<macro-def name="voice:Square Wave">
+			<macro-ref ref="Voice Change" value="0 80"/>
+		</macro-def>
+		<macro-def name="voice:MG Square">
+			<macro-ref ref="Voice Change" value="1 80"/>
+		</macro-def>
+		<macro-def name="voice:Hollow Mini">
+			<macro-ref ref="Voice Change" value="2 80"/>
+		</macro-def>
+		<macro-def name="voice:Mellow FM">
+			<macro-ref ref="Voice Change" value="3 80"/>
+		</macro-def>
+		<macro-def name="voice:CC Solo">
+			<macro-ref ref="Voice Change" value="4 80"/>
+		</macro-def>
+		<macro-def name="voice:Shmoog">
+			<macro-ref ref="Voice Change" value="5 80"/>
+		</macro-def>
+		<macro-def name="voice:LM Square">
+			<macro-ref ref="Voice Change" value="6 80"/>
+		</macro-def>
+		<macro-def name="voice:JP8000 TWM">
+			<macro-ref ref="Voice Change" value="7 80"/>
+		</macro-def>
+		<macro-def name="voice:2600 Sine">
+			<macro-ref ref="Voice Change" value="8 80"/>
+		</macro-def>
+		<macro-def name="voice:Sine Lead">
+			<macro-ref ref="Voice Change" value="9 80"/>
+		</macro-def>
+		<macro-def name="voice:KG Lead">
+			<macro-ref ref="Voice Change" value="10 80"/>
+		</macro-def>
+		<macro-def name="voice:Twin Sine">
+			<macro-ref ref="Voice Change" value="11 80"/>
+		</macro-def>
+		<macro-def name="voice:P5 Square">
+			<macro-ref ref="Voice Change" value="16 80"/>
+		</macro-def>
+		<macro-def name="voice:OB Square">
+			<macro-ref ref="Voice Change" value="17 80"/>
+		</macro-def>
+		<macro-def name="voice:JP-8 Square">
+			<macro-ref ref="Voice Change" value="18 80"/>
+		</macro-def>
+		<macro-def name="voice:Distortion Square">
+			<macro-ref ref="Voice Change" value="19 80"/>
+		</macro-def>
+		<macro-def name="voice:303 Square Distortion 1">
+			<macro-ref ref="Voice Change" value="20 80"/>
+		</macro-def>
+		<macro-def name="voice:303 Square Distortion 2">
+			<macro-ref ref="Voice Change" value="21 80"/>
+		</macro-def>
+		<macro-def name="voice:303 Mix Square">
+			<macro-ref ref="Voice Change" value="22 80"/>
+		</macro-def>
+		<macro-def name="voice:Dual Square &amp; Saw">
+			<macro-ref ref="Voice Change" value="23 80"/>
+		</macro-def>
+		<macro-def name="voice:Pulse Lead">
+			<macro-ref ref="Voice Change" value="24 80"/>
+		</macro-def>
+		<macro-def name="voice:JP8 Pulse Lead 1">
+			<macro-ref ref="Voice Change" value="25 80"/>
+		</macro-def>
+		<macro-def name="voice:JP8 Pulse Lead 2">
+			<macro-ref ref="Voice Change" value="26 80"/>
+		</macro-def>
+		<macro-def name="voice:MG Resonance Pulse">
+			<macro-ref ref="Voice Change" value="27 80"/>
+		</macro-def>
+		<macro-def name="voice:JP8 Pulse Lead 3">
+			<macro-ref ref="Voice Change" value="28 80"/>
+		</macro-def>
+		<macro-def name="voice:260 Ring Lead">
+			<macro-ref ref="Voice Change" value="29 80"/>
+		</macro-def>
+		<macro-def name="voice:303 Distortion Lead">
+			<macro-ref ref="Voice Change" value="30 80"/>
+		</macro-def>
+		<macro-def name="voice:JP8000 Distortion Lead">
+			<macro-ref ref="Voice Change" value="31 80"/>
+		</macro-def>
+		<macro-def name="voice:HipHop Sine Lead">
+			<macro-ref ref="Voice Change" value="32 80"/>
+		</macro-def>
+		<macro-def name="voice:HipHop Square Lead">
+			<macro-ref ref="Voice Change" value="33 80"/>
+		</macro-def>
+		<macro-def name="voice:HipHop Pulse Lead">
+			<macro-ref ref="Voice Change" value="34 80"/>
+		</macro-def>
+		<macro-def name="voice:Flux Pulse">
+			<macro-ref ref="Voice Change" value="35 80"/>
+		</macro-def>
+
+		<macro-def name="voice:Saw Wave">
+			<macro-ref ref="Voice Change" value="0 81"/>
+		</macro-def>
+		<macro-def name="voice:OB2 Saw">
+			<macro-ref ref="Voice Change" value="1 81"/>
+		</macro-def>
+		<macro-def name="voice:Pulse Saw">
+			<macro-ref ref="Voice Change" value="2 81"/>
+		</macro-def>
+		<macro-def name="voice:Feline GR">
+			<macro-ref ref="Voice Change" value="3 81"/>
+		</macro-def>
+		<macro-def name="voice:Big Lead">
+			<macro-ref ref="Voice Change" value="4 81"/>
+		</macro-def>
+		<macro-def name="voice:Velo Lead">
+			<macro-ref ref="Voice Change" value="5 81"/>
+		</macro-def>
+		<macro-def name="voice:GR-300">
+			<macro-ref ref="Voice Change" value="6 81"/>
+		</macro-def>
+		<macro-def name="voice:LA Saw">
+			<macro-ref ref="Voice Change" value="7 81"/>
+		</macro-def>
+		<macro-def name="voice:Doctor Solo">
+			<macro-ref ref="Voice Change" value="8 81"/>
+		</macro-def>
+		<macro-def name="voice:Fat Saw Lead">
+			<macro-ref ref="Voice Change" value="9 81"/>
+		</macro-def>
+		<macro-def name="voice:JP8000 Saw">
+			<macro-ref ref="Voice Change" value="10 81"/>
+		</macro-def>
+		<macro-def name="voice:D-50 Fat Saw">
+			<macro-ref ref="Voice Change" value="11 81"/>
+		</macro-def>
+		<macro-def name="voice:OB Double Saw">
+			<macro-ref ref="Voice Change" value="12 81"/>
+		</macro-def>
+		<macro-def name="voice:JP Double Saw">
+			<macro-ref ref="Voice Change" value="13 81"/>
+		</macro-def>
+		<macro-def name="voice:Fat Saw Lead 2">
+			<macro-ref ref="Voice Change" value="14 81"/>
+		</macro-def>
+		<macro-def name="voice:JP Super Saw">
+			<macro-ref ref="Voice Change" value="15 81"/>
+		</macro-def>
+		<macro-def name="voice:Waspy Synth">
+			<macro-ref ref="Voice Change" value="16 81"/>
+		</macro-def>
+		<macro-def name="voice:PM Lead">
+			<macro-ref ref="Voice Change" value="17 81"/>
+		</macro-def>
+		<macro-def name="voice:CS Saw Lead">
+			<macro-ref ref="Voice Change" value="18 81"/>
+		</macro-def>
+		<macro-def name="voice:MG Saw 1">
+			<macro-ref ref="Voice Change" value="24 81"/>
+		</macro-def>
+		<macro-def name="voice:MG Saw 2">
+			<macro-ref ref="Voice Change" value="25 81"/>
+		</macro-def>
+		<macro-def name="voice:OB Saw 1">
+			<macro-ref ref="Voice Change" value="26 81"/>
+		</macro-def>
+		<macro-def name="voice:OB Saw 2">
+			<macro-ref ref="Voice Change" value="27 81"/>
+		</macro-def>
+		<macro-def name="voice:D-50 Saw">
+			<macro-ref ref="Voice Change" value="28 81"/>
+		</macro-def>
+		<macro-def name="voice:SH-101 Saw">
+			<macro-ref ref="Voice Change" value="29 81"/>
+		</macro-def>
+		<macro-def name="voice:CS Saw">
+			<macro-ref ref="Voice Change" value="30 81"/>
+		</macro-def>
+		<macro-def name="voice:MG Saw Lead">
+			<macro-ref ref="Voice Change" value="31 81"/>
+		</macro-def>
+		<macro-def name="voice:OB Saw Lead">
+			<macro-ref ref="Voice Change" value="32 81"/>
+		</macro-def>
+		<macro-def name="voice:P5 Saw Lead">
+			<macro-ref ref="Voice Change" value="33 81"/>
+		</macro-def>
+		<macro-def name="voice:MG unison">
+			<macro-ref ref="Voice Change" value="34 81"/>
+		</macro-def>
+		<macro-def name="voice:Octave Saw Lead">
+			<macro-ref ref="Voice Change" value="35 81"/>
+		</macro-def>
+		<macro-def name="voice:Natural Lead">
+			<macro-ref ref="Voice Change" value="36 81"/>
+		</macro-def>
+		<macro-def name="voice:Sequence Saw 1">
+			<macro-ref ref="Voice Change" value="40 81"/>
+		</macro-def>
+		<macro-def name="voice:Sequence Saw 2">
+			<macro-ref ref="Voice Change" value="41 81"/>
+		</macro-def>
+		<macro-def name="voice:Resonance Saw">
+			<macro-ref ref="Voice Change" value="42 81"/>
+		</macro-def>
+		<macro-def name="voice:Cheese Saw 1">
+			<macro-ref ref="Voice Change" value="43 81"/>
+		</macro-def>
+		<macro-def name="voice:Cheese Saw 2">
+			<macro-ref ref="Voice Change" value="44 81"/>
+		</macro-def>
+		<macro-def name="voice:Rhythmic Saw">
+			<macro-ref ref="Voice Change" value="45 81"/>
+		</macro-def>
+		<macro-def name="voice:Sequenced Saw">
+			<macro-ref ref="Voice Change" value="46 81"/>
+		</macro-def>
+		<macro-def name="voice:Techno Saw">
+			<macro-ref ref="Voice Change" value="47 81"/>
+		</macro-def>
+
+		<macro-def name="voice:Synth Calliope">
+			<macro-ref ref="Voice Change" value="0 82"/>
+		</macro-def>
+		<macro-def name="voice:Vent Synth">
+			<macro-ref ref="Voice Change" value="1 82"/>
+		</macro-def>
+		<macro-def name="voice:Pure Pan Lead">
+			<macro-ref ref="Voice Change" value="2 82"/>
+		</macro-def>
+		<macro-def name="voice:LM Pure Lead">
+			<macro-ref ref="Voice Change" value="8 82"/>
+		</macro-def>
+		<macro-def name="voice:LM Blow Lead">
+			<macro-ref ref="Voice Change" value="9 82"/>
+		</macro-def>
+
+		<macro-def name="voice:Chiffer Lead">
+			<macro-ref ref="Voice Change" value="0 83"/>
+		</macro-def>
+		<macro-def name="voice:TB Lead">
+			<macro-ref ref="Voice Change" value="1 83"/>
+		</macro-def>
+		<macro-def name="voice:Hybrid Lead">
+			<macro-ref ref="Voice Change" value="2 83"/>
+		</macro-def>
+		<macro-def name="voice:Unison Square Lead">
+			<macro-ref ref="Voice Change" value="3 83"/>
+		</macro-def>
+		<macro-def name="voice:Fat Solo Lead">
+			<macro-ref ref="Voice Change" value="4 83"/>
+		</macro-def>
+		<macro-def name="voice:Forceful Lead">
+			<macro-ref ref="Voice Change" value="5 83"/>
+		</macro-def>
+		<macro-def name="voice:Octave Unison Lead">
+			<macro-ref ref="Voice Change" value="6 83"/>
+		</macro-def>
+		<macro-def name="voice:Unison Saw Lead">
+			<macro-ref ref="Voice Change" value="7 83"/>
+		</macro-def>
+		<macro-def name="voice:Mad Lead">
+			<macro-ref ref="Voice Change" value="8 83"/>
+		</macro-def>
+		<macro-def name="voice:Crowding Lead">
+			<macro-ref ref="Voice Change" value="9 83"/>
+		</macro-def>
+		<macro-def name="voice:Double Square">
+			<macro-ref ref="Voice Change" value="10 83"/>
+		</macro-def>
+
+		<macro-def name="voice:Charang">
+			<macro-ref ref="Voice Change" value="0 84"/>
+		</macro-def>
+		<macro-def name="voice:Wire Lead">
+			<macro-ref ref="Voice Change" value="1 84"/>
+		</macro-def>
+		<macro-def name="voice:Feedback Charang">
+			<macro-ref ref="Voice Change" value="2 84"/>
+		</macro-def>
+		<macro-def name="voice:Fat GR Lead">
+			<macro-ref ref="Voice Change" value="3 84"/>
+		</macro-def>
+		<macro-def name="voice:Windy GR Lead">
+			<macro-ref ref="Voice Change" value="4 84"/>
+		</macro-def>
+		<macro-def name="voice:Mellow GR Lead">
+			<macro-ref ref="Voice Change" value="5 84"/>
+		</macro-def>
+		<macro-def name="voice:GR &amp; Pulse">
+			<macro-ref ref="Voice Change" value="6 84"/>
+		</macro-def>
+		<macro-def name="voice:Distortion Lead">
+			<macro-ref ref="Voice Change" value="8 84"/>
+		</macro-def>
+		<macro-def name="voice:Acid Guitar 1">
+			<macro-ref ref="Voice Change" value="9 84"/>
+		</macro-def>
+		<macro-def name="voice:Acid Guitar 2">
+			<macro-ref ref="Voice Change" value="10 84"/>
+		</macro-def>
+		<macro-def name="voice:Dance Distortion Guitar">
+			<macro-ref ref="Voice Change" value="11 84"/>
+		</macro-def>
+		<macro-def name="voice:Dance Distortion Guitar 2">
+			<macro-ref ref="Voice Change" value="12 84"/>
+		</macro-def>
+		<macro-def name="voice:P5 Sync Lead">
+			<macro-ref ref="Voice Change" value="16 84"/>
+		</macro-def>
+		<macro-def name="voice:Fat Sync Lead">
+			<macro-ref ref="Voice Change" value="17 84"/>
+		</macro-def>
+		<macro-def name="voice:Rock Lead">
+			<macro-ref ref="Voice Change" value="18 84"/>
+		</macro-def>
+		<macro-def name="voice:5th Deca Sync">
+			<macro-ref ref="Voice Change" value="19 84"/>
+		</macro-def>
+		<macro-def name="voice:Dirty Sync">
+			<macro-ref ref="Voice Change" value="20 84"/>
+		</macro-def>
+		<macro-def name="voice:Dual Sync Lead">
+			<macro-ref ref="Voice Change" value="21 84"/>
+		</macro-def>
+		<macro-def name="voice:LA Brass Lead">
+			<macro-ref ref="Voice Change" value="22 84"/>
+		</macro-def>
+		<macro-def name="voice:JUNO Sub Osc">
+			<macro-ref ref="Voice Change" value="24 84"/>
+		</macro-def>
+		<macro-def name="voice:2600 Sub Osc">
+			<macro-ref ref="Voice Change" value="25 84"/>
+		</macro-def>
+		<macro-def name="voice:JP8000 Fd Osc">
+			<macro-ref ref="Voice Change" value="26 84"/>
+		</macro-def>
+
+		<macro-def name="voice:Solo Vox">
+			<macro-ref ref="Voice Change" value="0 85"/>
+		</macro-def>
+		<macro-def name="voice:Solo Vox 2">
+			<macro-ref ref="Voice Change" value="1 85"/>
+		</macro-def>
+		<macro-def name="voice:Vox Lead">
+			<macro-ref ref="Voice Change" value="8 85"/>
+		</macro-def>
+		<macro-def name="voice:LFO Vox">
+			<macro-ref ref="Voice Change" value="9 85"/>
+		</macro-def>
+		<macro-def name="voice:Vox Lead 2">
+			<macro-ref ref="Voice Change" value="10 85"/>
+		</macro-def>
+
+		<macro-def name="voice:5th Saw Wave">
+			<macro-ref ref="Voice Change" value="0 86"/>
+		</macro-def>
+		<macro-def name="voice:Big Fives">
+			<macro-ref ref="Voice Change" value="1 86"/>
+		</macro-def>
+		<macro-def name="voice:5th Lead">
+			<macro-ref ref="Voice Change" value="2 86"/>
+		</macro-def>
+		<macro-def name="voice:5th Analog Clavichord">
+			<macro-ref ref="Voice Change" value="3 86"/>
+		</macro-def>
+		<macro-def name="voice:5th Pulse">
+			<macro-ref ref="Voice Change" value="4 86"/>
+		</macro-def>
+		<macro-def name="voice:JP 5th Saw">
+			<macro-ref ref="Voice Change" value="5 86"/>
+		</macro-def>
+		<macro-def name="voice:JP8000 5th Feedback">
+			<macro-ref ref="Voice Change" value="6 86"/>
+		</macro-def>
+		<macro-def name="voice:4th Lead">
+			<macro-ref ref="Voice Change" value="8 86"/>
+		</macro-def>
+
+		<macro-def name="voice:Bass &amp; Lead">
+			<macro-ref ref="Voice Change" value="0 87"/>
+		</macro-def>
+		<macro-def name="voice:Big &amp; Raw">
+			<macro-ref ref="Voice Change" value="1 87"/>
+		</macro-def>
+		<macro-def name="voice:Fat &amp; Perky">
+			<macro-ref ref="Voice Change" value="2 87"/>
+		</macro-def>
+		<macro-def name="voice:JUNO Rave">
+			<macro-ref ref="Voice Change" value="3 87"/>
+		</macro-def>
+		<macro-def name="voice:JP8 Bass Lead 1">
+			<macro-ref ref="Voice Change" value="4 87"/>
+		</macro-def>
+		<macro-def name="voice:JP8 Bass Lead 2">
+			<macro-ref ref="Voice Change" value="5 87"/>
+		</macro-def>
+		<macro-def name="voice:SH-5 Bass Lead">
+			<macro-ref ref="Voice Change" value="6 87"/>
+		</macro-def>
+		<macro-def name="voice:Delayed Lead">
+			<macro-ref ref="Voice Change" value="7 87"/>
+		</macro-def>
+
+		<!-- ##################### -->
+		<!-- ## SYNTH PAD, ETC. ## -->
+		<!-- ##################### -->
+
+		<macro-def name="voice:Fantasia">
+			<macro-ref ref="Voice Change" value="0 88"/>
+		</macro-def>
+		<macro-def name="voice:Fantasia 2">
+			<macro-ref ref="Voice Change" value="1 88"/>
+		</macro-def>
+		<macro-def name="voice:New Age Pad">
+			<macro-ref ref="Voice Change" value="2 88"/>
+		</macro-def>
+		<macro-def name="voice:Bell Heaven">
+			<macro-ref ref="Voice Change" value="3 88"/>
+		</macro-def>
+		<macro-def name="voice:Fantasia 3">
+			<macro-ref ref="Voice Change" value="4 88"/>
+		</macro-def>
+		<macro-def name="voice:Fantasia 4">
+			<macro-ref ref="Voice Change" value="5 88"/>
+		</macro-def>
+		<macro-def name="voice:After D !">
+			<macro-ref ref="Voice Change" value="6 88"/>
+		</macro-def>
+		<macro-def name="voice:260 Harmonics Pad">
+			<macro-ref ref="Voice Change" value="7 88"/>
+		</macro-def>
+
+		<macro-def name="voice:Warm Pad">
+			<macro-ref ref="Voice Change" value="0 89"/>
+		</macro-def>
+		<macro-def name="voice:Thick Matrix">
+			<macro-ref ref="Voice Change" value="1 89"/>
+		</macro-def>
+		<macro-def name="voice:Horn Pad">
+			<macro-ref ref="Voice Change" value="2 89"/>
+		</macro-def>
+		<macro-def name="voice:Rotary String">
+			<macro-ref ref="Voice Change" value="3 89"/>
+		</macro-def>
+		<macro-def name="voice:OB Soft Pad">
+			<macro-ref ref="Voice Change" value="4 89"/>
+		</macro-def>
+		<macro-def name="voice:Sine Pad">
+			<macro-ref ref="Voice Change" value="5 89"/>
+		</macro-def>
+		<macro-def name="voice:OB Soft Pad 2">
+			<macro-ref ref="Voice Change" value="6 89"/>
+		</macro-def>
+		<macro-def name="voice:Octave Pad">
+			<macro-ref ref="Voice Change" value="8 89"/>
+		</macro-def>
+		<macro-def name="voice:Stack Pad">
+			<macro-ref ref="Voice Change" value="9 89"/>
+		</macro-def>
+		<macro-def name="voice:Human Pad">
+			<macro-ref ref="Voice Change" value="10 89"/>
+		</macro-def>
+		<macro-def name="voice:Sync Brass Pad">
+			<macro-ref ref="Voice Change" value="11 89"/>
+		</macro-def>
+		<macro-def name="voice:Octave PWM Pad">
+			<macro-ref ref="Voice Change" value="12 89"/>
+		</macro-def>
+		<macro-def name="voice:JP Soft Pad">
+			<macro-ref ref="Voice Change" value="13 89"/>
+		</macro-def>
+
+		<macro-def name="voice:Polysynth">
+			<macro-ref ref="Voice Change" value="0 90"/>
+		</macro-def>
+		<macro-def name="voice:80's PolySynth">
+			<macro-ref ref="Voice Change" value="1 90"/>
+		</macro-def>
+		<macro-def name="voice:Polysynth 2">
+			<macro-ref ref="Voice Change" value="2 90"/>
+		</macro-def>
+		<macro-def name="voice:Poly King">
+			<macro-ref ref="Voice Change" value="3 90"/>
+		</macro-def>
+		<macro-def name="voice:Super Poly">
+			<macro-ref ref="Voice Change" value="4 90"/>
+		</macro-def>
+		<macro-def name="voice:Power Stack">
+			<macro-ref ref="Voice Change" value="8 90"/>
+		</macro-def>
+		<macro-def name="voice:Octave Stack">
+			<macro-ref ref="Voice Change" value="9 90"/>
+		</macro-def>
+		<macro-def name="voice:Resonance Stack">
+			<macro-ref ref="Voice Change" value="10 90"/>
+		</macro-def>
+		<macro-def name="voice:Techno Stack">
+			<macro-ref ref="Voice Change" value="11 90"/>
+		</macro-def>
+		<macro-def name="voice:Pulse Stack">
+			<macro-ref ref="Voice Change" value="12 90"/>
+		</macro-def>
+		<macro-def name="voice:Twin Octave Rave">
+			<macro-ref ref="Voice Change" value="13 90"/>
+		</macro-def>
+		<macro-def name="voice:Octave Rave">
+			<macro-ref ref="Voice Change" value="14 90"/>
+		</macro-def>
+		<macro-def name="voice:Happy Synth">
+			<macro-ref ref="Voice Change" value="15 90"/>
+		</macro-def>
+		<macro-def name="voice:Forward Sweep">
+			<macro-ref ref="Voice Change" value="16 90"/>
+		</macro-def>
+		<macro-def name="voice:Reverse Sweep">
+			<macro-ref ref="Voice Change" value="17 90"/>
+		</macro-def>
+		<macro-def name="voice:Minor Rave">
+			<macro-ref ref="Voice Change" value="24 90"/>
+		</macro-def>
+
+		<macro-def name="voice:Space Voice">
+			<macro-ref ref="Voice Change" value="0 91"/>
+		</macro-def>
+		<macro-def name="voice:Heaven II">
+			<macro-ref ref="Voice Change" value="1 91"/>
+		</macro-def>
+		<macro-def name="voice:SC Heaven">
+			<macro-ref ref="Voice Change" value="2 91"/>
+		</macro-def>
+		<macro-def name="voice:Itopia">
+			<macro-ref ref="Voice Change" value="3 91"/>
+		</macro-def>
+		<macro-def name="voice:Water Space">
+			<macro-ref ref="Voice Change" value="4 91"/>
+		</macro-def>
+		<macro-def name="voice:Cold Space">
+			<macro-ref ref="Voice Change" value="5 91"/>
+		</macro-def>
+		<macro-def name="voice:Noise Peaker">
+			<macro-ref ref="Voice Change" value="6 91"/>
+		</macro-def>
+		<macro-def name="voice:Bamboo Hit">
+			<macro-ref ref="Voice Change" value="7 91"/>
+		</macro-def>
+		<macro-def name="voice:Cosmic Voice">
+			<macro-ref ref="Voice Change" value="8 91"/>
+		</macro-def>
+		<macro-def name="voice:Auh Vox">
+			<macro-ref ref="Voice Change" value="9 91"/>
+		</macro-def>
+		<macro-def name="voice:AuhAuh">
+			<macro-ref ref="Voice Change" value="10 91"/>
+		</macro-def>
+		<macro-def name="voice:Vocorderman">
+			<macro-ref ref="Voice Change" value="11 91"/>
+		</macro-def>
+		<macro-def name="voice:Holy Voices">
+			<macro-ref ref="Voice Change" value="12 91"/>
+		</macro-def>
+
+		<macro-def name="voice:Bowed Glass">
+			<macro-ref ref="Voice Change" value="0 92"/>
+		</macro-def>
+		<macro-def name="voice:Soft Bell Pad">
+			<macro-ref ref="Voice Change" value="1 92"/>
+		</macro-def>
+		<macro-def name="voice:JP8 Square Pad">
+			<macro-ref ref="Voice Change" value="2 92"/>
+		</macro-def>
+		<macro-def name="voice:7th Bell Pad">
+			<macro-ref ref="Voice Change" value="3 92"/>
+		</macro-def>
+		<macro-def name="voice:Steel Glass">
+			<macro-ref ref="Voice Change" value="4 92"/>
+		</macro-def>
+		<macro-def name="voice:Bottle Stack">
+			<macro-ref ref="Voice Change" value="5 92"/>
+		</macro-def>
+
+		<macro-def name="voice:Metal Pad">
+			<macro-ref ref="Voice Change" value="0 93"/>
+		</macro-def>
+		<macro-def name="voice:Tine Pad">
+			<macro-ref ref="Voice Change" value="1 93"/>
+		</macro-def>
+		<macro-def name="voice:Panner Pad">
+			<macro-ref ref="Voice Change" value="2 93"/>
+		</macro-def>
+		<macro-def name="voice:Steel Pad">
+			<macro-ref ref="Voice Change" value="3 93"/>
+		</macro-def>
+		<macro-def name="voice:Special Rave">
+			<macro-ref ref="Voice Change" value="4 93"/>
+		</macro-def>
+		<macro-def name="voice:Metal Pad 2">
+			<macro-ref ref="Voice Change" value="5 93"/>
+		</macro-def>
+
+		<macro-def name="voice:Halo Pad">
+			<macro-ref ref="Voice Change" value="0 94"/>
+		</macro-def>
+		<macro-def name="voice:Vox Pad">
+			<macro-ref ref="Voice Change" value="1 94"/>
+		</macro-def>
+		<macro-def name="voice:Vox Sweep">
+			<macro-ref ref="Voice Change" value="2 94"/>
+		</macro-def>
+		<macro-def name="voice:Horror Pad">
+			<macro-ref ref="Voice Change" value="8 94"/>
+		</macro-def>
+		<macro-def name="voice:Synth Vox Pad">
+			<macro-ref ref="Voice Change" value="9 94"/>
+		</macro-def>
+		<macro-def name="voice:Synth Vox Pad 2">
+			<macro-ref ref="Voice Change" value="10 94"/>
+		</macro-def>
+		<macro-def name="voice:Breath &amp; Rise">
+			<macro-ref ref="Voice Change" value="11 94"/>
+		</macro-def>
+		<macro-def name="voice:Tears Voices">
+			<macro-ref ref="Voice Change" value="12 94"/>
+		</macro-def>
+
+		<macro-def name="voice:Sweep Pad">
+			<macro-ref ref="Voice Change" value="0 95"/>
+		</macro-def>
+		<macro-def name="voice:Polar Pad">
+			<macro-ref ref="Voice Change" value="1 95"/>
+		</macro-def>
+		<macro-def name="voice:Ambient BPF">
+			<macro-ref ref="Voice Change" value="2 95"/>
+		</macro-def>
+		<macro-def name="voice:Sync Pad">
+			<macro-ref ref="Voice Change" value="3 95"/>
+		</macro-def>
+		<macro-def name="voice:Warriors">
+			<macro-ref ref="Voice Change" value="4 95"/>
+		</macro-def>
+		<macro-def name="voice:Converge">
+			<macro-ref ref="Voice Change" value="8 95"/>
+		</macro-def>
+		<macro-def name="voice:Shwimmer">
+			<macro-ref ref="Voice Change" value="9 95"/>
+		</macro-def>
+		<macro-def name="voice:Celestial Pad">
+			<macro-ref ref="Voice Change" value="10 95"/>
+		</macro-def>
+		<macro-def name="voice:Bag Sweep">
+			<macro-ref ref="Voice Change" value="11 95"/>
+		</macro-def>
+		<macro-def name="voice:Sweep Pipe">
+			<macro-ref ref="Voice Change" value="12 95"/>
+		</macro-def>
+		<macro-def name="voice:Sweep Stack">
+			<macro-ref ref="Voice Change" value="13 95"/>
+		</macro-def>
+		<macro-def name="voice:Deep Sweep">
+			<macro-ref ref="Voice Change" value="14 95"/>
+		</macro-def>
+		<macro-def name="voice:Stray Pad">
+			<macro-ref ref="Voice Change" value="15 95"/>
+		</macro-def>
+
+		<!-- ############### -->
+		<!-- ## SYNTH SFX ## -->
+		<!-- ############### -->
+
+		<macro-def name="voice:Ice Rain">
+			<macro-ref ref="Voice Change" value="0 96"/>
+		</macro-def>
+		<macro-def name="voice:Harmo Rain">
+			<macro-ref ref="Voice Change" value="1 96"/>
+		</macro-def>
+		<macro-def name="voice:African Wood">
+			<macro-ref ref="Voice Change" value="2 96"/>
+		</macro-def>
+		<macro-def name="voice:Anklung Pad">
+			<macro-ref ref="Voice Change" value="3 96"/>
+		</macro-def>
+		<macro-def name="voice:Rattle Pad">
+			<macro-ref ref="Voice Change" value="4 96"/>
+		</macro-def>
+		<macro-def name="voice:Saw Impulse">
+			<macro-ref ref="Voice Change" value="5 96"/>
+		</macro-def>
+		<macro-def name="voice:Strange String">
+			<macro-ref ref="Voice Change" value="6 96"/>
+		</macro-def>
+		<macro-def name="voice:Fast Forward Pad">
+			<macro-ref ref="Voice Change" value="7 96"/>
+		</macro-def>
+		<macro-def name="voice:Clavichord Pad">
+			<macro-ref ref="Voice Change" value="8 96"/>
+		</macro-def>
+		<macro-def name="voice:Electric Piano Pad">
+			<macro-ref ref="Voice Change" value="9 96"/>
+		</macro-def>
+		<macro-def name="voice:Tambra Pad">
+			<macro-ref ref="Voice Change" value="10 96"/>
+		</macro-def>
+		<macro-def name="voice:CP Pad">
+			<macro-ref ref="Voice Change" value="11 96"/>
+		</macro-def>
+
+		<macro-def name="voice:Soundtrack">
+			<macro-ref ref="Voice Change" value="0 97"/>
+		</macro-def>
+		<macro-def name="voice:Ancestral">
+			<macro-ref ref="Voice Change" value="1 97"/>
+		</macro-def>
+		<macro-def name="voice:Prologue">
+			<macro-ref ref="Voice Change" value="2 97"/>
+		</macro-def>
+		<macro-def name="voice:Prologue 2">
+			<macro-ref ref="Voice Change" value="3 97"/>
+		</macro-def>
+		<macro-def name="voice:Hols Strings">
+			<macro-ref ref="Voice Change" value="4 97"/>
+		</macro-def>
+		<macro-def name="voice:History Wave">
+			<macro-ref ref="Voice Change" value="5 97"/>
+		</macro-def>
+		<macro-def name="voice:Rave">
+			<macro-ref ref="Voice Change" value="8 97"/>
+		</macro-def>
+
+		<macro-def name="voice:Crystal">
+			<macro-ref ref="Voice Change" value="0 98"/>
+		</macro-def>
+		<macro-def name="voice:Synth Mallet">
+			<macro-ref ref="Voice Change" value="1 98"/>
+		</macro-def>
+		<macro-def name="voice:Soft Crystal">
+			<macro-ref ref="Voice Change" value="2 98"/>
+		</macro-def>
+		<macro-def name="voice:Round Glock">
+			<macro-ref ref="Voice Change" value="3 98"/>
+		</macro-def>
+		<macro-def name="voice:Loud Glock">
+			<macro-ref ref="Voice Change" value="4 98"/>
+		</macro-def>
+		<macro-def name="voice:Glocken Chime">
+			<macro-ref ref="Voice Change" value="5 98"/>
+		</macro-def>
+		<macro-def name="voice:Clear Bells">
+			<macro-ref ref="Voice Change" value="6 98"/>
+		</macro-def>
+		<macro-def name="voice:Christmas Bell">
+			<macro-ref ref="Voice Change" value="7 98"/>
+		</macro-def>
+		<macro-def name="voice:Vibra Bells">
+			<macro-ref ref="Voice Change" value="8 98"/>
+		</macro-def>
+		<macro-def name="voice:Digi Bells">
+			<macro-ref ref="Voice Change" value="9 98"/>
+		</macro-def>
+		<macro-def name="voice:Music Bell">
+			<macro-ref ref="Voice Change" value="10 98"/>
+		</macro-def>
+		<macro-def name="voice:Analog Bell">
+			<macro-ref ref="Voice Change" value="11 98"/>
+		</macro-def>
+		<macro-def name="voice:Blow Bell">
+			<macro-ref ref="Voice Change" value="12 98"/>
+		</macro-def>
+		<macro-def name="voice:Hyper Bell">
+			<macro-ref ref="Voice Change" value="13 98"/>
+		</macro-def>
+		<macro-def name="voice:Choral Bells">
+			<macro-ref ref="Voice Change" value="16 98"/>
+		</macro-def>
+		<macro-def name="voice:Air Bells">
+			<macro-ref ref="Voice Change" value="17 98"/>
+		</macro-def>
+		<macro-def name="voice:Bell Harp">
+			<macro-ref ref="Voice Change" value="18 98"/>
+		</macro-def>
+		<macro-def name="voice:Gamelimba">
+			<macro-ref ref="Voice Change" value="19 98"/>
+		</macro-def>
+		<macro-def name="voice:JUNO Bell">
+			<macro-ref ref="Voice Change" value="20 98"/>
+		</macro-def>
+		<macro-def name="voice:JP Bell">
+			<macro-ref ref="Voice Change" value="21 98"/>
+		</macro-def>
+		<macro-def name="voice:Pizz Bell">
+			<macro-ref ref="Voice Change" value="22 98"/>
+		</macro-def>
+		<macro-def name="voice:Bottom Bell">
+			<macro-ref ref="Voice Change" value="23 98"/>
+		</macro-def>
+
+		<macro-def name="voice:Atmosphere">
+			<macro-ref ref="Voice Change" value="0 99"/>
+		</macro-def>
+		<macro-def name="voice:Warm Atmosphere">
+			<macro-ref ref="Voice Change" value="1 99"/>
+		</macro-def>
+		<macro-def name="voice:Nylon Harp">
+			<macro-ref ref="Voice Change" value="2 99"/>
+		</macro-def>
+		<macro-def name="voice:Harpvox">
+			<macro-ref ref="Voice Change" value="3 99"/>
+		</macro-def>
+		<macro-def name="voice:Hollow Release">
+			<macro-ref ref="Voice Change" value="4 99"/>
+		</macro-def>
+		<macro-def name="voice:Nylon + Rhodes">
+			<macro-ref ref="Voice Change" value="5 99"/>
+		</macro-def>
+		<macro-def name="voice:Ambient Pad">
+			<macro-ref ref="Voice Change" value="6 99"/>
+		</macro-def>
+		<macro-def name="voice:Invisible">
+			<macro-ref ref="Voice Change" value="7 99"/>
+		</macro-def>
+		<macro-def name="voice:Pulsey Key">
+			<macro-ref ref="Voice Change" value="8 99"/>
+		</macro-def>
+		<macro-def name="voice:Noise Piano">
+			<macro-ref ref="Voice Change" value="9 99"/>
+		</macro-def>
+		<macro-def name="voice:Heaven Atmosphere">
+			<macro-ref ref="Voice Change" value="10 99"/>
+		</macro-def>
+		<macro-def name="voice:Tambra Atmosphere">
+			<macro-ref ref="Voice Change" value="11 99"/>
+		</macro-def>
+
+		<macro-def name="voice:Brightness">
+			<macro-ref ref="Voice Change" value="0 100"/>
+		</macro-def>
+		<macro-def name="voice:Shining Star">
+			<macro-ref ref="Voice Change" value="1 100"/>
+		</macro-def>
+		<macro-def name="voice:OB Stab">
+			<macro-ref ref="Voice Change" value="2 100"/>
+		</macro-def>
+		<macro-def name="voice:Brass Star">
+			<macro-ref ref="Voice Change" value="3 100"/>
+		</macro-def>
+		<macro-def name="voice:Choir Stab">
+			<macro-ref ref="Voice Change" value="4 100"/>
+		</macro-def>
+		<macro-def name="voice:D-50 Retour">
+			<macro-ref ref="Voice Change" value="5 100"/>
+		</macro-def>
+		<macro-def name="voice:Southern Wind">
+			<macro-ref ref="Voice Change" value="6 100"/>
+		</macro-def>
+		<macro-def name="voice:Symbolic Bell">
+			<macro-ref ref="Voice Change" value="7 100"/>
+		</macro-def>
+		<macro-def name="voice:Organ Bell">
+			<macro-ref ref="Voice Change" value="8 100"/>
+		</macro-def>
+
+		<macro-def name="voice:Goblin">
+			<macro-ref ref="Voice Change" value="0 101"/>
+		</macro-def>
+		<macro-def name="voice:Goblinson">
+			<macro-ref ref="Voice Change" value="1 101"/>
+		</macro-def>
+		<macro-def name="voice:50's Sci-Fi">
+			<macro-ref ref="Voice Change" value="2 101"/>
+		</macro-def>
+		<macro-def name="voice:Abduction">
+			<macro-ref ref="Voice Change" value="3 101"/>
+		</macro-def>
+		<macro-def name="voice:Auhbient">
+			<macro-ref ref="Voice Change" value="4 101"/>
+		</macro-def>
+		<macro-def name="voice:LFO Pad">
+			<macro-ref ref="Voice Change" value="5 101"/>
+		</macro-def>
+		<macro-def name="voice:Random Strings">
+			<macro-ref ref="Voice Change" value="6 101"/>
+		</macro-def>
+		<macro-def name="voice:Random Pad">
+			<macro-ref ref="Voice Change" value="7 101"/>
+		</macro-def>
+		<macro-def name="voice:Low Birds Pad">
+			<macro-ref ref="Voice Change" value="8 101"/>
+		</macro-def>
+		<macro-def name="voice:Falling Down">
+			<macro-ref ref="Voice Change" value="9 101"/>
+		</macro-def>
+		<macro-def name="voice:LFO RAVE">
+			<macro-ref ref="Voice Change" value="10 101"/>
+		</macro-def>
+		<macro-def name="voice:LFO Horror">
+			<macro-ref ref="Voice Change" value="11 101"/>
+		</macro-def>
+		<macro-def name="voice:LFO Techno">
+			<macro-ref ref="Voice Change" value="12 101"/>
+		</macro-def>
+		<macro-def name="voice:Alternative">
+			<macro-ref ref="Voice Change" value="13 101"/>
+		</macro-def>
+		<macro-def name="voice:UFO FX">
+			<macro-ref ref="Voice Change" value="14 101"/>
+		</macro-def>
+		<macro-def name="voice:Gargle Man">
+			<macro-ref ref="Voice Change" value="15 101"/>
+		</macro-def>
+		<macro-def name="voice:Sweep FX">
+			<macro-ref ref="Voice Change" value="16 101"/>
+		</macro-def>
+		<macro-def name="voice:LM Has Come">
+			<macro-ref ref="Voice Change" value="17 101"/>
+		</macro-def>
+		<macro-def name="voice:Fallin Insect">
+			<macro-ref ref="Voice Change" value="18 101"/>
+		</macro-def>
+		<macro-def name="voice:LFO Octave Rave">
+			<macro-ref ref="Voice Change" value="19 101"/>
+		</macro-def>
+		<macro-def name="voice:Just Before">
+			<macro-ref ref="Voice Change" value="20 101"/>
+		</macro-def>
+		<macro-def name="voice:Random Fl.Chord">
+			<macro-ref ref="Voice Change" value="21 101"/>
+		</macro-def>
+		<macro-def name="voice:Random Ending">
+			<macro-ref ref="Voice Change" value="22 101"/>
+		</macro-def>
+		<macro-def name="voice:Random Sine">
+			<macro-ref ref="Voice Change" value="23 101"/>
+		</macro-def>
+		<macro-def name="voice:Eating Filter">
+			<macro-ref ref="Voice Change" value="24 101"/>
+		</macro-def>
+		<macro-def name="voice:Noise &amp; Saw Hit">
+			<macro-ref ref="Voice Change" value="25 101"/>
+		</macro-def>
+		<macro-def name="voice:Pour Magic">
+			<macro-ref ref="Voice Change" value="26 101"/>
+		</macro-def>
+		<macro-def name="voice:Dancing Drill">
+			<macro-ref ref="Voice Change" value="27 101"/>
+		</macro-def>
+		<macro-def name="voice:Dirty Stack">
+			<macro-ref ref="Voice Change" value="28 101"/>
+		</macro-def>
+		<macro-def name="voice:Big Blue">
+			<macro-ref ref="Voice Change" value="29 101"/>
+		</macro-def>
+		<macro-def name="voice:Static Hit">
+			<macro-ref ref="Voice Change" value="30 101"/>
+		</macro-def>
+		<macro-def name="voice:Atl. Mod. FX">
+			<macro-ref ref="Voice Change" value="31 101"/>
+		</macro-def>
+		<macro-def name="voice:Acid Copter">
+			<macro-ref ref="Voice Change" value="32 101"/>
+		</macro-def>
+
+		<macro-def name="voice:Echo Drops">
+			<macro-ref ref="Voice Change" value="0 102"/>
+		</macro-def>
+		<macro-def name="voice:Echo Bell">
+			<macro-ref ref="Voice Change" value="1 102"/>
+		</macro-def>
+		<macro-def name="voice:Echo Pan">
+			<macro-ref ref="Voice Change" value="2 102"/>
+		</macro-def>
+		<macro-def name="voice:Echo Pan 2">
+			<macro-ref ref="Voice Change" value="3 102"/>
+		</macro-def>
+		<macro-def name="voice:Big Panner">
+			<macro-ref ref="Voice Change" value="4 102"/>
+		</macro-def>
+		<macro-def name="voice:Resonance Panner">
+			<macro-ref ref="Voice Change" value="5 102"/>
+		</macro-def>
+		<macro-def name="voice:Water Piano">
+			<macro-ref ref="Voice Change" value="6 102"/>
+		</macro-def>
+		<macro-def name="voice:Echo Synth Bass">
+			<macro-ref ref="Voice Change" value="7 102"/>
+		</macro-def>
+		<macro-def name="voice:Pan Sequence">
+			<macro-ref ref="Voice Change" value="8 102"/>
+		</macro-def>
+		<macro-def name="voice:Aqua">
+			<macro-ref ref="Voice Change" value="9 102"/>
+		</macro-def>
+		<macro-def name="voice:Panning Lead">
+			<macro-ref ref="Voice Change" value="10 102"/>
+		</macro-def>
+		<macro-def name="voice:Panning Brass">
+			<macro-ref ref="Voice Change" value="11 102"/>
+		</macro-def>
+
+		<macro-def name="voice:Star Theme">
+			<macro-ref ref="Voice Change" value="0 103"/>
+		</macro-def>
+		<macro-def name="voice:Star Theme 2">
+			<macro-ref ref="Voice Change" value="1 103"/>
+		</macro-def>
+		<macro-def name="voice:Star Mind">
+			<macro-ref ref="Voice Change" value="2 103"/>
+		</macro-def>
+		<macro-def name="voice:Star Dust">
+			<macro-ref ref="Voice Change" value="3 103"/>
+		</macro-def>
+		<macro-def name="voice:Rep. Trance">
+			<macro-ref ref="Voice Change" value="4 103"/>
+		</macro-def>
+		<macro-def name="voice:Etherality">
+			<macro-ref ref="Voice Change" value="5 103"/>
+		</macro-def>
+		<macro-def name="voice:Mystic Pad">
+			<macro-ref ref="Voice Change" value="6 103"/>
+		</macro-def>
+		<macro-def name="voice:Dream Pad">
+			<macro-ref ref="Voice Change" value="8 103"/>
+		</macro-def>
+		<macro-def name="voice:Silky Pad">
+			<macro-ref ref="Voice Change" value="9 103"/>
+		</macro-def>
+		<macro-def name="voice:Dream Pad 2">
+			<macro-ref ref="Voice Change" value="10 103"/>
+		</macro-def>
+		<macro-def name="voice:Silky Pad 2">
+			<macro-ref ref="Voice Change" value="11 103"/>
+		</macro-def>
+		<macro-def name="voice:New Century">
+			<macro-ref ref="Voice Change" value="16 103"/>
+		</macro-def>
+		<macro-def name="voice:7th Atmosphere">
+			<macro-ref ref="Voice Change" value="17 103"/>
+		</macro-def>
+		<macro-def name="voice:Galaxy Way">
+			<macro-ref ref="Voice Change" value="18 103"/>
+		</macro-def>
+		<macro-def name="voice:Rising OSC.">
+			<macro-ref ref="Voice Change" value="19 103"/>
+		</macro-def>
+
+		<!-- ################## -->
+		<!-- ## ETHNIC, ETC. ## -->
+		<!-- ################## -->
+
+		<macro-def name="voice:Sitar">
+			<macro-ref ref="Voice Change" value="0 104"/>
+		</macro-def>
+		<macro-def name="voice:Sitar 2">
+			<macro-ref ref="Voice Change" value="1 104"/>
+		</macro-def>
+		<macro-def name="voice:Detune Sitar">
+			<macro-ref ref="Voice Change" value="2 104"/>
+		</macro-def>
+		<macro-def name="voice:Sitar 3">
+			<macro-ref ref="Voice Change" value="3 104"/>
+		</macro-def>
+		<macro-def name="voice:Sitar / Drone">
+			<macro-ref ref="Voice Change" value="4 104"/>
+		</macro-def>
+		<macro-def name="voice:Sitar 4">
+			<macro-ref ref="Voice Change" value="5 104"/>
+		</macro-def>
+		<macro-def name="voice:Tambra">
+			<macro-ref ref="Voice Change" value="8 104"/>
+		</macro-def>
+		<macro-def name="voice:Tamboura">
+			<macro-ref ref="Voice Change" value="16 104"/>
+		</macro-def>
+
+		<macro-def name="voice:Banjo">
+			<macro-ref ref="Voice Change" value="0 105"/>
+		</macro-def>
+		<macro-def name="voice:Muted Banjo">
+			<macro-ref ref="Voice Change" value="1 105"/>
+		</macro-def>
+		<macro-def name="voice:Rabab">
+			<macro-ref ref="Voice Change" value="8 105"/>
+		</macro-def>
+		<macro-def name="voice:San Xian">
+			<macro-ref ref="Voice Change" value="9 105"/>
+		</macro-def>
+		<macro-def name="voice:Gopichant">
+			<macro-ref ref="Voice Change" value="16 105"/>
+		</macro-def>
+		<macro-def name="voice:Oud">
+			<macro-ref ref="Voice Change" value="24 105"/>
+		</macro-def>
+		<macro-def name="voice:Oud + Strings">
+			<macro-ref ref="Voice Change" value="28 105"/>
+		</macro-def>
+		<macro-def name="voice:Pi Pa">
+			<macro-ref ref="Voice Change" value="32 105"/>
+		</macro-def>
+
+		<macro-def name="voice:三味線">
+			<macro-ref ref="Voice Change" value="0 106"/>
+		</macro-def>
+		<macro-def name="voice:津軽">
+			<macro-ref ref="Voice Change" value="1 106"/>
+		</macro-def>
+		<macro-def name="voice:Synth 三味線">
+			<macro-ref ref="Voice Change" value="8 106"/>
+		</macro-def>
+
+		<macro-def name="voice:琴">
+			<macro-ref ref="Voice Change" value="0 107"/>
+		</macro-def>
+		<macro-def name="voice:Gu Zheng">
+			<macro-ref ref="Voice Change" value="1 107"/>
+		</macro-def>
+		<macro-def name="voice:大正琴">
+			<macro-ref ref="Voice Change" value="8 107"/>
+		</macro-def>
+		<macro-def name="voice:Kanoon">
+			<macro-ref ref="Voice Change" value="16 107"/>
+		</macro-def>
+		<macro-def name="voice:Kanoon + Choir">
+			<macro-ref ref="Voice Change" value="19 107"/>
+		</macro-def>
+		<macro-def name="voice:Octave Harp">
+			<macro-ref ref="Voice Change" value="24 107"/>
+		</macro-def>
+
+		<macro-def name="voice:Kalimba">
+			<macro-ref ref="Voice Change" value="0 108"/>
+		</macro-def>
+		<macro-def name="voice:Sanza">
+			<macro-ref ref="Voice Change" value="8 108"/>
+		</macro-def>
+		<macro-def name="voice:Bodhran">
+			<macro-ref ref="Voice Change" value="9 108"/>
+		</macro-def>
+		<macro-def name="voice:Bodhran Mute">
+			<macro-ref ref="Voice Change" value="10 108"/>
+		</macro-def>
+
+		<macro-def name="voice:Bagpipe">
+			<macro-ref ref="Voice Change" value="0 109"/>
+		</macro-def>
+		<macro-def name="voice:Didgeridoo">
+			<macro-ref ref="Voice Change" value="8 109"/>
+		</macro-def>
+		<macro-def name="voice:Uillean Pipe">
+			<macro-ref ref="Voice Change" value="9 109"/>
+		</macro-def>
+		<macro-def name="voice:Uillean Pipe Nm">
+			<macro-ref ref="Voice Change" value="10 109"/>
+		</macro-def>
+		<macro-def name="voice:Uillean Pipe Or">
+			<macro-ref ref="Voice Change" value="11 109"/>
+		</macro-def>
+
+		<macro-def name="voice:Fiddle">
+			<macro-ref ref="Voice Change" value="0 110"/>
+		</macro-def>
+		<macro-def name="voice:二胡">
+			<macro-ref ref="Voice Change" value="8 110"/>
+		</macro-def>
+		<macro-def name="voice:Gao Hu">
+			<macro-ref ref="Voice Change" value="9 110"/>
+		</macro-def>
+
+		<macro-def name="voice:Shanai">
+			<macro-ref ref="Voice Change" value="0 111"/>
+		</macro-def>
+		<macro-def name="voice:Shanai 2">
+			<macro-ref ref="Voice Change" value="1 111"/>
+		</macro-def>
+		<macro-def name="voice:Pungi">
+			<macro-ref ref="Voice Change" value="8 111"/>
+		</macro-def>
+		<macro-def name="voice:篳篥">
+			<macro-ref ref="Voice Change" value="16 111"/>
+		</macro-def>
+		<macro-def name="voice:Mizmar">
+			<macro-ref ref="Voice Change" value="24 111"/>
+		</macro-def>
+		<macro-def name="voice:Suona 1">
+			<macro-ref ref="Voice Change" value="32 111"/>
+		</macro-def>
+		<macro-def name="voice:Suona 2">
+			<macro-ref ref="Voice Change" value="33 111"/>
+		</macro-def>
+
+		<!-- ################ -->
+		<!-- ## PERCUSSIVE ## -->
+		<!-- ################ -->
+
+		<macro-def name="voice:Tinkle Bell">
+			<macro-ref ref="Voice Change" value="0 112"/>
+		</macro-def>
+		<macro-def name="voice:Bonang">
+			<macro-ref ref="Voice Change" value="8 112"/>
+		</macro-def>
+		<macro-def name="voice:Gender">
+			<macro-ref ref="Voice Change" value="9 112"/>
+		</macro-def>
+		<macro-def name="voice:Gamelan Gong">
+			<macro-ref ref="Voice Change" value="10 112"/>
+		</macro-def>
+		<macro-def name="voice:Steel Gamelan">
+			<macro-ref ref="Voice Change" value="11 112"/>
+		</macro-def>
+		<macro-def name="voice:Jang Gu">
+			<macro-ref ref="Voice Change" value="12 112"/>
+		</macro-def>
+		<macro-def name="voice:Jegogan">
+			<macro-ref ref="Voice Change" value="13 112"/>
+		</macro-def>
+		<macro-def name="voice:Jublag">
+			<macro-ref ref="Voice Change" value="14 112"/>
+		</macro-def>
+		<macro-def name="voice:Pemade">
+			<macro-ref ref="Voice Change" value="15 112"/>
+		</macro-def>
+		<macro-def name="voice:RAMA Cymbal">
+			<macro-ref ref="Voice Change" value="16 112"/>
+		</macro-def>
+		<macro-def name="voice:Kajar">
+			<macro-ref ref="Voice Change" value="17 112"/>
+		</macro-def>
+		<macro-def name="voice:Kelontuk">
+			<macro-ref ref="Voice Change" value="18 112"/>
+		</macro-def>
+		<macro-def name="voice:Kelontuk Mute">
+			<macro-ref ref="Voice Change" value="19 112"/>
+		</macro-def>
+		<macro-def name="voice:Kelontuk Sid">
+			<macro-ref ref="Voice Change" value="20 112"/>
+		</macro-def>
+		<macro-def name="voice:Kopyak Open">
+			<macro-ref ref="Voice Change" value="21 112"/>
+		</macro-def>
+		<macro-def name="voice:Kopyak Mute">
+			<macro-ref ref="Voice Change" value="22 112"/>
+		</macro-def>
+		<macro-def name="voice:Ceng Ceng">
+			<macro-ref ref="Voice Change" value="23 112"/>
+		</macro-def>
+		<macro-def name="voice:Reyoung">
+			<macro-ref ref="Voice Change" value="24 112"/>
+		</macro-def>
+		<macro-def name="voice:Kempur">
+			<macro-ref ref="Voice Change" value="25 112"/>
+		</macro-def>
+		<macro-def name="voice:Jungle Crash">
+			<macro-ref ref="Voice Change" value="32 112"/>
+		</macro-def>
+		<macro-def name="voice:Crash Menu">
+			<macro-ref ref="Voice Change" value="40 112"/>
+		</macro-def>
+		<macro-def name="voice:Ride Cymbal Menu">
+			<macro-ref ref="Voice Change" value="41 112"/>
+		</macro-def>
+		<macro-def name="voice:Ride Bell Menu">
+			<macro-ref ref="Voice Change" value="42 112"/>
+		</macro-def>
+
+		<macro-def name="voice:Agogo">
+			<macro-ref ref="Voice Change" value="0 113"/>
+		</macro-def>
+		<macro-def name="voice:当り鉦">
+			<macro-ref ref="Voice Change" value="8 113"/>
+		</macro-def>
+		<macro-def name="voice:Tambourine">
+			<macro-ref ref="Voice Change" value="16 113"/>
+		</macro-def>
+
+		<macro-def name="voice:Steel Drums">
+			<macro-ref ref="Voice Change" value="0 114"/>
+		</macro-def>
+		<macro-def name="voice:Island Mlt">
+			<macro-ref ref="Voice Change" value="1 114"/>
+		</macro-def>
+
+		<macro-def name="voice:Woodblock">
+			<macro-ref ref="Voice Change" value="0 115"/>
+		</macro-def>
+		<macro-def name="voice:Castanets">
+			<macro-ref ref="Voice Change" value="8 115"/>
+		</macro-def>
+		<macro-def name="voice:Angklung">
+			<macro-ref ref="Voice Change" value="16 115"/>
+		</macro-def>
+		<macro-def name="voice:Angklung Rhythm">
+			<macro-ref ref="Voice Change" value="17 115"/>
+		</macro-def>
+		<macro-def name="voice:Finger Snaps">
+			<macro-ref ref="Voice Change" value="24 115"/>
+		</macro-def>
+		<macro-def name="voice:909 Hand Clap">
+			<macro-ref ref="Voice Change" value="32 115"/>
+		</macro-def>
+		<macro-def name="voice:Hand Clap Menu">
+			<macro-ref ref="Voice Change" value="40 115"/>
+		</macro-def>
+
+		<macro-def name="voice:太鼓">
+			<macro-ref ref="Voice Change" value="0 116"/>
+		</macro-def>
+		<macro-def name="voice:Small 太鼓">
+			<macro-ref ref="Voice Change" value="1 116"/>
+		</macro-def>
+		<macro-def name="voice:Concert Bass Drum">
+			<macro-ref ref="Voice Change" value="8 116"/>
+		</macro-def>
+		<macro-def name="voice:Concert Bass Drum Mute">
+			<macro-ref ref="Voice Change" value="9 116"/>
+		</macro-def>
+		<macro-def name="voice:Jungle Bass Drum">
+			<macro-ref ref="Voice Change" value="16 116"/>
+		</macro-def>
+		<macro-def name="voice:Techno Bass Drum">
+			<macro-ref ref="Voice Change" value="17 116"/>
+		</macro-def>
+		<macro-def name="voice:Bounce">
+			<macro-ref ref="Voice Change" value="18 116"/>
+		</macro-def>
+		<macro-def name="voice:Kendang Wadon">
+			<macro-ref ref="Voice Change" value="24 116"/>
+		</macro-def>
+		<macro-def name="voice:Bebarongan">
+			<macro-ref ref="Voice Change" value="25 116"/>
+		</macro-def>
+		<macro-def name="voice:Pelegongan">
+			<macro-ref ref="Voice Change" value="26 116"/>
+		</macro-def>
+		<macro-def name="voice:Dholak 1">
+			<macro-ref ref="Voice Change" value="27 116"/>
+		</macro-def>
+		<macro-def name="voice:Dholak 2">
+			<macro-ref ref="Voice Change" value="28 116"/>
+		</macro-def>
+		<macro-def name="voice:Jungle Bass Drum Roll">
+			<macro-ref ref="Voice Change" value="32 116"/>
+		</macro-def>
+		<macro-def name="voice:Kick Menu 1">
+			<macro-ref ref="Voice Change" value="40 116"/>
+		</macro-def>
+		<macro-def name="voice:Kick Menu 2">
+			<macro-ref ref="Voice Change" value="41 116"/>
+		</macro-def>
+		<macro-def name="voice:Kick Menu 3">
+			<macro-ref ref="Voice Change" value="42 116"/>
+		</macro-def>
+		<macro-def name="voice:Kick Menu 4">
+			<macro-ref ref="Voice Change" value="43 116"/>
+		</macro-def>
+
+		<macro-def name="voice:Melo. Tom 1">
+			<macro-ref ref="Voice Change" value="0 117"/>
+		</macro-def>
+		<macro-def name="voice:Real Tom">
+			<macro-ref ref="Voice Change" value="1 117"/>
+		</macro-def>
+		<macro-def name="voice:Real Tom 2">
+			<macro-ref ref="Voice Change" value="2 117"/>
+		</macro-def>
+		<macro-def name="voice:Jazz Tom">
+			<macro-ref ref="Voice Change" value="3 117"/>
+		</macro-def>
+		<macro-def name="voice:Brush Tom">
+			<macro-ref ref="Voice Change" value="4 117"/>
+		</macro-def>
+		<macro-def name="voice:Melo. Tom 2">
+			<macro-ref ref="Voice Change" value="8 117"/>
+		</macro-def>
+		<macro-def name="voice:Rock Tom">
+			<macro-ref ref="Voice Change" value="9 117"/>
+		</macro-def>
+		<macro-def name="voice:Rash Snare Drum">
+			<macro-ref ref="Voice Change" value="16 117"/>
+		</macro-def>
+		<macro-def name="voice:House Snare Drum">
+			<macro-ref ref="Voice Change" value="17 117"/>
+		</macro-def>
+		<macro-def name="voice:Jungle Snare Drum">
+			<macro-ref ref="Voice Change" value="18 117"/>
+		</macro-def>
+		<macro-def name="voice:909 Snare Drum">
+			<macro-ref ref="Voice Change" value="19 117"/>
+		</macro-def>
+		<macro-def name="voice:Jungle Snare Drum Roll">
+			<macro-ref ref="Voice Change" value="24 117"/>
+		</macro-def>
+		<macro-def name="voice:Snare Drum Menu 1">
+			<macro-ref ref="Voice Change" value="40 117"/>
+		</macro-def>
+		<macro-def name="voice:Snare Drum Menu 2">
+			<macro-ref ref="Voice Change" value="41 117"/>
+		</macro-def>
+		<macro-def name="voice:Snare Drum Menu 3">
+			<macro-ref ref="Voice Change" value="42 117"/>
+		</macro-def>
+		<macro-def name="voice:Snare Drum Menu 4">
+			<macro-ref ref="Voice Change" value="43 117"/>
+		</macro-def>
+		<macro-def name="voice:Snare Drum Menu 5">
+			<macro-ref ref="Voice Change" value="44 117"/>
+		</macro-def>
+
+		<macro-def name="voice:Synth Drum">
+			<macro-ref ref="Voice Change" value="0 118"/>
+		</macro-def>
+		<macro-def name="voice:808 Tom">
+			<macro-ref ref="Voice Change" value="8 118"/>
+		</macro-def>
+		<macro-def name="voice:Electric Perc">
+			<macro-ref ref="Voice Change" value="9 118"/>
+		</macro-def>
+		<macro-def name="voice:Sine Perc.">
+			<macro-ref ref="Voice Change" value="10 118"/>
+		</macro-def>
+		<macro-def name="voice:606 Tom">
+			<macro-ref ref="Voice Change" value="11 118"/>
+		</macro-def>
+		<macro-def name="voice:909 Tom">
+			<macro-ref ref="Voice Change" value="12 118"/>
+		</macro-def>
+		<macro-def name="voice:606 Distotion Tom">
+			<macro-ref ref="Voice Change" value="13 118"/>
+		</macro-def>
+
+		<macro-def name="voice:Reverse Cymbal">
+			<macro-ref ref="Voice Change" value="0 119"/>
+		</macro-def>
+		<macro-def name="voice:Reverse Cymbal 2">
+			<macro-ref ref="Voice Change" value="1 119"/>
+		</macro-def>
+		<macro-def name="voice:Reverse Cymbal 3">
+			<macro-ref ref="Voice Change" value="2 119"/>
+		</macro-def>
+		<macro-def name="voice:Reverse Cymbal 4">
+			<macro-ref ref="Voice Change" value="3 119"/>
+		</macro-def>
+		<macro-def name="voice:Reverse Snare 1">
+			<macro-ref ref="Voice Change" value="8 119"/>
+		</macro-def>
+		<macro-def name="voice:Reverse Snare 2">
+			<macro-ref ref="Voice Change" value="9 119"/>
+		</macro-def>
+		<macro-def name="voice:Reverse Kick 1">
+			<macro-ref ref="Voice Change" value="16 119"/>
+		</macro-def>
+		<macro-def name="voice:Reverse Concert Bass Drum">
+			<macro-ref ref="Voice Change" value="17 119"/>
+		</macro-def>
+		<macro-def name="voice:Reverse Tom 1">
+			<macro-ref ref="Voice Change" value="24 119"/>
+		</macro-def>
+		<macro-def name="voice:Reverse Tom 2">
+			<macro-ref ref="Voice Change" value="25 119"/>
+		</macro-def>
+		<macro-def name="voice:Reverse Tom 3">
+			<macro-ref ref="Voice Change" value="26 119"/>
+		</macro-def>
+		<macro-def name="voice:Reverse Tom 4">
+			<macro-ref ref="Voice Change" value="27 119"/>
+		</macro-def>
+		<macro-def name="voice:Reverse Snare Drum Menu 1">
+			<macro-ref ref="Voice Change" value="40 119"/>
+		</macro-def>
+		<macro-def name="voice:Reverse Snare Drum Menu 2">
+			<macro-ref ref="Voice Change" value="41 119"/>
+		</macro-def>
+		<macro-def name="voice:Reverse Snare Drum Menu 3">
+			<macro-ref ref="Voice Change" value="42 119"/>
+		</macro-def>
+		<macro-def name="voice:Reverse Bass Drum Menu 1">
+			<macro-ref ref="Voice Change" value="43 119"/>
+		</macro-def>
+		<macro-def name="voice:Reverse Bass Drum Menu 2">
+			<macro-ref ref="Voice Change" value="44 119"/>
+		</macro-def>
+		<macro-def name="voice:Reverse Bass Drum Menu 3">
+			<macro-ref ref="Voice Change" value="45 119"/>
+		</macro-def>
+		<macro-def name="voice:Reverse Clap Menu">
+			<macro-ref ref="Voice Change" value="46 119"/>
+		</macro-def>
+
+		<!-- ######### -->
+		<!-- ## SFX ## -->
+		<!-- ######### -->
+
+		<macro-def name="voice:Guitar Fret Noise">
+			<macro-ref ref="Voice Change" value="0 120"/>
+		</macro-def>
+		<macro-def name="voice:Guitar Cut Noise">
+			<macro-ref ref="Voice Change" value="1 120"/>
+		</macro-def>
+		<macro-def name="voice:String Slap">
+			<macro-ref ref="Voice Change" value="2 120"/>
+		</macro-def>
+		<macro-def name="voice:Guitar Cut Noise 2">
+			<macro-ref ref="Voice Change" value="3 120"/>
+		</macro-def>
+		<macro-def name="voice:Distortion Cut Noise">
+			<macro-ref ref="Voice Change" value="4 120"/>
+		</macro-def>
+		<macro-def name="voice:Bass Slide">
+			<macro-ref ref="Voice Change" value="5 120"/>
+		</macro-def>
+		<macro-def name="voice:Pick Scrape">
+			<macro-ref ref="Voice Change" value="6 120"/>
+		</macro-def>
+		<macro-def name="voice:Guitar FX Menu">
+			<macro-ref ref="Voice Change" value="8 120"/>
+		</macro-def>
+		<macro-def name="voice:Bartok Pizzicato">
+			<macro-ref ref="Voice Change" value="9 120"/>
+		</macro-def>
+		<macro-def name="voice:Guitar Slap">
+			<macro-ref ref="Voice Change" value="10 120"/>
+		</macro-def>
+		<macro-def name="voice:Chord Stroke">
+			<macro-ref ref="Voice Change" value="11 120"/>
+		</macro-def>
+		<macro-def name="voice:琵琶 Stroke">
+			<macro-ref ref="Voice Change" value="12 120"/>
+		</macro-def>
+		<macro-def name="voice:琵琶 Tremolo">
+			<macro-ref ref="Voice Change" value="13 120"/>
+		</macro-def>
+		<macro-def name="voice:Acoustic Bass Noise Menu">
+			<macro-ref ref="Voice Change" value="16 120"/>
+		</macro-def>
+		<macro-def name="voice:Distotion Guitar Noise Menu">
+			<macro-ref ref="Voice Change" value="17 120"/>
+		</macro-def>
+		<macro-def name="voice:Electric Guitar Noise Menu 1">
+			<macro-ref ref="Voice Change" value="18 120"/>
+		</macro-def>
+		<macro-def name="voice:Electric Guitar Noise Menu 2">
+			<macro-ref ref="Voice Change" value="19 120"/>
+		</macro-def>
+		<macro-def name="voice:Guitar Stroke Menu">
+			<macro-ref ref="Voice Change" value="20 120"/>
+		</macro-def>
+		<macro-def name="voice:Guitar Slide Menu">
+			<macro-ref ref="Voice Change" value="21 120"/>
+		</macro-def>
+		<macro-def name="voice:Acoustic Bass Mute Noise">
+			<macro-ref ref="Voice Change" value="22 120"/>
+		</macro-def>
+		<macro-def name="voice:Acoustic Bass Touch Noise">
+			<macro-ref ref="Voice Change" value="23 120"/>
+		</macro-def>
+		<macro-def name="voice:Acoustic Bass Attack Noise">
+			<macro-ref ref="Voice Change" value="24 120"/>
+		</macro-def>
+		<macro-def name="voice:TC Up Noise">
+			<macro-ref ref="Voice Change" value="25 120"/>
+		</macro-def>
+		<macro-def name="voice:TC Down Mute Noise">
+			<macro-ref ref="Voice Change" value="26 120"/>
+		</macro-def>
+		<macro-def name="voice:TC Up Mute Noise">
+			<macro-ref ref="Voice Change" value="27 120"/>
+		</macro-def>
+		<macro-def name="voice:TC Down Noise">
+			<macro-ref ref="Voice Change" value="28 120"/>
+		</macro-def>
+		<macro-def name="voice:Distortion Guitar Up Noise">
+			<macro-ref ref="Voice Change" value="29 120"/>
+		</macro-def>
+		<macro-def name="voice:Distortion Guitar Down Noise 1">
+			<macro-ref ref="Voice Change" value="30 120"/>
+		</macro-def>
+		<macro-def name="voice:Distortion Guitar Down Noise 2">
+			<macro-ref ref="Voice Change" value="31 120"/>
+		</macro-def>
+		<macro-def name="voice:Distortion Guitar Mute Noise">
+			<macro-ref ref="Voice Change" value="32 120"/>
+		</macro-def>
+		<macro-def name="voice:Gutar Stroke Noise 5">
+			<macro-ref ref="Voice Change" value="34 120"/>
+		</macro-def>
+		<macro-def name="voice:Steel Guitar Slide Noise 1">
+			<macro-ref ref="Voice Change" value="35 120"/>
+		</macro-def>
+		<macro-def name="voice:Steel Guitar Slide Noise 2">
+			<macro-ref ref="Voice Change" value="36 120"/>
+		</macro-def>
+		<macro-def name="voice:Steel Guitar Slide Noise 3">
+			<macro-ref ref="Voice Change" value="37 120"/>
+		</macro-def>
+		<macro-def name="voice:Steel Guitar Slide Noise 4">
+			<macro-ref ref="Voice Change" value="38 120"/>
+		</macro-def>
+		<macro-def name="voice:Guitar Stroke Noise 1">
+			<macro-ref ref="Voice Change" value="39 120"/>
+		</macro-def>
+		<macro-def name="voice:Guitar Stroke Noise 2">
+			<macro-ref ref="Voice Change" value="40 120"/>
+		</macro-def>
+		<macro-def name="voice:Guitar Stroke Noise 3">
+			<macro-ref ref="Voice Change" value="41 120"/>
+		</macro-def>
+		<macro-def name="voice:Guitar Stroke Noise 4">
+			<macro-ref ref="Voice Change" value="42 120"/>
+		</macro-def>
+
+		<macro-def name="voice:Breath Noise">
+			<macro-ref ref="Voice Change" value="0 121"/>
+		</macro-def>
+		<macro-def name="voice:Flute Key Click">
+			<macro-ref ref="Voice Change" value="1 121"/>
+		</macro-def>
+		<macro-def name="voice:Breath Noise Menu">
+			<macro-ref ref="Voice Change" value="2 121"/>
+		</macro-def>
+		<macro-def name="voice:Flute Breath 1">
+			<macro-ref ref="Voice Change" value="3 121"/>
+		</macro-def>
+		<macro-def name="voice:Flute Breath 2">
+			<macro-ref ref="Voice Change" value="4 121"/>
+		</macro-def>
+		<macro-def name="voice:Flute Breath 3">
+			<macro-ref ref="Voice Change" value="5 121"/>
+		</macro-def>
+		<macro-def name="voice:Vox Breath 1">
+			<macro-ref ref="Voice Change" value="6 121"/>
+		</macro-def>
+		<macro-def name="voice:Vox Breath 2">
+			<macro-ref ref="Voice Change" value="7 121"/>
+		</macro-def>
+		<macro-def name="voice:Trombone Noise">
+			<macro-ref ref="Voice Change" value="8 121"/>
+		</macro-def>
+		<macro-def name="voice:Trumpet Noise">
+			<macro-ref ref="Voice Change" value="9 121"/>
+		</macro-def>
+
+		<macro-def name="voice:Seashore">
+			<macro-ref ref="Voice Change" value="0 122"/>
+		</macro-def>
+		<macro-def name="voice:Rain">
+			<macro-ref ref="Voice Change" value="1 122"/>
+		</macro-def>
+		<macro-def name="voice:Thunder">
+			<macro-ref ref="Voice Change" value="2 122"/>
+		</macro-def>
+		<macro-def name="voice:Wind">
+			<macro-ref ref="Voice Change" value="3 122"/>
+		</macro-def>
+		<macro-def name="voice:Stream">
+			<macro-ref ref="Voice Change" value="4 122"/>
+		</macro-def>
+		<macro-def name="voice:Bubble">
+			<macro-ref ref="Voice Change" value="5 122"/>
+		</macro-def>
+		<macro-def name="voice:Wind 2">
+			<macro-ref ref="Voice Change" value="6 122"/>
+		</macro-def>
+		<macro-def name="voice:Cricket">
+			<macro-ref ref="Voice Change" value="7 122"/>
+		</macro-def>
+		<macro-def name="voice:Pink Noise">
+			<macro-ref ref="Voice Change" value="16 122"/>
+		</macro-def>
+		<macro-def name="voice:White Noise">
+			<macro-ref ref="Voice Change" value="17 122"/>
+		</macro-def>
+
+		<macro-def name="voice:Bird">
+			<macro-ref ref="Voice Change" value="0 123"/>
+		</macro-def>
+		<macro-def name="voice:Dog">
+			<macro-ref ref="Voice Change" value="1 123"/>
+		</macro-def>
+		<macro-def name="voice:Horse-Gallop">
+			<macro-ref ref="Voice Change" value="2 123"/>
+		</macro-def>
+		<macro-def name="voice:Bird 2">
+			<macro-ref ref="Voice Change" value="3 123"/>
+		</macro-def>
+		<macro-def name="voice:Kitty">
+			<macro-ref ref="Voice Change" value="4 123"/>
+		</macro-def>
+		<macro-def name="voice:Growl">
+			<macro-ref ref="Voice Change" value="5 123"/>
+		</macro-def>
+		<macro-def name="voice:Growl 2">
+			<macro-ref ref="Voice Change" value="6 123"/>
+		</macro-def>
+		<macro-def name="voice:Fancy Animal">
+			<macro-ref ref="Voice Change" value="7 123"/>
+		</macro-def>
+		<macro-def name="voice:Seal">
+			<macro-ref ref="Voice Change" value="8 123"/>
+		</macro-def>
+
+		<macro-def name="voice:Telephone 1">
+			<macro-ref ref="Voice Change" value="0 124"/>
+		</macro-def>
+		<macro-def name="voice:Telephone 2">
+			<macro-ref ref="Voice Change" value="1 124"/>
+		</macro-def>
+		<macro-def name="voice:Door Creaking">
+			<macro-ref ref="Voice Change" value="2 124"/>
+		</macro-def>
+		<macro-def name="voice:Door">
+			<macro-ref ref="Voice Change" value="3 124"/>
+		</macro-def>
+		<macro-def name="voice:Scratch">
+			<macro-ref ref="Voice Change" value="4 124"/>
+		</macro-def>
+		<macro-def name="voice:Wind Chimes">
+			<macro-ref ref="Voice Change" value="5 124"/>
+		</macro-def>
+		<macro-def name="voice:Scratch 2">
+			<macro-ref ref="Voice Change" value="7 124"/>
+		</macro-def>
+		<macro-def name="voice:ScratchKey">
+			<macro-ref ref="Voice Change" value="8 124"/>
+		</macro-def>
+		<macro-def name="voice:Tape Rewind">
+			<macro-ref ref="Voice Change" value="9 124"/>
+		</macro-def>
+		<macro-def name="voice:Phono Noise">
+			<macro-ref ref="Voice Change" value="10 124"/>
+		</macro-def>
+		<macro-def name="voice:MC-500 Beep">
+			<macro-ref ref="Voice Change" value="11 124"/>
+		</macro-def>
+		<macro-def name="voice:Scratch 3">
+			<macro-ref ref="Voice Change" value="12 124"/>
+		</macro-def>
+		<macro-def name="voice:Scratch 4">
+			<macro-ref ref="Voice Change" value="13 124"/>
+		</macro-def>
+		<macro-def name="voice:Scratch 5">
+			<macro-ref ref="Voice Change" value="14 124"/>
+		</macro-def>
+		<macro-def name="voice:Scratch 6">
+			<macro-ref ref="Voice Change" value="15 124"/>
+		</macro-def>
+		<macro-def name="voice:Scratch 7">
+			<macro-ref ref="Voice Change" value="16 124"/>
+		</macro-def>
+
+		<macro-def name="voice:Helicopter">
+			<macro-ref ref="Voice Change" value="0 125"/>
+		</macro-def>
+		<macro-def name="voice:Car-Engine">
+			<macro-ref ref="Voice Change" value="1 125"/>
+		</macro-def>
+		<macro-def name="voice:Car-Stop">
+			<macro-ref ref="Voice Change" value="2 125"/>
+		</macro-def>
+		<macro-def name="voice:Car-Pass">
+			<macro-ref ref="Voice Change" value="3 125"/>
+		</macro-def>
+		<macro-def name="voice:Car-Crash">
+			<macro-ref ref="Voice Change" value="4 125"/>
+		</macro-def>
+		<macro-def name="voice:Siren">
+			<macro-ref ref="Voice Change" value="5 125"/>
+		</macro-def>
+		<macro-def name="voice:Train">
+			<macro-ref ref="Voice Change" value="6 125"/>
+		</macro-def>
+		<macro-def name="voice:Jetplane">
+			<macro-ref ref="Voice Change" value="7 125"/>
+		</macro-def>
+		<macro-def name="voice:Starship">
+			<macro-ref ref="Voice Change" value="8 125"/>
+		</macro-def>
+		<macro-def name="voice:Burst Noise">
+			<macro-ref ref="Voice Change" value="9 125"/>
+		</macro-def>
+		<macro-def name="voice:Calculating">
+			<macro-ref ref="Voice Change" value="10 125"/>
+		</macro-def>
+		<macro-def name="voice:Perc. Bang">
+			<macro-ref ref="Voice Change" value="11 125"/>
+		</macro-def>
+		<macro-def name="voice:Burner">
+			<macro-ref ref="Voice Change" value="12 125"/>
+		</macro-def>
+		<macro-def name="voice:Glass &amp; Glam">
+			<macro-ref ref="Voice Change" value="13 125"/>
+		</macro-def>
+		<macro-def name="voice:Ice Ring">
+			<macro-ref ref="Voice Change" value="14 125"/>
+		</macro-def>
+		<macro-def name="voice:Over Blow">
+			<macro-ref ref="Voice Change" value="15 125"/>
+		</macro-def>
+		<macro-def name="voice:Crack Bottle">
+			<macro-ref ref="Voice Change" value="16 125"/>
+		</macro-def>
+		<macro-def name="voice:Pour Bottle">
+			<macro-ref ref="Voice Change" value="17 125"/>
+		</macro-def>
+		<macro-def name="voice:Soda">
+			<macro-ref ref="Voice Change" value="18 125"/>
+		</macro-def>
+		<macro-def name="voice:Open CD Tray">
+			<macro-ref ref="Voice Change" value="19 125"/>
+		</macro-def>
+		<macro-def name="voice:Audio Switch">
+			<macro-ref ref="Voice Change" value="20 125"/>
+		</macro-def>
+		<macro-def name="voice:Key Typing">
+			<macro-ref ref="Voice Change" value="21 125"/>
+		</macro-def>
+		<macro-def name="voice:SL 1">
+			<macro-ref ref="Voice Change" value="22 125"/>
+		</macro-def>
+		<macro-def name="voice:SL 2">
+			<macro-ref ref="Voice Change" value="23 125"/>
+		</macro-def>
+		<macro-def name="voice:Car Engine 2">
+			<macro-ref ref="Voice Change" value="24 125"/>
+		</macro-def>
+		<macro-def name="voice:Car Horn">
+			<macro-ref ref="Voice Change" value="25 125"/>
+		</macro-def>
+		<macro-def name="voice:Boeeeen">
+			<macro-ref ref="Voice Change" value="26 125"/>
+		</macro-def>
+		<macro-def name="voice:Railroad Crossing">
+			<macro-ref ref="Voice Change" value="27 125"/>
+		</macro-def>
+		<macro-def name="voice:Compresser">
+			<macro-ref ref="Voice Change" value="28 125"/>
+		</macro-def>
+		<macro-def name="voice:Sword Boom!">
+			<macro-ref ref="Voice Change" value="29 125"/>
+		</macro-def>
+		<macro-def name="voice:Sword Cross">
+			<macro-ref ref="Voice Change" value="30 125"/>
+		</macro-def>
+		<macro-def name="voice:Stab! 1">
+			<macro-ref ref="Voice Change" value="31 125"/>
+		</macro-def>
+		<macro-def name="voice:Stab! 2">
+			<macro-ref ref="Voice Change" value="32 125"/>
+		</macro-def>
+
+		<macro-def name="voice:Applause">
+			<macro-ref ref="Voice Change" value="0 126"/>
+		</macro-def>
+		<macro-def name="voice:Laughing">
+			<macro-ref ref="Voice Change" value="1 126"/>
+		</macro-def>
+		<macro-def name="voice:Screaming">
+			<macro-ref ref="Voice Change" value="2 126"/>
+		</macro-def>
+		<macro-def name="voice:Punch">
+			<macro-ref ref="Voice Change" value="3 126"/>
+		</macro-def>
+		<macro-def name="voice:Heart Beat">
+			<macro-ref ref="Voice Change" value="4 126"/>
+		</macro-def>
+		<macro-def name="voice:Footsteps">
+			<macro-ref ref="Voice Change" value="5 126"/>
+		</macro-def>
+		<macro-def name="voice:Applause 2">
+			<macro-ref ref="Voice Change" value="6 126"/>
+		</macro-def>
+		<macro-def name="voice:Small Club">
+			<macro-ref ref="Voice Change" value="7 126"/>
+		</macro-def>
+		<macro-def name="voice:Applause Wave">
+			<macro-ref ref="Voice Change" value="8 126"/>
+		</macro-def>
+		<macro-def name="voice:Baby Laughing">
+			<macro-ref ref="Voice Change" value="9 126"/>
+		</macro-def>
+		<macro-def name="voice:Voice One">
+			<macro-ref ref="Voice Change" value="16 126"/>
+		</macro-def>
+		<macro-def name="voice:Voice Two">
+			<macro-ref ref="Voice Change" value="17 126"/>
+		</macro-def>
+		<macro-def name="voice:Voice Three">
+			<macro-ref ref="Voice Change" value="18 126"/>
+		</macro-def>
+		<macro-def name="voice:Voice Tah">
+			<macro-ref ref="Voice Change" value="19 126"/>
+		</macro-def>
+		<macro-def name="voice:Voice Whey">
+			<macro-ref ref="Voice Change" value="20 126"/>
+		</macro-def>
+		<macro-def name="voice:Voice Kikit">
+			<macro-ref ref="Voice Change" value="22 126"/>
+		</macro-def>
+		<macro-def name="voice:Voice Come On">
+			<macro-ref ref="Voice Change" value="23 126"/>
+		</macro-def>
+		<macro-def name="voice:Voice Aou">
+			<macro-ref ref="Voice Change" value="24 126"/>
+		</macro-def>
+		<macro-def name="voice:Voice Oou">
+			<macro-ref ref="Voice Change" value="25 126"/>
+		</macro-def>
+		<macro-def name="voice:Voice Hie">
+			<macro-ref ref="Voice Change" value="26 126"/>
+		</macro-def>
+
+		<macro-def name="voice:Gun Shot">
+			<macro-ref ref="Voice Change" value="0 127"/>
+		</macro-def>
+		<macro-def name="voice:Machine Gun">
+			<macro-ref ref="Voice Change" value="1 127"/>
+		</macro-def>
+		<macro-def name="voice:Lasergun">
+			<macro-ref ref="Voice Change" value="2 127"/>
+		</macro-def>
+		<macro-def name="voice:Explosion">
+			<macro-ref ref="Voice Change" value="3 127"/>
+		</macro-def>
+		<macro-def name="voice:Eruption">
+			<macro-ref ref="Voice Change" value="4 127"/>
+		</macro-def>
+		<macro-def name="voice:Big Shot">
+			<macro-ref ref="Voice Change" value="5 127"/>
+		</macro-def>
+		<macro-def name="voice:Explosion 2">
+			<macro-ref ref="Voice Change" value="6 127"/>
+		</macro-def>
+
+	</definition>
+</beumidi>

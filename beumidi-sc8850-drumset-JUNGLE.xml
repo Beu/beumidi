@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beumidi
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="file:beumidi.xsd">
+
+	<definition>
+
+		<value-def name="[88] Electric Kick 2"
+				element="note" attribute="note" value="0"/>
+		<value-def name="[88] Electric Kick 1"
+				element="note" attribute="note" value="1"/>
+		<value-def name="[Pro] CR-78 Kick 1"
+				element="note" attribute="note" value="2"/>
+		<value-def name="[Pro] CR-78 Kick 2"
+				element="note" attribute="note" value="3"/>
+		<value-def name="[Pro] TR-606 Kick 1"
+				element="note" attribute="note" value="4"/>
+		<value-def name="[Pro] TR-707 Kick 1"
+				element="note" attribute="note" value="5"/>
+		<value-def name="[55] TR-808 Kick"
+				element="note" attribute="note" value="6"/>
+		<value-def name="[88] TR-808 Kick"
+				element="note" attribute="note" value="7"/>
+		<value-def name="[Pro] TR-808 Kick 1"
+				element="note" attribute="note" value="8"/>
+		<value-def name="[88] TR-909 Kick"
+				element="note" attribute="note" value="9"/>
+		<value-def name="[88] Dance Kick"
+				element="note" attribute="note" value="10"/>
+		<value-def name="[Pro] Hip-Hop Kick 2"
+				element="note" attribute="note" value="11"/>
+		<value-def name="[Pro] TR-909 Kick 1"
+				element="note" attribute="note" value="12"/>
+		<value-def name="[Pro] Hip-Hop Kick 3"
+				element="note" attribute="note" value="13"/>
+		<value-def name="[Pro] Jungle Kick 1"
+				element="note" attribute="note" value="14"/>
+		<value-def name="[Pro] Techno Kick 1"
+				element="note" attribute="note" value="15"/>
+		<value-def name="[Pro] Bounce Kick"
+				element="note" attribute="note" value="16"/>
+		<value-def name="[Pro] Voice One"
+				element="note" attribute="note" value="17"/>
+		<value-def name="[Pro] Voice Two"
+				element="note" attribute="note" value="18"/>
+		<value-def name="[Pro] Voice Three"
+				element="note" attribute="note" value="19"/>
+		<value-def name="HipHop Kick 2"
+				element="note" attribute="note" value="20"/>
+		<value-def name="HipHop Kick 1"
+				element="note" attribute="note" value="21"/>
+
+		<value-def name="MC-500 Beep 1"
+				element="note" attribute="note" value="22"/>
+		<value-def name="MC-500 Beep 2"
+				element="note" attribute="note" value="23"/>
+		<value-def name="Concert SD"
+				element="note" attribute="note" value="24"/>
+		<value-def name="Snare Roll"
+				element="note" attribute="note" value="25"/>
+		<value-def name="Finger Snap 2"
+				element="note" attribute="note" value="26"/>
+		<value-def name="High Q"
+				element="note" attribute="note" value="27"/>
+		<value-def name="Slap"
+				element="note" attribute="note" value="28"/>
+		<value-def name="Scratch Push 2"
+				element="note" attribute="note" value="29"/>
+		<value-def name="Scratch Pull 2"
+				element="note" attribute="note" value="30"/>
+		<value-def name="Sticks"
+				element="note" attribute="note" value="31"/>
+		<value-def name="Square Click"
+				element="note" attribute="note" value="32"/>
+		<value-def name="Metronome Click"
+				element="note" attribute="note" value="33"/>
+		<value-def name="Metronome Bell"
+				element="note" attribute="note" value="34"/>
+		<value-def name="Jungle Kick 2"
+				element="note" attribute="note" value="35"/>
+		<value-def name="Jungle Kick 1"
+				element="note" attribute="note" value="36"/>
+		<value-def name="Jungle Snare Rim"
+				element="note" attribute="note" value="37"/>
+		<value-def name="HipHop Snare"
+				element="note" attribute="note" value="38"/>
+		<value-def name="R&amp;B Claps"
+				element="note" attribute="note" value="39"/>
+		<value-def name="Jungle Snare"
+				element="note" attribute="note" value="40"/>
+		<value-def name="TR-909 Low Tom 2"
+				element="note" attribute="note" value="41"/>
+		<value-def name="TR-606 Closed Hi-Hat"
+				element="note" attribute="note" value="42"/>
+		<value-def name="TR-909 Low Tom 1"
+				element="note" attribute="note" value="43"/>
+		<value-def name="Jungle Hi-Hat"
+				element="note" attribute="note" value="44"/>
+		<value-def name="TR-909 Mid Tom 2"
+				element="note" attribute="note" value="45"/>
+		<value-def name="TR-606 Open Hi-Hat"
+				element="note" attribute="note" value="46"/>
+		<value-def name="TR-909 Mid Tom 1"
+				element="note" attribute="note" value="47"/>
+		<value-def name="TR-909 High Tom 2"
+				element="note" attribute="note" value="48"/>
+		<value-def name="Jungle Crash"
+				element="note" attribute="note" value="49"/>
+		<value-def name="TR-909 High Tom 1"
+				element="note" attribute="note" value="50"/>
+		<value-def name="Ride Cymbal 1"
+				element="note" attribute="note" value="51"/>
+		<value-def name="Reverse Cymbal"
+				element="note" attribute="note" value="52"/>
+		<value-def name="Ride Bell"
+				element="note" attribute="note" value="53"/>
+		<value-def name="Shake Tambourine"
+				element="note" attribute="note" value="54"/>
+		<value-def name="Splash Cymbal"
+				element="note" attribute="note" value="55"/>
+		<value-def name="TR-808 Cowbell"
+				element="note" attribute="note" value="56"/>
+		<value-def name="Crash Cymbal 2"
+				element="note" attribute="note" value="57"/>
+		<value-def name="Vibra-slap"
+				element="note" attribute="note" value="58"/>
+		<value-def name="Ride Cymbal 2"
+				element="note" attribute="note" value="59"/>
+		<value-def name="High Bongo"
+				element="note" attribute="note" value="60"/>
+		<value-def name="Low Bongo"
+				element="note" attribute="note" value="61"/>
+		<value-def name="Mute High Conga"
+				element="note" attribute="note" value="62"/>
+		<value-def name="Open High Conga"
+				element="note" attribute="note" value="63"/>
+		<value-def name="Low Conga"
+				element="note" attribute="note" value="64"/>
+		<value-def name="High Timbale"
+				element="note" attribute="note" value="65"/>
+		<value-def name="Low Timbale"
+				element="note" attribute="note" value="66"/>
+		<value-def name="High Agogo"
+				element="note" attribute="note" value="67"/>
+		<value-def name="Low Agogo"
+				element="note" attribute="note" value="68"/>
+		<value-def name="Cabasa"
+				element="note" attribute="note" value="69"/>
+		<value-def name="TR-808 Maracas"
+				element="note" attribute="note" value="70"/>
+		<value-def name="Short High Whistle"
+				element="note" attribute="note" value="71"/>
+		<value-def name="Long Low Whistle"
+				element="note" attribute="note" value="72"/>
+		<value-def name="Short Guiro"
+				element="note" attribute="note" value="73"/>
+		<value-def name="CR-78 Guiro"
+				element="note" attribute="note" value="74"/>
+		<value-def name="TR-808 Claves"
+				element="note" attribute="note" value="75"/>
+		<value-def name="High Wood Block"
+				element="note" attribute="note" value="76"/>
+		<value-def name="Low Wood Block"
+				element="note" attribute="note" value="77"/>
+		<value-def name="High Hoo"
+				element="note" attribute="note" value="78"/>
+		<value-def name="Low Hoo"
+				element="note" attribute="note" value="79"/>
+		<value-def name="Electric Mute Triangle"
+				element="note" attribute="note" value="80"/>
+		<value-def name="Electric Open Triangle"
+				element="note" attribute="note" value="81"/>
+		<value-def name="Jungle Shaker"
+				element="note" attribute="note" value="82"/>
+		<value-def name="Jingle Bell"
+				element="note" attribute="note" value="83"/>
+		<value-def name="Bell Tree"
+				element="note" attribute="note" value="84"/>
+		<value-def name="Castanets"
+				element="note" attribute="note" value="85"/>
+		<value-def name="Mute Surdo"
+				element="note" attribute="note" value="86"/>
+		<value-def name="Open Surdo"
+				element="note" attribute="note" value="87"/>
+		<value-def name="Small Club 1"
+				element="note" attribute="note" value="88"/>
+		<value-def name="Jungle Kick Roll"
+				element="note" attribute="note" value="89"/>
+		<value-def name="Jungle Snare Roll"
+				element="note" attribute="note" value="90"/>
+		<value-def name="TR-606 Snare 2"
+				element="note" attribute="note" value="91"/>
+		<value-def name="Dance Snare"
+				element="note" attribute="note" value="92"/>
+		<value-def name="Techno Snare"
+				element="note" attribute="note" value="93"/>
+		<value-def name="House Snare"
+				element="note" attribute="note" value="94"/>
+
+		<value-def name="Rock Snare Dry"
+				element="note" attribute="note" value="95"/>
+		<value-def name="LoFi Snare 1"
+				element="note" attribute="note" value="96"/>
+		<value-def name="[Pro] Techno Hit"
+				element="note" attribute="note" value="97"/>
+		<value-def name="[Pro] Philly Hit"
+				element="note" attribute="note" value="98"/>
+		<value-def name="[Pro] Impact Hit"
+				element="note" attribute="note" value="99"/>
+		<value-def name="[Pro] Lo-Fi Rave"
+				element="note" attribute="note" value="100"/>
+		<value-def name="[Pro] Bam Hit"
+				element="note" attribute="note" value="101"/>
+		<value-def name="[Pro] Bim Hit"
+				element="note" attribute="note" value="102"/>
+		<value-def name="[Pro] Tape Rewind"
+				element="note" attribute="note" value="103"/>
+		<value-def name="[Pro] Phonograph Noise"
+				element="note" attribute="note" value="104"/>
+		<value-def name="[88] Power Snare 1"
+				element="note" attribute="note" value="105"/>
+		<value-def name="[88] Dance Snare 1"
+				element="note" attribute="note" value="106"/>
+		<value-def name="[88] Dance Snare 2"
+				element="note" attribute="note" value="107"/>
+		<value-def name="[88] Disco Snare"
+				element="note" attribute="note" value="108"/>
+		<value-def name="[88] Electric Snare 2"
+				element="note" attribute="note" value="109"/>
+		<value-def name="[55] Electric Snare"
+				element="note" attribute="note" value="110"/>
+		<value-def name="[88] Electric Snare 3"
+				element="note" attribute="note" value="111"/>
+		<value-def name="[Pro] TR-606 Snare 2"
+				element="note" attribute="note" value="112"/>
+		<value-def name="[Pro] TR-606 Snare 1"
+				element="note" attribute="note" value="113"/>
+		<value-def name="[88] TR-808 Snare 2"
+				element="note" attribute="note" value="114"/>
+		<value-def name="[88] TR-808 Snare 1"
+				element="note" attribute="note" value="115"/>
+		<value-def name="[Pro] TR-808 Snare 2"
+				element="note" attribute="note" value="116"/>
+		<value-def name="[88] TR-909 Snare 1"
+				element="note" attribute="note" value="117"/>
+		<value-def name="[88] TR-909 Snare 2"
+				element="note" attribute="note" value="118"/>
+		<value-def name="[Pro] TR-909 Snare 1"
+				element="note" attribute="note" value="119"/>
+		<value-def name="[Pro] TR-909 Snare 2"
+				element="note" attribute="note" value="120"/>
+		<value-def name="[Pro] Rap Snare"
+				element="note" attribute="note" value="121"/>
+		<value-def name="[Pro] Jungle Snare"
+				element="note" attribute="note" value="122"/>
+		<value-def name="[Pro] House Snare 1"
+				element="note" attribute="note" value="123"/>
+		<value-def name="[88] House Snare"
+				element="note" attribute="note" value="124"/>
+		<value-def name="[Pro] House Snare 2"
+				element="note" attribute="note" value="125"/>
+		<value-def name="[Pro] Voice Tah"
+				element="note" attribute="note" value="126"/>
+		<value-def name="[88] Slappy"
+				element="note" attribute="note" value="127"/>
+
+	</definition>
+
+</beumidi>
